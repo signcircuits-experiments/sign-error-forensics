@@ -1,0 +1,290 @@
+[
+ {
+  "id": "arith_001",
+  "problem": "Compute 160 - 139. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": 21,
+  "true_sign": "+"
+ },
+ {
+  "id": "arith_002",
+  "problem": "Compute 107 - 143. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -36,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_003",
+  "problem": "Compute 476 - 675. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -199,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_004",
+  "problem": "Compute 210 - 105. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": 105,
+  "true_sign": "+"
+ },
+ {
+  "id": "arith_005",
+  "problem": "Compute 138 - 117. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": 21,
+  "true_sign": "+"
+ },
+ {
+  "id": "arith_006",
+  "problem": "Compute 347 - 116. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": 231,
+  "true_sign": "+"
+ },
+ {
+  "id": "arith_007",
+  "problem": "Compute 211 - 152. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": 59,
+  "true_sign": "+"
+ },
+ {
+  "id": "arith_008",
+  "problem": "Compute 250 - 681. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -431,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_009",
+  "problem": "Compute 287 - 235. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": 52,
+  "true_sign": "+"
+ },
+ {
+  "id": "arith_010",
+  "problem": "Compute 110 - 100. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": 10,
+  "true_sign": "+"
+ },
+ {
+  "id": "arith_011",
+  "problem": "Compute 517 - 335. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": 182,
+  "true_sign": "+"
+ },
+ {
+  "id": "arith_012",
+  "problem": "Compute 326 - 394. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -68,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_013",
+  "problem": "Compute 323 - 131. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": 192,
+  "true_sign": "+"
+ },
+ {
+  "id": "arith_014",
+  "problem": "Compute 175 - 198. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -23,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_015",
+  "problem": "Compute 691 - 942. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -251,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_016",
+  "problem": "Compute 231 - 198. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": 33,
+  "true_sign": "+"
+ },
+ {
+  "id": "arith_017",
+  "problem": "Compute 239 - 913. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -674,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_019",
+  "problem": "Compute 494 - 391. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": 103,
+  "true_sign": "+"
+ },
+ {
+  "id": "arith_020",
+  "problem": "Compute 472 - 366. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": 106,
+  "true_sign": "+"
+ },
+ {
+  "id": "arith_021",
+  "problem": "Compute 216 - 462. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -246,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_022",
+  "problem": "Compute 643 - 667. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -24,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_024",
+  "problem": "Compute 771 - 589. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": 182,
+  "true_sign": "+"
+ },
+ {
+  "id": "arith_025",
+  "problem": "Compute 557 - 650. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -93,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_026",
+  "problem": "Compute 632 - 168. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": 464,
+  "true_sign": "+"
+ },
+ {
+  "id": "arith_027",
+  "problem": "Compute 491 - 581. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -90,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_028",
+  "problem": "Compute 137 - 122. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": 15,
+  "true_sign": "+"
+ },
+ {
+  "id": "arith_029",
+  "problem": "Compute 419 - 724. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -305,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_030",
+  "problem": "Compute 910 - 754. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": 156,
+  "true_sign": "+"
+ },
+ {
+  "id": "arith_031",
+  "problem": "Compute 250 - 449. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -199,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_032",
+  "problem": "Compute 898 - 293. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": 605,
+  "true_sign": "+"
+ },
+ {
+  "id": "arith_033",
+  "problem": "Compute 129 - 711. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -582,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_034",
+  "problem": "Compute 141 - 107. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": 34,
+  "true_sign": "+"
+ },
+ {
+  "id": "arith_035",
+  "problem": "Compute 359 - 255. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": 104,
+  "true_sign": "+"
+ },
+ {
+  "id": "arith_036",
+  "problem": "Compute 182 - 290. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -108,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_037",
+  "problem": "Compute 171 - 274. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -103,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_038",
+  "problem": "Compute 138 - 479. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -341,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_039",
+  "problem": "Compute 350 - 969. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -619,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_040",
+  "problem": "Compute 382 - 792. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -410,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_041",
+  "problem": "Compute 435 - 551. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -116,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_042",
+  "problem": "Compute 453 - 518. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -65,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_043",
+  "problem": "Compute 439 - 886. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -447,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_044",
+  "problem": "Compute 669 - 302. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": 367,
+  "true_sign": "+"
+ },
+ {
+  "id": "arith_045",
+  "problem": "Compute 681 - 184. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": 497,
+  "true_sign": "+"
+ },
+ {
+  "id": "arith_046",
+  "problem": "Compute 326 - 196. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": 130,
+  "true_sign": "+"
+ },
+ {
+  "id": "arith_047",
+  "problem": "Compute 726 - 985. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -259,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_048",
+  "problem": "Compute 172 - 184. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -12,
+  "true_sign": "-"
+ },
+ {
+  "id": "arith_049",
+  "problem": "Compute 343 - 301. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": 42,
+  "true_sign": "+"
+ },
+ {
+  "id": "arith_050",
+  "problem": "Compute 567 - 654. Show all steps. Write your final numerical answer with its sign (use '+' if the result is positive, '-' if negative).",
+  "answer": -87,
+  "true_sign": "-"
+ }
+]

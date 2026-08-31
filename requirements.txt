@@ -1,0 +1,7 @@
+# Pipeline (GPU stages) — versions used in the original runs; nearby versions work.
+torch>=2.1
+transformers>=4.44
+accelerate>=0.30
+numpy>=1.26
+pandas>=2.0
+openpyxl>=3.1
