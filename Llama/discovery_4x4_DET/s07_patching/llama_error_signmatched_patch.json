@@ -1,0 +1,717 @@
+{
+  "meta": {
+    "n_questions": 15,
+    "donor_domain": "det_4x4_correct",
+    "d_hat_recipe": "N/A \u2014 mean-patch, no d_hat",
+    "sign_matching": "error written sign matched to correct donor sign",
+    "prediction": "L75/L78 near-null; L77 corrective; L30/L50 null",
+    "note": "label_inversion: correct files have written_sign = row.wrong_sign"
+  },
+  "results": {
+    "C_4x4_det_036": {
+      "id": "C_4x4_det_036",
+      "written_sign": "+",
+      "baseline_ld": 7.25,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 7.5,
+          "delta_ld": 0.25,
+          "fixed": false
+        },
+        "L79_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 4.5,
+          "delta_ld": -2.75,
+          "fixed": false
+        },
+        "L72_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 7.0,
+          "delta_ld": -0.25,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 8.25,
+          "delta_ld": 1.0,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 4.75,
+          "delta_ld": -2.5,
+          "fixed": false
+        }
+      }
+    },
+    "NC_4x4_det_001": {
+      "id": "NC_4x4_det_001",
+      "written_sign": "-",
+      "baseline_ld": 11.9688,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 9.2188,
+          "delta_ld": -2.75,
+          "fixed": false
+        },
+        "L79_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 1.4844,
+          "delta_ld": -10.4844,
+          "fixed": false
+        },
+        "L72_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 8.8281,
+          "delta_ld": -3.1406,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 12.25,
+          "delta_ld": 0.2812,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 11.9062,
+          "delta_ld": -0.0625,
+          "fixed": false
+        }
+      }
+    },
+    "NC_4x4_det_026": {
+      "id": "NC_4x4_det_026",
+      "written_sign": "+",
+      "baseline_ld": 5.75,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 6.75,
+          "delta_ld": 1.0,
+          "fixed": false
+        },
+        "L79_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 7.0,
+          "delta_ld": 1.25,
+          "fixed": false
+        },
+        "L72_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 7.0,
+          "delta_ld": 1.25,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 5.75,
+          "delta_ld": 0.0,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 5.75,
+          "delta_ld": 0.0,
+          "fixed": false
+        }
+      }
+    },
+    "NC_4x4_det_031": {
+      "id": "NC_4x4_det_031",
+      "written_sign": "-",
+      "baseline_ld": 3.25,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 6.0,
+          "delta_ld": 2.75,
+          "fixed": false
+        },
+        "L79_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 6.75,
+          "delta_ld": 3.5,
+          "fixed": false
+        },
+        "L72_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 2.75,
+          "delta_ld": -0.5,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 2.25,
+          "delta_ld": -1.0,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 5.0,
+          "delta_ld": 1.75,
+          "fixed": false
+        }
+      }
+    },
+    "NC_4x4_det_039": {
+      "id": "NC_4x4_det_039",
+      "written_sign": "+",
+      "baseline_ld": 6.5,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 8.25,
+          "delta_ld": 1.75,
+          "fixed": false
+        },
+        "L79_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 8.25,
+          "delta_ld": 1.75,
+          "fixed": false
+        },
+        "L72_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 6.25,
+          "delta_ld": -0.25,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 8.75,
+          "delta_ld": 2.25,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 4.5,
+          "delta_ld": -2.0,
+          "fixed": false
+        }
+      }
+    },
+    "NC_4x4_det_042": {
+      "id": "NC_4x4_det_042",
+      "written_sign": "+",
+      "baseline_ld": 19.875,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 14.5,
+          "delta_ld": -5.375,
+          "fixed": false
+        },
+        "L79_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 16.25,
+          "delta_ld": -3.625,
+          "fixed": false
+        },
+        "L72_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 19.75,
+          "delta_ld": -0.125,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 19.875,
+          "delta_ld": 0.0,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 20.375,
+          "delta_ld": 0.5,
+          "fixed": false
+        }
+      }
+    },
+    "NC_4x4_det_048": {
+      "id": "NC_4x4_det_048",
+      "written_sign": "+",
+      "baseline_ld": 10.5,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 6.625,
+          "delta_ld": -3.875,
+          "fixed": false
+        },
+        "L79_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 8.875,
+          "delta_ld": -1.625,
+          "fixed": false
+        },
+        "L72_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 12.75,
+          "delta_ld": 2.25,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 14.75,
+          "delta_ld": 4.25,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 10.5,
+          "delta_ld": 0.0,
+          "fixed": false
+        }
+      }
+    },
+    "NC_4x4_det_053": {
+      "id": "NC_4x4_det_053",
+      "written_sign": "-",
+      "baseline_ld": 7.25,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 7.75,
+          "delta_ld": 0.5,
+          "fixed": false
+        },
+        "L79_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 10.5,
+          "delta_ld": 3.25,
+          "fixed": false
+        },
+        "L72_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 7.5,
+          "delta_ld": 0.25,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 6.25,
+          "delta_ld": -1.0,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 7.0,
+          "delta_ld": -0.25,
+          "fixed": false
+        }
+      }
+    },
+    "NC_4x4_det_065": {
+      "id": "NC_4x4_det_065",
+      "written_sign": "-",
+      "baseline_ld": 7.6875,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 7.75,
+          "delta_ld": 0.0625,
+          "fixed": false
+        },
+        "L79_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": -1.1406,
+          "delta_ld": -8.8281,
+          "fixed": true
+        },
+        "L72_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 8.5625,
+          "delta_ld": 0.875,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 7.0,
+          "delta_ld": -0.6875,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 8.9375,
+          "delta_ld": 1.25,
+          "fixed": false
+        }
+      }
+    },
+    "NC_4x4_det_083": {
+      "id": "NC_4x4_det_083",
+      "written_sign": "-",
+      "baseline_ld": 28.25,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 25.375,
+          "delta_ld": -2.875,
+          "fixed": false
+        },
+        "L79_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 27.125,
+          "delta_ld": -1.125,
+          "fixed": false
+        },
+        "L72_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 25.5,
+          "delta_ld": -2.75,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 27.625,
+          "delta_ld": -0.625,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 28.5,
+          "delta_ld": 0.25,
+          "fixed": false
+        }
+      }
+    },
+    "NC_4x4_det_086": {
+      "id": "NC_4x4_det_086",
+      "written_sign": "-",
+      "baseline_ld": 9.75,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 13.5,
+          "delta_ld": 3.75,
+          "fixed": false
+        },
+        "L79_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 13.25,
+          "delta_ld": 3.5,
+          "fixed": false
+        },
+        "L72_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 9.25,
+          "delta_ld": -0.5,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 11.5,
+          "delta_ld": 1.75,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": 11.25,
+          "delta_ld": 1.5,
+          "fixed": false
+        }
+      }
+    },
+    "NC_4x4_det_105": {
+      "id": "NC_4x4_det_105",
+      "written_sign": "+",
+      "baseline_ld": -9.75,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": -4.25,
+          "delta_ld": 5.5,
+          "fixed": false
+        },
+        "L79_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": -9.0,
+          "delta_ld": 0.75,
+          "fixed": false
+        },
+        "L72_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": -8.0,
+          "delta_ld": 1.75,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": -16.0,
+          "delta_ld": -6.25,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": -8.0,
+          "delta_ld": 1.75,
+          "fixed": false
+        }
+      }
+    },
+    "NC_4x4_det_133": {
+      "id": "NC_4x4_det_133",
+      "written_sign": "+",
+      "baseline_ld": 19.5,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 19.0,
+          "delta_ld": -0.5,
+          "fixed": false
+        },
+        "L79_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 20.5,
+          "delta_ld": 1.0,
+          "fixed": false
+        },
+        "L72_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 20.25,
+          "delta_ld": 0.75,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 19.5,
+          "delta_ld": 0.0,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": 18.5,
+          "delta_ld": -1.0,
+          "fixed": false
+        }
+      }
+    },
+    "NC_4x4_det_137": {
+      "id": "NC_4x4_det_137",
+      "written_sign": "-",
+      "baseline_ld": -2.1719,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": -0.5312,
+          "delta_ld": 1.6406,
+          "fixed": false
+        },
+        "L79_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": -13.2812,
+          "delta_ld": -11.1094,
+          "fixed": false
+        },
+        "L72_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": -2.5,
+          "delta_ld": -0.3281,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": -2.1875,
+          "delta_ld": -0.0156,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 62,
+          "edit_ld": -1.4062,
+          "delta_ld": 0.7656,
+          "fixed": false
+        }
+      }
+    },
+    "NC_4x4_det_154": {
+      "id": "NC_4x4_det_154",
+      "written_sign": "+",
+      "baseline_ld": -5.0,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": -3.25,
+          "delta_ld": 1.75,
+          "fixed": false
+        },
+        "L79_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": -4.5,
+          "delta_ld": 0.5,
+          "fixed": false
+        },
+        "L72_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": -4.25,
+          "delta_ld": 0.75,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": -4.25,
+          "delta_ld": 0.75,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "+",
+          "donor_n": 18,
+          "edit_ld": -7.5,
+          "delta_ld": -2.5,
+          "fixed": false
+        }
+      }
+    }
+  }
+}

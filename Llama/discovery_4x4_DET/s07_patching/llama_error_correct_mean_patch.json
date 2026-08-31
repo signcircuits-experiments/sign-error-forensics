@@ -1,0 +1,572 @@
+{
+  "C_4x4_det_036": {
+    "id": "C_4x4_det_036",
+    "written_sign": "+",
+    "baseline_ld": 7.25,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 2.0,
+        "delta_ld": -5.25,
+        "flipped": false
+      },
+      "L79_mlp": {
+        "prediction": "null",
+        "edit_ld": -0.5,
+        "delta_ld": -7.75,
+        "flipped": true
+      },
+      "L72_mlp": {
+        "prediction": "movement",
+        "edit_ld": 6.75,
+        "delta_ld": -0.5,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 7.5,
+        "delta_ld": 0.25,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 4.25,
+        "delta_ld": -3.0,
+        "flipped": false
+      }
+    }
+  },
+  "NC_4x4_det_001": {
+    "id": "NC_4x4_det_001",
+    "written_sign": "-",
+    "baseline_ld": 11.9688,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 8.5625,
+        "delta_ld": -3.4062,
+        "flipped": false
+      },
+      "L79_mlp": {
+        "prediction": "null",
+        "edit_ld": 1.7812,
+        "delta_ld": -10.1875,
+        "flipped": false
+      },
+      "L72_mlp": {
+        "prediction": "movement",
+        "edit_ld": 9.0781,
+        "delta_ld": -2.8906,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 12.25,
+        "delta_ld": 0.2812,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 11.9062,
+        "delta_ld": -0.0625,
+        "flipped": false
+      }
+    }
+  },
+  "NC_4x4_det_026": {
+    "id": "NC_4x4_det_026",
+    "written_sign": "+",
+    "baseline_ld": 5.75,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 3.75,
+        "delta_ld": -2.0,
+        "flipped": false
+      },
+      "L79_mlp": {
+        "prediction": "null",
+        "edit_ld": 2.5,
+        "delta_ld": -3.25,
+        "flipped": false
+      },
+      "L72_mlp": {
+        "prediction": "movement",
+        "edit_ld": 5.75,
+        "delta_ld": 0.0,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 6.25,
+        "delta_ld": 0.5,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 5.25,
+        "delta_ld": -0.5,
+        "flipped": false
+      }
+    }
+  },
+  "NC_4x4_det_031": {
+    "id": "NC_4x4_det_031",
+    "written_sign": "-",
+    "baseline_ld": 3.25,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 4.25,
+        "delta_ld": 1.0,
+        "flipped": false
+      },
+      "L79_mlp": {
+        "prediction": "null",
+        "edit_ld": 5.5,
+        "delta_ld": 2.25,
+        "flipped": false
+      },
+      "L72_mlp": {
+        "prediction": "movement",
+        "edit_ld": 2.25,
+        "delta_ld": -1.0,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 2.25,
+        "delta_ld": -1.0,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 4.5,
+        "delta_ld": 1.25,
+        "flipped": false
+      }
+    }
+  },
+  "NC_4x4_det_039": {
+    "id": "NC_4x4_det_039",
+    "written_sign": "+",
+    "baseline_ld": 6.5,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 4.25,
+        "delta_ld": -2.25,
+        "flipped": false
+      },
+      "L79_mlp": {
+        "prediction": "null",
+        "edit_ld": 3.75,
+        "delta_ld": -2.75,
+        "flipped": false
+      },
+      "L72_mlp": {
+        "prediction": "movement",
+        "edit_ld": 5.25,
+        "delta_ld": -1.25,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 6.75,
+        "delta_ld": 0.25,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 3.5,
+        "delta_ld": -3.0,
+        "flipped": false
+      }
+    }
+  },
+  "NC_4x4_det_042": {
+    "id": "NC_4x4_det_042",
+    "written_sign": "+",
+    "baseline_ld": 19.875,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 14.75,
+        "delta_ld": -5.125,
+        "flipped": false
+      },
+      "L79_mlp": {
+        "prediction": "null",
+        "edit_ld": 17.625,
+        "delta_ld": -2.25,
+        "flipped": false
+      },
+      "L72_mlp": {
+        "prediction": "movement",
+        "edit_ld": 18.875,
+        "delta_ld": -1.0,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 20.25,
+        "delta_ld": 0.375,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 20.0,
+        "delta_ld": 0.125,
+        "flipped": false
+      }
+    }
+  },
+  "NC_4x4_det_048": {
+    "id": "NC_4x4_det_048",
+    "written_sign": "+",
+    "baseline_ld": 10.5,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 4.875,
+        "delta_ld": -5.625,
+        "flipped": false
+      },
+      "L79_mlp": {
+        "prediction": "null",
+        "edit_ld": 10.125,
+        "delta_ld": -0.375,
+        "flipped": false
+      },
+      "L72_mlp": {
+        "prediction": "movement",
+        "edit_ld": 11.5,
+        "delta_ld": 1.0,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 14.625,
+        "delta_ld": 4.125,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 11.25,
+        "delta_ld": 0.75,
+        "flipped": false
+      }
+    }
+  },
+  "NC_4x4_det_053": {
+    "id": "NC_4x4_det_053",
+    "written_sign": "-",
+    "baseline_ld": 7.25,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 6.5,
+        "delta_ld": -0.75,
+        "flipped": false
+      },
+      "L79_mlp": {
+        "prediction": "null",
+        "edit_ld": 9.25,
+        "delta_ld": 2.0,
+        "flipped": false
+      },
+      "L72_mlp": {
+        "prediction": "movement",
+        "edit_ld": 7.0,
+        "delta_ld": -0.25,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 6.75,
+        "delta_ld": -0.5,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 6.75,
+        "delta_ld": -0.5,
+        "flipped": false
+      }
+    }
+  },
+  "NC_4x4_det_065": {
+    "id": "NC_4x4_det_065",
+    "written_sign": "-",
+    "baseline_ld": 7.6875,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 6.8125,
+        "delta_ld": -0.875,
+        "flipped": false
+      },
+      "L79_mlp": {
+        "prediction": "null",
+        "edit_ld": -0.8438,
+        "delta_ld": -8.5312,
+        "flipped": true
+      },
+      "L72_mlp": {
+        "prediction": "movement",
+        "edit_ld": 8.5,
+        "delta_ld": 0.8125,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 7.0625,
+        "delta_ld": -0.625,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 8.875,
+        "delta_ld": 1.1875,
+        "flipped": false
+      }
+    }
+  },
+  "NC_4x4_det_083": {
+    "id": "NC_4x4_det_083",
+    "written_sign": "-",
+    "baseline_ld": 28.25,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 23.75,
+        "delta_ld": -4.5,
+        "flipped": false
+      },
+      "L79_mlp": {
+        "prediction": "null",
+        "edit_ld": 25.75,
+        "delta_ld": -2.5,
+        "flipped": false
+      },
+      "L72_mlp": {
+        "prediction": "movement",
+        "edit_ld": 25.0,
+        "delta_ld": -3.25,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 27.625,
+        "delta_ld": -0.625,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 28.375,
+        "delta_ld": 0.125,
+        "flipped": false
+      }
+    }
+  },
+  "NC_4x4_det_086": {
+    "id": "NC_4x4_det_086",
+    "written_sign": "-",
+    "baseline_ld": 9.75,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 12.25,
+        "delta_ld": 2.5,
+        "flipped": false
+      },
+      "L79_mlp": {
+        "prediction": "null",
+        "edit_ld": 12.0,
+        "delta_ld": 2.25,
+        "flipped": false
+      },
+      "L72_mlp": {
+        "prediction": "movement",
+        "edit_ld": 9.25,
+        "delta_ld": -0.5,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 11.5,
+        "delta_ld": 1.75,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 11.25,
+        "delta_ld": 1.5,
+        "flipped": false
+      }
+    }
+  },
+  "NC_4x4_det_105": {
+    "id": "NC_4x4_det_105",
+    "written_sign": "+",
+    "baseline_ld": -9.75,
+    "baseline_correct": true,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": -9.0,
+        "delta_ld": 0.75,
+        "flipped": false
+      },
+      "L79_mlp": {
+        "prediction": "null",
+        "edit_ld": -14.0,
+        "delta_ld": -4.25,
+        "flipped": false
+      },
+      "L72_mlp": {
+        "prediction": "movement",
+        "edit_ld": -9.0,
+        "delta_ld": 0.75,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": -13.75,
+        "delta_ld": -4.0,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": -8.75,
+        "delta_ld": 1.0,
+        "flipped": false
+      }
+    }
+  },
+  "NC_4x4_det_133": {
+    "id": "NC_4x4_det_133",
+    "written_sign": "+",
+    "baseline_ld": 19.5,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 16.5,
+        "delta_ld": -3.0,
+        "flipped": false
+      },
+      "L79_mlp": {
+        "prediction": "null",
+        "edit_ld": 16.25,
+        "delta_ld": -3.25,
+        "flipped": false
+      },
+      "L72_mlp": {
+        "prediction": "movement",
+        "edit_ld": 19.25,
+        "delta_ld": -0.25,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 20.0,
+        "delta_ld": 0.5,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 18.5,
+        "delta_ld": -1.0,
+        "flipped": false
+      }
+    }
+  },
+  "NC_4x4_det_137": {
+    "id": "NC_4x4_det_137",
+    "written_sign": "-",
+    "baseline_ld": -2.1719,
+    "baseline_correct": true,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": -1.7188,
+        "delta_ld": 0.4531,
+        "flipped": false
+      },
+      "L79_mlp": {
+        "prediction": "null",
+        "edit_ld": -13.125,
+        "delta_ld": -10.9531,
+        "flipped": false
+      },
+      "L72_mlp": {
+        "prediction": "movement",
+        "edit_ld": -2.4844,
+        "delta_ld": -0.3125,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": -2.25,
+        "delta_ld": -0.0781,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": -1.5,
+        "delta_ld": 0.6719,
+        "flipped": false
+      }
+    }
+  },
+  "NC_4x4_det_154": {
+    "id": "NC_4x4_det_154",
+    "written_sign": "+",
+    "baseline_ld": -5.0,
+    "baseline_correct": true,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": -7.75,
+        "delta_ld": -2.75,
+        "flipped": false
+      },
+      "L79_mlp": {
+        "prediction": "null",
+        "edit_ld": -9.75,
+        "delta_ld": -4.75,
+        "flipped": false
+      },
+      "L72_mlp": {
+        "prediction": "movement",
+        "edit_ld": -5.0,
+        "delta_ld": 0.0,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": -4.25,
+        "delta_ld": 0.75,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": -7.0,
+        "delta_ld": -2.0,
+        "flipped": false
+      }
+    }
+  }
+}
