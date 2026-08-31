@@ -1,0 +1,97 @@
+{
+  "model": "qwen",
+  "domain": "ibp_error",
+  "n_layers": 80,
+  "human_reviewed": true,
+  "reviewed_by": "the PI (name withheld for double-blind review)",
+  "reviewed_date": "2026-08-18",
+  "derivation": "pipeline_release stage s03_derive_targets, run against the discovery-run expA_logit_lens.json + expB_dla.json for ibp_error (n=10 discovery cases). Same algorithm used to produce Llama's targets.json.",
+  "habit_layers": [
+    75,
+    78
+  ],
+  "check_layer": 63,
+  "control_layers": [
+    30,
+    50
+  ],
+  "capture_layers": [
+    63,
+    75,
+    78
+  ],
+  "late_window_start": 60,
+  "n_cases": {
+    "total": 10,
+    "emb_peak": 0,
+    "late_peak": 10,
+    "minus_writers": 10,
+    "plus_writers": 0
+  },
+  "emb_peak_ids": [],
+  "peak_layer_histogram": {
+    "77": 2,
+    "78": 3,
+    "79": 5
+  },
+  "sign_token_modes": [
+    {
+      "wrong_sign_tok": 481,
+      "correct_sign_tok": 488,
+      "written_sign": "-",
+      "n": 10
+    }
+  ],
+  "evidence_mean_mlp_dla": {
+    "late_all": {
+      "60": 0.0605,
+      "61": 0.2202,
+      "62": 0.1241,
+      "63": -0.167,
+      "64": 0.121,
+      "65": 0.0164,
+      "66": -0.1572,
+      "67": 0.0934,
+      "68": 0.3955,
+      "69": 0.4885,
+      "70": 0.7014,
+      "71": 0.7282,
+      "72": 0.7025,
+      "73": 0.0101,
+      "74": 1.5171,
+      "75": 2.085,
+      "76": 0.6135,
+      "77": 1.4427,
+      "78": 2.4406,
+      "79": 0.3273
+    },
+    "late_minus": {
+      "60": 0.0605,
+      "61": 0.2202,
+      "62": 0.1241,
+      "63": -0.167,
+      "64": 0.121,
+      "65": 0.0164,
+      "66": -0.1572,
+      "67": 0.0934,
+      "68": 0.3955,
+      "69": 0.4885,
+      "70": 0.7014,
+      "71": 0.7282,
+      "72": 0.7025,
+      "73": 0.0101,
+      "74": 1.5171,
+      "75": 2.085,
+      "76": 0.6135,
+      "77": 1.4427,
+      "78": 2.4406,
+      "79": 0.3273
+    },
+    "late_plus": {}
+  },
+  "preregistration_notes": {
+    "check_layer_63_caveat": "check_layer=63 is derived from only n=10 discovery cases -- verified NOT to be small-n noise: per-case MLP DLA at L63 was negative in 10/10 cases, mean=-0.167, stdev=0.034 (tight spread). By contrast L79 (det's check layer) was highly erratic on this same IBP data: mean=+0.327, stdev=1.58, only 4/10 cases negative. So L63 is a real, low-noise, but MODEST-MAGNITUDE signal.",
+    "check_layer_63_success_criterion": "Because the effect is modest, held-out success at check_layer=63 is pre-registered with a sign-consistency criterion rather than a large-delta-magnitude criterion: mean MLP DLA at L63 is negative AND >=75% of held-out IBP error cases (n=26) are individually negative at L63. A small-n confidence-interval caveat applies given the held-out IBP error set is itself only n=26.",
+    "no_sign_matched_patch": "IBP has no sign-matched patch replication -- this experiment never existed for ibp_error in the discovery run (no exp_signmatched_patch.json was ever produced for this domain), and additionally IBP has zero plus-writers in the discovery data (10/10 minus-writers), so a sign-matched patch design would have no '+' donor group anyway. This exclusion is intentional, not an oversight."
+  }
+}

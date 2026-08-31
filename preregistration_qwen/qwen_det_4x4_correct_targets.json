@@ -1,0 +1,24 @@
+{
+  "model": "qwen",
+  "domain": "det_4x4_correct",
+  "n_layers": 80,
+  "human_reviewed": true,
+  "reviewed_by": "the PI (name withheld for double-blind review)",
+  "reviewed_date": "2026-08-18",
+  "habit_layers": [
+    75,
+    78
+  ],
+  "check_layer": 79,
+  "control_layers": [
+    30,
+    50
+  ],
+  "capture_layers": [
+    75,
+    78,
+    79
+  ],
+  "paired_error_domain": "det_4x4_error",
+  "note": "inherited from det_4x4_error targets; not derived from correct-domain data. Target layers are only ever discovered from error-domain cases; correct-domain runs reuse the same frozen layers to test whether the habit/check circuit is inert (as predicted) when the model already writes the correct sign."
+}

@@ -1,0 +1,152 @@
+{
+  "model": "qwen",
+  "domain": "det_4x4_error",
+  "n_layers": 80,
+  "human_reviewed": true,
+  "reviewed_by": "the PI (name withheld for double-blind review)",
+  "reviewed_date": "2026-08-18",
+  "derivation": "pipeline_release stage s03_derive_targets, run against the discovery-run expA_logit_lens.json + expB_dla.json for det_4x4_error (n=59 discovery cases). Same algorithm used to produce Llama's targets.json.",
+  "habit_layers": [
+    75,
+    78
+  ],
+  "check_layer": 79,
+  "control_layers": [
+    30,
+    50
+  ],
+  "capture_layers": [
+    75,
+    78,
+    79
+  ],
+  "late_window_start": 60,
+  "n_cases": {
+    "total": 59,
+    "emb_peak": 15,
+    "late_peak": 44,
+    "minus_writers": 29,
+    "plus_writers": 30
+  },
+  "emb_peak_ids": [
+    "C_4x4_det_005",
+    "C_4x4_det_011",
+    "C_4x4_det_027",
+    "C_4x4_det_030",
+    "C_4x4_det_042",
+    "NC_4x4_det_024",
+    "NC_4x4_det_043",
+    "NC_4x4_det_080",
+    "NC_4x4_det_105",
+    "NC_4x4_det_110",
+    "NC_4x4_det_117",
+    "NC_4x4_det_179",
+    "NC_4x4_det_185",
+    "NC_4x4_det_189",
+    "NC_4x4_det_190"
+  ],
+  "peak_layer_histogram": {
+    "0": 15,
+    "57": 1,
+    "71": 5,
+    "72": 7,
+    "74": 5,
+    "77": 12,
+    "78": 4,
+    "79": 10
+  },
+  "sign_token_modes": [
+    {
+      "wrong_sign_tok": 488,
+      "correct_sign_tok": 481,
+      "written_sign": "+",
+      "n": 30
+    },
+    {
+      "wrong_sign_tok": 481,
+      "correct_sign_tok": 488,
+      "written_sign": "-",
+      "n": 27
+    },
+    {
+      "wrong_sign_tok": 12,
+      "correct_sign_tok": 10,
+      "written_sign": "-",
+      "n": 2
+    }
+  ],
+  "evidence_mean_mlp_dla": {
+    "late_all": {
+      "60": 0.0157,
+      "61": 0.0265,
+      "62": 0.0135,
+      "63": 0.0324,
+      "64": 0.038,
+      "65": 0.1034,
+      "66": 0.154,
+      "67": 0.0727,
+      "68": 0.2041,
+      "69": -0.0877,
+      "70": 0.0984,
+      "71": 0.3481,
+      "72": 0.191,
+      "73": 0.0531,
+      "74": 0.21,
+      "75": 0.5724,
+      "76": 0.2048,
+      "77": 1.1196,
+      "78": 0.7137,
+      "79": -0.1538
+    },
+    "late_minus": {
+      "60": 0.1111,
+      "61": 0.1526,
+      "62": 0.0151,
+      "63": 0.0252,
+      "64": 0.1024,
+      "65": 0.0832,
+      "66": -0.2126,
+      "67": -0.2149,
+      "68": 0.4109,
+      "69": -0.0468,
+      "70": 0.104,
+      "71": -0.1776,
+      "72": -0.0,
+      "73": 0.039,
+      "74": -0.0118,
+      "75": 1.9314,
+      "76": 0.4216,
+      "77": -0.0439,
+      "78": 2.7744,
+      "79": 0.0123
+    },
+    "late_plus": {
+      "60": -0.0765,
+      "61": -0.0954,
+      "62": 0.0119,
+      "63": 0.0393,
+      "64": -0.0243,
+      "65": 0.123,
+      "66": 0.5084,
+      "67": 0.3508,
+      "68": 0.0041,
+      "69": -0.1273,
+      "70": 0.0929,
+      "71": 0.8562,
+      "72": 0.3757,
+      "73": 0.0668,
+      "74": 0.4244,
+      "75": -0.7414,
+      "76": -0.0048,
+      "77": 2.2443,
+      "78": -1.2784,
+      "79": -0.3144
+    }
+  },
+  "preregistration_notes": {
+    "patching_scope": "s07 patching arm is MLP-only for this held-out round (habit_layers + check_layer + control_layers). L77-attn (self_attn.o_proj) is intentionally NOT patched -- the current pipeline_release s07_patching.py has no code path for attention-type sites, and adding one days before a one-shot run was judged too risky.",
+    "L77_attn_handling": "L77 coverage instead comes from the existing s05 --with-heads attention ablation re-test (no new code required).",
+    "L77_attn_discovery_evidence": "In the original discovery sign-matched patch run (det_4x4_error, n=44), L77_attn had a 0/44 (0.00%) fix rate with mean delta_ld=+0.033 -- statistically indistinguishable from the null controls (L30_mlp mean delta=+0.001, L50_mlp mean delta=-0.023), despite being pre-registered as predicted-corrective. This was a null/failed causal result, not a positive finding.",
+    "L77_attn_held_out_prediction": "Pre-registered prediction: the s05 attention ablation re-test at L77 fails again on held-out data (no significant sign-flip recovery), consistent with the discovery null result."
+  }
+}
