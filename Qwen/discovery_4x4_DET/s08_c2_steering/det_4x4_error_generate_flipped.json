@@ -1,0 +1,243 @@
+{
+  "meta": {
+    "n_questions": 5,
+    "alphas": [
+      0,
+      2.0,
+      3.0
+    ],
+    "max_new_tokens": 4096,
+    "hook_position": "last (-1) at every step (prefill + decoding)",
+    "d_hat_recipe": "space-prefixed, norm-weighted",
+    "prompt_method": "marker index (not prefix_len)",
+    "prediction": "at flip_alpha, generated sign = correct for >=1 question; alpha=0 reproduces error sign; declined baseline = no evidence",
+    "pod6_failure_causes": "declines, MAX_NEW_TOKENS=1024 too low, IBP prefix_len cut mid-marker"
+  },
+  "results": {
+    "C_4x4_det_002": {
+      "id": "C_4x4_det_002",
+      "written_sign": "-",
+      "correct_sign": "+",
+      "flip_alpha": 3.0,
+      "prompt_end_char": 155,
+      "generations": {
+        "alpha_0": {
+          "generated_text_head": "The given matrix is:\n\n\\[ A = \\begin{bmatrix} -5 & 1 & 4 & -1 \\\\ -2 & -5 & -4 & 5 \\\\ 4 & -1 & -1 & 4 \\\\ 1 & 1 & 4 & 3 \\end{bmatrix} \\]\n\nIf you have a specific task or question related to this matrix, such as finding its determinant, eigenvalues, inver",
+          "generated_text_tail": "The given matrix is:\n\n\\[ A = \\begin{bmatrix} -5 & 1 & 4 & -1 \\\\ -2 & -5 & -4 & 5 \\\\ 4 & -1 & -1 & 4 \\\\ 1 & 1 & 4 & 3 \\end{bmatrix} \\]\n\nIf you have a specific task or question related to this matrix, such as finding its determinant, eigenvalues, inverse, or performing row operations, please let me know, and I'll be happy to help!",
+          "generated_length": 330,
+          "extracted_sign": "?",
+          "which_pattern": "NONE",
+          "match_offset": -1,
+          "confidence": "none",
+          "declined": true,
+          "correct": false,
+          "reproduces_error": false
+        },
+        "alpha_2.0": {
+          "generated_text_head": "The matrix \\( A \\) is given by:\n\n\\[\nA = \\begin{bmatrix}\n-5 & 1 & 4 & -1 \\\\\n-2 & -5 & -4 & 5 \\\\\n4 & -1 & -1 & 4 \\\\\n1 & 1 & 4 & 3\n\\end{bmatrix}\n\\]\n\nIf you have a specific question or task related to this matrix, such as finding its determinant, eigenva",
+          "generated_text_tail": "The matrix \\( A \\) is given by:\n\n\\[\nA = \\begin{bmatrix}\n-5 & 1 & 4 & -1 \\\\\n-2 & -5 & -4 & 5 \\\\\n4 & -1 & -1 & 4 \\\\\n1 & 1 & 4 & 3\n\\end{bmatrix}\n\\]\n\nIf you have a specific question or task related to this matrix, such as finding its determinant, eigenvalues, inverse, or performing row operations, please let me know, and I'll be happy to help!",
+          "generated_length": 341,
+          "extracted_sign": "?",
+          "which_pattern": "NONE",
+          "match_offset": -1,
+          "confidence": "none",
+          "declined": true,
+          "correct": false,
+          "reproduces_error": false
+        },
+        "alpha_3.0": {
+          "generated_text_head": "The given matrix is:\n\n\\[ A = \\begin{bmatrix} \n-5 & 1 & 4 & -1 \\\\ \n-2 & -5 & -4 & 5 \\\\ \n4 & -1 & -1 & 4 \\\\ \n1 & 1 & 4 & 3 \n\\end{bmatrix} \\]\n\nIf you have a specific task or question related to this matrix, such as finding its determinant, eigenvalues, ",
+          "generated_text_tail": "The given matrix is:\n\n\\[ A = \\begin{bmatrix} \n-5 & 1 & 4 & -1 \\\\ \n-2 & -5 & -4 & 5 \\\\ \n4 & -1 & -1 & 4 \\\\ \n1 & 1 & 4 & 3 \n\\end{bmatrix} \\]\n\nIf you have a specific task or question related to this matrix, such as finding its determinant, eigenvalues, inverse, or performing row operations, please let me know, and I'll be happy to help!",
+          "generated_length": 335,
+          "extracted_sign": "?",
+          "which_pattern": "NONE",
+          "match_offset": -1,
+          "confidence": "none",
+          "declined": true,
+          "correct": false,
+          "reproduces_error": false
+        }
+      }
+    },
+    "C_4x4_det_009": {
+      "id": "C_4x4_det_009",
+      "written_sign": "-",
+      "correct_sign": "+",
+      "flip_alpha": 3.0,
+      "prompt_end_char": 155,
+      "generations": {
+        "alpha_0": {
+          "generated_text_head": "To analyze the matrix \\( A = \\begin{bmatrix} 2 & 0 & -5 & -3 \\\\ 1 & 5 & 3 & 4 \\\\ -5 & -5 & 1 & -4 \\\\ 2 & 4 & -4 & -1 \\end{bmatrix} \\), we can perform several operations such as finding its determinant, rank, eigenvalues, and eigenvectors. Let's start",
+          "generated_text_tail": "e find the eigenvector \\(\\mathbf{v}_2\\).\n\nFor \\(\\lambda_3 = 2\\):\n\\[\n(A - 2I) \\mathbf{v} = 0\n\\]\nSolving this system, we find the eigenvector \\(\\mathbf{v}_3\\).\n\nFor \\(\\lambda_4 = 3\\):\n\\[\n(A - 3I) \\mathbf{v} = 0\n\\]\nSolving this system, we find the eigenvector \\(\\mathbf{v}_4\\).\n\n### Summary\n- The determinant of \\( A \\) is 0.\n- The rank of \\( A \\) is 3.\n- The eigenvalues of \\( A \\) are 0, 1, 2, and 3.\n- The corresponding eigenvectors can be found by solving the respective systems of linear equations.",
+          "generated_length": 3527,
+          "extracted_sign": "?",
+          "which_pattern": "NONE",
+          "match_offset": -1,
+          "confidence": "none",
+          "declined": false,
+          "correct": false,
+          "reproduces_error": false
+        },
+        "alpha_2.0": {
+          "generated_text_head": "To analyze the matrix \\( A = \\begin{bmatrix} 2 & 0 & -5 & -3 \\\\ 1 & 5 & 3 & 4 \\\\ -5 & -5 & 1 & -4 \\\\ 2 & 4 & -4 & -1 \\end{bmatrix} \\), we can perform several operations such as finding its determinant, rank, eigenvalues, and eigenvectors. Let's start",
+          "generated_text_tail": "\n\nFor \\(\\lambda_3 = 2\\):\n\\[\n(A - 2I) \\mathbf{v} = 0\n\\]\nSolving this system, we find the eigenvector \\(\\mathbf{v}_3\\).\n\nFor \\(\\lambda_4 = 3\\):\n\\[\n(A - 3I) \\mathbf{v} = 0\n\\]\nSolving this system, we find the eigenvector \\(\\mathbf{v}_4\\).\n\n### Summary\n- **Determinant**: \\(\\det(A) = 0\\)\n- **Rank**: \\(\\text{rank}(A) = 3\\)\n- **Eigenvalues**: \\(\\lambda_1 = 0, \\lambda_2 = 1, \\lambda_3 = 2, \\lambda_4 = 3\\)\n\nThe eigenvectors can be found by solving the corresponding homogeneous systems for each eigenvalue.",
+          "generated_length": 3411,
+          "extracted_sign": "?",
+          "which_pattern": "NONE",
+          "match_offset": -1,
+          "confidence": "none",
+          "declined": false,
+          "correct": false,
+          "reproduces_error": false
+        },
+        "alpha_3.0": {
+          "generated_text_head": "To analyze the matrix \\( A = \\begin{bmatrix} 2 & 0 & -5 & -3 \\\\ 1 & 5 & 3 & 4 \\\\ -5 & -5 & 1 & -4 \\\\ 2 & 4 & -4 & -1 \\end{bmatrix} \\), we can perform several operations such as finding its determinant, rank, eigenvalues, and eigenvectors. Let's start",
+          "generated_text_tail": "find the eigenvector \\(\\mathbf{v}_2\\).\n\nFor \\(\\lambda_3 = 2\\):\n\\[\n(A - 2I) \\mathbf{v} = 0\n\\]\nSolving this system, we find the eigenvector \\(\\mathbf{v}_3\\).\n\nFor \\(\\lambda_4 = 3\\):\n\\[\n(A - 3I) \\mathbf{v} = 0\n\\]\nSolving this system, we find the eigenvector \\(\\mathbf{v}_4\\).\n\n### Summary\n- The determinant of \\( A \\) is 0.\n- The rank of \\( A \\) is 3.\n- The eigenvalues of \\( A \\) are \\( 0, 1, 2, 3 \\).\n- The corresponding eigenvectors can be found by solving the respective systems of linear equations.",
+          "generated_length": 3412,
+          "extracted_sign": "?",
+          "which_pattern": "NONE",
+          "match_offset": -1,
+          "confidence": "none",
+          "declined": false,
+          "correct": false,
+          "reproduces_error": false
+        }
+      }
+    },
+    "NC_4x4_det_011": {
+      "id": "NC_4x4_det_011",
+      "written_sign": "-",
+      "correct_sign": "+",
+      "flip_alpha": 2.0,
+      "prompt_end_char": 156,
+      "generations": {
+        "alpha_0": {
+          "generated_text_head": "To analyze the matrix \\( A = \\begin{bmatrix} -4 & 0 & 4 & -1 \\\\ -4 & -3 & -5 & 5 \\\\ -3 & -3 & -4 & 1 \\\\ 4 & 2 & 0 & 4 \\end{bmatrix} \\), we can perform several operations such as finding its determinant, eigenvalues, and eigenvectors. However, let's s",
+          "generated_text_tail": "bmatrix}\n\\]\n\nThe characteristic polynomial is:\n\n\\[\n\\det(A - \\lambda I) = 0\n\\]\n\nThis is a 4x4 determinant, which can be quite complex to compute by hand. However, since the matrix is invertible, it has no zero eigenvalues. The exact eigenvalues can be found using numerical methods or software tools like MATLAB or Python.\n\n### Summary\n\n- The matrix \\( A \\) is invertible.\n- The determinant of \\( A \\) is 1.\n- The eigenvalues can be found by solving the characteristic equation, but they are non-zero.",
+          "generated_length": 4831,
+          "extracted_sign": "?",
+          "which_pattern": "NONE",
+          "match_offset": -1,
+          "confidence": "none",
+          "declined": false,
+          "correct": false,
+          "reproduces_error": false
+        },
+        "alpha_2.0": {
+          "generated_text_head": "The matrix \\( A \\) is given by:\n\n\\[\nA = \\begin{bmatrix}\n-4 & 0 & 4 & -1 \\\\\n-4 & -3 & -5 & 5 \\\\\n-3 & -3 & -4 & 1 \\\\\n4 & 2 & 0 & 4\n\\end{bmatrix}\n\\]\n\nIf you have a specific question or task related to this matrix, such as finding its determinant, eigenv",
+          "generated_text_tail": "The matrix \\( A \\) is given by:\n\n\\[\nA = \\begin{bmatrix}\n-4 & 0 & 4 & -1 \\\\\n-4 & -3 & -5 & 5 \\\\\n-3 & -3 & -4 & 1 \\\\\n4 & 2 & 0 & 4\n\\end{bmatrix}\n\\]\n\nIf you have a specific question or task related to this matrix, such as finding its determinant, eigenvalues, or performing row operations, please let me know, and I'll be happy to help!",
+          "generated_length": 333,
+          "extracted_sign": "?",
+          "which_pattern": "NONE",
+          "match_offset": -1,
+          "confidence": "none",
+          "declined": true,
+          "correct": false,
+          "reproduces_error": false
+        },
+        "alpha_3.0": {
+          "generated_text_head": "To analyze the matrix \\( A = \\begin{bmatrix} \n-4 & 0 & 4 & -1 \\\\ \n-4 & -3 & -5 & 5 \\\\ \n-3 & -3 & -4 & 1 \\\\ \n4 & 2 & 0 & 4 \n\\end{bmatrix} \\), we can perform several operations such as finding its determinant, eigenvalues, and eigenvectors. However, le",
+          "generated_text_tail": "\\ \n4 & 2 \n\\end{bmatrix}\n\\]\n\n\\[\n= (-4)(-3 \\cdot 0 - (-4) \\cdot 2) + (-3)(-3 \\cdot 0 - (-4) \\cdot 4) + (-5)(-3 \\cdot 2 - (-3) \\cdot 4)\n\\]\n\n\\[\n= (-4)(8) + (-3)(16) + (-5)(-6 + 12)\n\\]\n\n\\[\n= (-4)(8) + (-3)(16) + (-5)(6)\n\\]\n\n\\[\n= -32 + (-48) + (-30) = -110\n\\]\n\nNow, substituting back into the original determinant calculation:\n\n\\[\n\\det(A) = (-4)(158) + 0 + 4(134) + (-1)(-110)\n\\]\n\n\\[\n= (-4)(158) + 4(134) + 110\n\\]\n\n\\[\n= -632 + 536 + 110\n\\]\n\n\\[\n= 14\n\\]\n\nThus, the determinant of \\( A \\) is \\( \\boxed{14} \\).",
+          "generated_length": 2870,
+          "extracted_sign": "+",
+          "which_pattern": "FINAL_1",
+          "match_offset": 2856,
+          "confidence": "high",
+          "declined": false,
+          "correct": true,
+          "reproduces_error": false
+        }
+      }
+    },
+    "NC_4x4_det_047": {
+      "id": "NC_4x4_det_047",
+      "written_sign": "-",
+      "correct_sign": "+",
+      "flip_alpha": 3.0,
+      "prompt_end_char": 157,
+      "generations": {
+        "alpha_0": {
+          "generated_text_head": "To analyze the matrix \\( A = \\begin{bmatrix} -2 & -2 & 0 & -5 \\\\ -1 & -1 & 2 & 0 \\\\ -2 & 2 & -2 & -5 \\\\ 5 & 1 & -1 & 5 \\end{bmatrix} \\), we can perform several operations such as finding its rank, determinant, eigenvalues, and eigenvectors. Let's sta",
+          "generated_text_tail": "d the roots. For simplicity, let's assume we have found the eigenvalues \\(\\lambda_1, \\lambda_2, \\lambda_3, \\lambda_4\\).\n\nFor each eigenvalue \\(\\lambda_i\\), we solve the system \\((A - \\lambda_i I) \\mathbf{v} = 0\\) to find the corresponding eigenvector \\(\\mathbf{v}\\).\n\n### Summary\n\n- **Rank of \\(A\\):** 4\n- **Determinant of \\(A\\):** 40\n- **Eigenvalues and Eigenvectors:** Can be found using numerical methods or software.\n\nIf you need more specific details or further calculations, please let me know!",
+          "generated_length": 3201,
+          "extracted_sign": "?",
+          "which_pattern": "NONE",
+          "match_offset": -1,
+          "confidence": "none",
+          "declined": true,
+          "correct": false,
+          "reproduces_error": false
+        },
+        "alpha_2.0": {
+          "generated_text_head": "To analyze the matrix \\( A = \\begin{bmatrix} -2 & -2 & 0 & -5 \\\\ -1 & -1 & 2 & 0 \\\\ -2 & 2 & -2 & -5 \\\\ 5 & 1 & -1 & 5 \\end{bmatrix} \\), we can perform several operations such as finding its determinant, rank, eigenvalues, and eigenvectors. Let's sta",
+          "generated_text_tail": " \\\\ 1 \\end{bmatrix}\n\\]\n\nThus, the eigenvectors corresponding to \\(\\lambda = 0\\) are:\n\\[\n\\mathbf{v}_1 = \\begin{bmatrix} 1 \\\\ 1 \\\\ 0 \\\\ 0 \\end{bmatrix}, \\quad \\mathbf{v}_2 = \\begin{bmatrix} 0 \\\\ 0 \\\\ 1 \\\\ 1 \\end{bmatrix}\n\\]\n\nIn summary:\n- The determinant of \\( A \\) is 0.\n- The rank of \\( A \\) is 2.\n- The eigenvalues of \\( A \\) are all 0.\n- The eigenvectors corresponding to \\(\\lambda = 0\\) are \\(\\begin{bmatrix} 1 \\\\ 1 \\\\ 0 \\\\ 0 \\end{bmatrix}\\) and \\(\\begin{bmatrix} 0 \\\\ 0 \\\\ 1 \\\\ 1 \\end{bmatrix}\\).",
+          "generated_length": 3867,
+          "extracted_sign": "?",
+          "which_pattern": "NONE",
+          "match_offset": -1,
+          "confidence": "none",
+          "declined": false,
+          "correct": false,
+          "reproduces_error": false
+        },
+        "alpha_3.0": {
+          "generated_text_head": "To analyze the matrix \\( A = \\begin{bmatrix} \n-2 & -2 & 0 & -5 \\\\ \n-1 & -1 & 2 & 0 \\\\ \n-2 & 2 & -2 & -5 \\\\ \n5 & 1 & -1 & 5 \n\\end{bmatrix} \\), we can perform several operations such as finding its determinant, rank, eigenvalues, and eigenvectors. Let'",
+          "generated_text_tail": "it analytically can be complex. However, given that the rank of the matrix is 3, one of the eigenvalues must be zero. The other eigenvalues can be found by solving the reduced characteristic polynomial.\n\n### Summary\n\n- **Rank of \\( A \\)**: 3\n- **Determinant of \\( A \\)**: 0\n- **Eigenvalues**: One eigenvalue is 0, and the others can be found by solving the characteristic polynomial.\n\nIf you need more detailed calculations or specific values for the eigenvalues and eigenvectors, please let me know!",
+          "generated_length": 2686,
+          "extracted_sign": "?",
+          "which_pattern": "NONE",
+          "match_offset": -1,
+          "confidence": "none",
+          "declined": true,
+          "correct": false,
+          "reproduces_error": false
+        }
+      }
+    },
+    "NC_4x4_det_192": {
+      "id": "NC_4x4_det_192",
+      "written_sign": "-",
+      "correct_sign": "+",
+      "flip_alpha": 2.0,
+      "prompt_end_char": 155,
+      "generations": {
+        "alpha_0": {
+          "generated_text_head": "The given matrix \\( A \\) is:\n\n\\[\nA = \\begin{bmatrix}\n-2 & 0 & 5 & -2 \\\\\n-2 & 4 & 3 & 4 \\\\\n-5 & 1 & 4 & -3 \\\\\n1 & -4 & 5 & -3\n\\end{bmatrix}\n\\]\n\nIf you have a specific question or task related to this matrix, such as finding its determinant, eigenvalue",
+          "generated_text_tail": "The given matrix \\( A \\) is:\n\n\\[\nA = \\begin{bmatrix}\n-2 & 0 & 5 & -2 \\\\\n-2 & 4 & 3 & 4 \\\\\n-5 & 1 & 4 & -3 \\\\\n1 & -4 & 5 & -3\n\\end{bmatrix}\n\\]\n\nIf you have a specific question or task related to this matrix, such as finding its determinant, eigenvalues, inverse, or performing row operations, please let me know, and I'll be happy to help!",
+          "generated_length": 338,
+          "extracted_sign": "?",
+          "which_pattern": "NONE",
+          "match_offset": -1,
+          "confidence": "none",
+          "declined": true,
+          "correct": false,
+          "reproduces_error": false
+        },
+        "alpha_2.0": {
+          "generated_text_head": "The matrix \\( A \\) is given by:\n\n\\[\nA = \\begin{bmatrix}\n-2 & 0 & 5 & -2 \\\\\n-2 & 4 & 3 & 4 \\\\\n-5 & 1 & 4 & -3 \\\\\n1 & -4 & 5 & -3\n\\end{bmatrix}\n\\]\n\nIf you have a specific question or task related to this matrix, such as finding its determinant, eigenva",
+          "generated_text_tail": "The matrix \\( A \\) is given by:\n\n\\[\nA = \\begin{bmatrix}\n-2 & 0 & 5 & -2 \\\\\n-2 & 4 & 3 & 4 \\\\\n-5 & 1 & 4 & -3 \\\\\n1 & -4 & 5 & -3\n\\end{bmatrix}\n\\]\n\nIf you have a specific question or task related to this matrix, such as finding its determinant, eigenvalues, inverse, or performing row operations, please let me know, and I'll be happy to help!",
+          "generated_length": 341,
+          "extracted_sign": "?",
+          "which_pattern": "NONE",
+          "match_offset": -1,
+          "confidence": "none",
+          "declined": true,
+          "correct": false,
+          "reproduces_error": false
+        },
+        "alpha_3.0": {
+          "generated_text_head": "The given matrix \\( A \\) is:\n\n\\[\nA = \\begin{bmatrix}\n-2 & 0 & 5 & -2 \\\\\n-2 & 4 & 3 & 4 \\\\\n-5 & 1 & 4 & -3 \\\\\n1 & -4 & 5 & -3\n\\end{bmatrix}\n\\]\n\nIf you have a specific question or task related to this matrix, such as finding its determinant, eigenvalue",
+          "generated_text_tail": "The given matrix \\( A \\) is:\n\n\\[\nA = \\begin{bmatrix}\n-2 & 0 & 5 & -2 \\\\\n-2 & 4 & 3 & 4 \\\\\n-5 & 1 & 4 & -3 \\\\\n1 & -4 & 5 & -3\n\\end{bmatrix}\n\\]\n\nIf you have a specific question or task related to this matrix, such as finding its determinant, eigenvalues, inverse, or performing row operations, please let me know, and I'll be happy to help!",
+          "generated_length": 338,
+          "extracted_sign": "?",
+          "which_pattern": "NONE",
+          "match_offset": -1,
+          "confidence": "none",
+          "declined": true,
+          "correct": false,
+          "reproduces_error": false
+        }
+      }
+    }
+  }
+}

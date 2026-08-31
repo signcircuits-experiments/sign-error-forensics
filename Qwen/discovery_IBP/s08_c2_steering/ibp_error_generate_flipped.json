@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "n_questions": 3,
+    "alphas": [
+      0,
+      2.0,
+      3.0
+    ],
+    "max_new_tokens": 4096,
+    "hook_position": "last (-1) at every step (prefill + decoding)",
+    "d_hat_recipe": "space-prefixed, norm-weighted",
+    "prompt_method": "marker index (not prefix_len)",
+    "prediction": "at flip_alpha, generated sign = correct for >=1 question; alpha=0 reproduces error sign; declined baseline = no evidence",
+    "pod6_failure_causes": "declines, MAX_NEW_TOKENS=1024 too low, IBP prefix_len cut mid-marker"
+  },
+  "results": {
+    "ibp_pts_n7_005": {
+      "id": "ibp_pts_n7_005",
+      "written_sign": "-",
+      "correct_sign": "+",
+      "flip_alpha": 3.0,
+      "prompt_end_char": 214,
+      "generations": {
+        "alpha_0": {
+          "generated_text_head": "To evaluate the integral \\(\\int x^7 \\sin(7x) \\, dx\\) using integration by parts, we will use the formula:\n\n\\[\n\\int u \\, dv = uv - \\int v \\, du\n\\]\n\nWe need to choose \\(u\\) and \\(dv\\) such that the resulting integral is easier to solve. Let's set:\n\n\\[\n",
+          "generated_text_tail": "tegrals. After several applications, we will eventually reach an integral of the form \\(\\int \\sin(7x) \\, dx\\), which is straightforward to solve.\n\nAfter performing all the necessary steps and simplifications, the final antiderivative is:\n\n\\[\n\\boxed{-\\frac{1}{7} x^7 \\cos(7x) + \\frac{1}{49} x^6 \\sin(7x) + \\frac{6}{343} x^5 \\cos(7x) - \\frac{30}{2401} x^4 \\sin(7x) - \\frac{120}{16807} x^3 \\cos(7x) + \\frac{360}{117649} x^2 \\sin(7x) + \\frac{720}{823543} x \\cos(7x) - \\frac{720}{5764801} \\sin(7x) + C}\n\\]",
+          "generated_length": 2198,
+          "extracted_sign": "-",
+          "which_pattern": "FINAL_4",
+          "match_offset": 1940,
+          "confidence": "high",
+          "declined": false,
+          "correct": false,
+          "reproduces_error": true
+        },
+        "alpha_2.0": {
+          "generated_text_head": "To evaluate the integral \\(\\int x^7 \\sin(7x) \\, dx\\) using integration by parts, we will use the formula:\n\n\\[\n\\int u \\, dv = uv - \\int v \\, du\n\\]\n\nWe need to choose \\(u\\) and \\(dv\\) such that the resulting integral is easier to solve. Let's set:\n\n\\[\n",
+          "generated_text_tail": " and found the pattern. The general form after \\(n\\) applications of integration by parts will be:\n\n\\[\n\\int x^n \\sin(7x) \\, dx = \\sum_{k=0}^{n} c_k x^{n-k} \\sin(7x) + d_k x^{n-k} \\cos(7x)\n\\]\n\nFor \\(n = 7\\), the final result after all steps is:\n\n\\[\n\\boxed{-\\frac{1}{7} x^7 \\cos(7x) + \\frac{1}{7} x^6 \\sin(7x) + \\frac{6}{49} x^5 \\cos(7x) - \\frac{30}{343} x^4 \\sin(7x) - \\frac{120}{2401} x^3 \\cos(7x) + \\frac{360}{16807} x^2 \\sin(7x) + \\frac{720}{117649} x \\cos(7x) - \\frac{720}{823543} \\sin(7x) + C}\n\\]",
+          "generated_length": 2119,
+          "extracted_sign": "-",
+          "which_pattern": "FINAL_4",
+          "match_offset": 1867,
+          "confidence": "high",
+          "declined": false,
+          "correct": false,
+          "reproduces_error": true
+        },
+        "alpha_3.0": {
+          "generated_text_head": "To evaluate the integral \\(\\int x^7 \\sin(7x) \\, dx\\) using integration by parts, we will use the formula:\n\n\\[\n\\int u \\, dv = uv - \\int v \\, du\n\\]\n\nWe need to choose \\(u\\) and \\(dv\\) such that the resulting integral is easier to solve. Let's set:\n\n\\[\n",
+          "generated_text_tail": " x^{n-1} \\cos(ax) \\, dx\n\\]\n\nUsing this reduction formula iteratively, we can express the integral in terms of simpler integrals until we reach a basic form. After applying the reduction formula multiple times, we get:\n\n\\[\n\\int x^7 \\sin(7x) \\, dx = \\boxed{-\\frac{1}{7} x^7 \\cos(7x) + \\frac{1}{7} x^6 \\sin(7x) + \\frac{6}{49} x^5 \\cos(7x) - \\frac{30}{343} x^4 \\sin(7x) - \\frac{120}{2401} x^3 \\cos(7x) + \\frac{360}{16807} x^2 \\sin(7x) + \\frac{720}{117649} x \\cos(7x) - \\frac{720}{823543} \\sin(7x) + C}\n\\]",
+          "generated_length": 2300,
+          "extracted_sign": "-",
+          "which_pattern": "FINAL_4",
+          "match_offset": 2048,
+          "confidence": "high",
+          "declined": false,
+          "correct": false,
+          "reproduces_error": true
+        }
+      }
+    },
+    "ibp_pts_n7_012": {
+      "id": "ibp_pts_n7_012",
+      "written_sign": "-",
+      "correct_sign": "+",
+      "flip_alpha": 3.0,
+      "prompt_end_char": 215,
+      "generations": {
+        "alpha_0": {
+          "generated_text_head": "To evaluate the integral \\(\\int x^7 \\sin(12x) \\, dx\\) using integration by parts, we will use the formula:\n\n\\[\n\\int u \\, dv = uv - \\int v \\, du\n\\]\n\nWe need to choose \\(u\\) and \\(dv\\) such that the resulting integral is easier to solve. Let's set:\n\n\\[",
+          "generated_text_tail": "rms of simpler integrals until we reach a basic form. For brevity, let's assume we have applied the reduction formula correctly and obtained the final result:\n\n\\[\n\\int x^7 \\sin(12x) \\, dx = -\\frac{1}{12} x^7 \\cos(12x) + \\frac{7}{144} x^6 \\sin(12x) - \\frac{7 \\cdot 6}{1728} x^5 \\cos(12x) + \\cdots + C\n\\]\n\nAfter simplifying and combining all terms, the final antiderivative is:\n\n\\[\n\\boxed{-\\frac{1}{12} x^7 \\cos(12x) + \\frac{7}{144} x^6 \\sin(12x) - \\frac{7 \\cdot 6}{1728} x^5 \\cos(12x) + \\cdots + C}\n\\]",
+          "generated_length": 2296,
+          "extracted_sign": "-",
+          "which_pattern": "FINAL_4",
+          "match_offset": 2176,
+          "confidence": "high",
+          "declined": false,
+          "correct": false,
+          "reproduces_error": true
+        },
+        "alpha_2.0": {
+          "generated_text_head": "To evaluate the integral \\(\\int x^7 \\sin(12x) \\, dx\\) using integration by parts, we will use the formula:\n\n\\[\n\\int u \\, dv = uv - \\int v \\, du\n\\]\n\nWe need to choose \\(u\\) and \\(dv\\) such that the resulting integral is easier to solve. Let's set:\n\n\\[",
+          "generated_text_tail": "4 \\cdot 12^4} x^2 \\sin(12x) + \\frac{7 \\cdot 6 \\cdot 5 \\cdot 4 \\cdot 3 \\cdot 2}{144 \\cdot 12^5} x \\cos(12x) - \\frac{7 \\cdot 6 \\cdot 5 \\cdot 4 \\cdot 3 \\cdot 2 \\cdot 1}{144 \\cdot 12^6} \\sin(12x) + C}\n\\]\n\nSimplifying the coefficients:\n\n\\[\n= \\boxed{-\\frac{1}{12} x^7 \\cos(12x) + \\frac{7}{144} x^6 \\sin(12x) + \\frac{7}{288} x^5 \\cos(12x) - \\frac{35}{10368} x^4 \\sin(12x) - \\frac{35}{31104} x^3 \\cos(12x) + \\frac{35}{93312} x^2 \\sin(12x) + \\frac{35}{279936} x \\cos(12x) - \\frac{35}{839808} \\sin(12x) + C}\n\\]",
+          "generated_length": 2757,
+          "extracted_sign": "-",
+          "which_pattern": "FINAL_4",
+          "match_offset": 2494,
+          "confidence": "high",
+          "declined": false,
+          "correct": false,
+          "reproduces_error": true
+        },
+        "alpha_3.0": {
+          "generated_text_head": "To evaluate the integral \\(\\int x^7 \\sin(12x) \\, dx\\) using integration by parts, we will use the formula:\n\n\\[\n\\int u \\, dv = uv - \\int v \\, du\n\\]\n\nWe need to choose \\(u\\) and \\(dv\\) such that the resulting integral is easier to solve. Let's set:\n\n\\[",
+          "generated_text_tail": "e integral in terms of simpler integrals until we reach a constant multiple of \\(\\int \\sin(12x) \\, dx\\).\n\nAfter applying the reduction formula multiple times, we get:\n\n\\[\n\\int x^7 \\sin(12x) \\, dx = \\boxed{-\\frac{1}{12} x^7 \\cos(12x) + \\frac{7}{144} x^6 \\sin(12x) + \\frac{7 \\cdot 6}{144 \\cdot 12} x^5 \\cos(12x) + \\cdots + C}\n\\]\n\nThe final simplified antiderivative is:\n\n\\[\n\\boxed{-\\frac{1}{12} x^7 \\cos(12x) + \\frac{7}{144} x^6 \\sin(12x) + \\frac{7 \\cdot 6}{144 \\cdot 12} x^5 \\cos(12x) + \\cdots + C}\n\\]",
+          "generated_length": 2280,
+          "extracted_sign": "-",
+          "which_pattern": "FINAL_4",
+          "match_offset": 2152,
+          "confidence": "high",
+          "declined": false,
+          "correct": false,
+          "reproduces_error": true
+        }
+      }
+    },
+    "ibp_pts_n8_005": {
+      "id": "ibp_pts_n8_005",
+      "written_sign": "-",
+      "correct_sign": "+",
+      "flip_alpha": 3.0,
+      "prompt_end_char": 214,
+      "generations": {
+        "alpha_0": {
+          "generated_text_head": "To evaluate the integral \\(\\int x^8 \\sin(7x) \\, dx\\) using integration by parts, we will use the formula:\n\n\\[\n\\int u \\, dv = uv - \\int v \\, du\n\\]\n\nWe need to choose \\(u\\) and \\(dv\\) such that the resulting integral is easier to solve. Let's set:\n\n\\[\n",
+          "generated_text_tail": " \\frac{48}{16807} x^4 \\cos(7x) + \\frac{192}{117649} x^3 \\sin(7x) + \\frac{192}{823543} x^2 \\cos(7x) - \\frac{384}{5764801} x \\sin(7x) - \\frac{384}{40353607} \\cos(7x)\n\\]\n\nThus, the final antiderivative is:\n\n\\[\n\\boxed{-\\frac{1}{7} x^8 \\cos(7x) + \\frac{8}{49} x^7 \\sin(7x) + \\frac{8}{343} x^6 \\cos(7x) - \\frac{48}{2401} x^5 \\sin(7x) - \\frac{48}{16807} x^4 \\cos(7x) + \\frac{192}{117649} x^3 \\sin(7x) + \\frac{192}{823543} x^2 \\cos(7x) - \\frac{384}{5764801} x \\sin(7x) - \\frac{384}{40353607} \\cos(7x) + C}\n\\]",
+          "generated_length": 3453,
+          "extracted_sign": "-",
+          "which_pattern": "FINAL_4",
+          "match_offset": 3160,
+          "confidence": "high",
+          "declined": false,
+          "correct": false,
+          "reproduces_error": true
+        },
+        "alpha_2.0": {
+          "generated_text_head": "To evaluate the integral \\(\\int x^8 \\sin(7x) \\, dx\\) using integration by parts, we will use the formula:\n\n\\[\n\\int u \\, dv = uv - \\int v \\, du\n\\]\n\nWe need to choose \\(u\\) and \\(dv\\) such that the resulting integral is easier to solve. Let's set:\n\n\\[\n",
+          "generated_text_tail": " \\frac{48}{16807} x^4 \\cos(7x) + \\frac{192}{117649} x^3 \\sin(7x) + \\frac{192}{823543} x^2 \\cos(7x) - \\frac{384}{5764801} x \\sin(7x) - \\frac{384}{40353607} \\cos(7x)\n\\]\n\nThus, the final antiderivative is:\n\n\\[\n\\boxed{-\\frac{1}{7} x^8 \\cos(7x) + \\frac{8}{49} x^7 \\sin(7x) + \\frac{8}{343} x^6 \\cos(7x) - \\frac{48}{2401} x^5 \\sin(7x) - \\frac{48}{16807} x^4 \\cos(7x) + \\frac{192}{117649} x^3 \\sin(7x) + \\frac{192}{823543} x^2 \\cos(7x) - \\frac{384}{5764801} x \\sin(7x) - \\frac{384}{40353607} \\cos(7x) + C}\n\\]",
+          "generated_length": 3402,
+          "extracted_sign": "-",
+          "which_pattern": "FINAL_4",
+          "match_offset": 3109,
+          "confidence": "high",
+          "declined": false,
+          "correct": false,
+          "reproduces_error": true
+        },
+        "alpha_3.0": {
+          "generated_text_head": "To evaluate the integral \\(\\int x^8 \\sin(7x) \\, dx\\) using integration by parts, we will use the formula:\n\n\\[\n\\int u \\, dv = uv - \\int v \\, du\n\\]\n\nWe need to choose \\(u\\) and \\(dv\\) such that the resulting integral is easier to solve. Let's set:\n\n\\[\n",
+          "generated_text_tail": " \\frac{48}{16807} x^4 \\cos(7x) + \\frac{192}{117649} x^3 \\sin(7x) + \\frac{192}{823543} x^2 \\cos(7x) - \\frac{384}{5764801} x \\sin(7x) - \\frac{384}{40353607} \\cos(7x)\n\\]\n\nThus, the final antiderivative is:\n\n\\[\n\\boxed{-\\frac{1}{7} x^8 \\cos(7x) + \\frac{8}{49} x^7 \\sin(7x) + \\frac{8}{343} x^6 \\cos(7x) - \\frac{48}{2401} x^5 \\sin(7x) - \\frac{48}{16807} x^4 \\cos(7x) + \\frac{192}{117649} x^3 \\sin(7x) + \\frac{192}{823543} x^2 \\cos(7x) - \\frac{384}{5764801} x \\sin(7x) - \\frac{384}{40353607} \\cos(7x) + C}\n\\]",
+          "generated_length": 3470,
+          "extracted_sign": "-",
+          "which_pattern": "FINAL_4",
+          "match_offset": 3177,
+          "confidence": "high",
+          "declined": false,
+          "correct": false,
+          "reproduces_error": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,4651 @@
+id,sign_subtype,error_family,condition,ground_truth,wrong_sign,correct_sign,sign_char_offset,prefix_len,full_input,Qwen2.5-72B,context_check,search_strategy,domain,depth_level
+ibp_pts_n10_b13,Alternating_Drift,ibp,failure,- \frac{x^{10} \cos{\left(13 x \right)}}{13} + \frac{10 x^{9} \sin{\left(13 x \right)}}{169} + \frac{90 x^{8} \cos{\left(13 x \right)}}{2197} - \frac{720 x^{7} \sin{\left(13 x \right)}}{28561} - \frac{5040 x^{6} \cos{\left(13 x \right)}}{371293} + \frac{30240 x^{5} \sin{\left(13 x \right)}}{4826809} + \frac{151200 x^{4} \cos{\left(13 x \right)}}{62748517} - \frac{604800 x^{3} \sin{\left(13 x \right)}}{815730721} - \frac{1814400 x^{2} \cos{\left(13 x \right)}}{10604499373} + \frac{3628800 x \sin{\left(13 x \right)}}{137858491849} + \frac{3628800 \cos{\left(13 x \right)}}{1792160394037},-,+,1874,374,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{10} \sin(13x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^{10} \sin(13x) \, dx\), we will use integration by parts repeatedly. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) in such a way that the integral becomes simpler with each application. Let's start with:
+
+\[
+u = x^{10}, \quad dv = \sin(13x) \, dx
+\]
+
+Then, we have:
+
+\[
+du = 10x^9 \, dx, \quad v = -\frac{1}{13} \cos(13x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{10} \sin(13x) \, dx = x^{10} \left( -\frac{1}{13} \cos(13x) \right) - \int -\frac{1}{13} \cos(13x) \cdot 10x^9 \, dx
+\]
+
+Simplifying:
+
+\[
+\int x^{10} \sin(13x) \, dx = -\frac{1}{13} x^{10} \cos(13x) + \frac{10}{13} \int x^9 \cos(13x) \, dx
+\]
+
+Now, we need to evaluate \(\int x^9 \cos(13x) \, dx\). We will use integration by parts again:
+
+\[
+u = x^9, \quad dv = \cos(13x) \, dx
+\]
+
+Then, we have:
+
+\[
+du = 9x^8 \, dx, \quad v = \frac{1}{13} \sin(13x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^9 \cos(13x) \, dx = x^9 \left( \frac{1}{13} \sin(13x) \right) - \int \frac{1}{13} \sin(13x) \cdot 9x^8 \, dx
+\]
+
+Simplifying:
+
+\[
+\int x^9 \cos(13x) \, dx = \frac{1}{13} x^9 \sin(13x) - \frac{9}{13} \int x^8 \sin(13x) \, dx
+\]
+
+Substituting back:
+
+\[
+\int x^{10} \sin(13x) \, dx = -\frac{1}{13} x^{10} \cos(13x) + \frac{10}{13} \left( \frac{1}{13} x^9 \sin(13x) - \frac{9}{13} \int x^8 \sin(13x) \, dx \right)
+\]
+
+Simplifying further:
+
+\[
+\int x^{10} \sin(13x) \, dx = -\frac{1}{13} x^{10} \cos(13x) + \frac{10}{169} x^9 \sin(13x) - \frac{90}{169} \int x^8 \sin(13x) \, dx
+\]
+
+We continue this process for each power of \(x\) from \(x^8\) down to \(x^0\). Each step will involve choosing \(u\) and \(dv\) appropriately and applying integration by parts. The pattern will be:
+
+\[
+\int x^n \sin(13x) \, dx = -\frac{1}{13} x^n \cos(13x) + \frac{n}{13} \int x^{n-1} \cos(13x) \, dx
+\]
+
+\[
+\int x^n \cos(13x) \, dx = \frac{1}{13} x^n \sin(13x) - \frac{n}{13} \int x^{n-1} \sin(13x) \, dx
+\]
+
+After 11 applications of integration by parts, we will have:
+
+\[
+\int x^{10} \sin(13x) \, dx = -\frac{1}{13} x^{10} \cos(13x) + \frac{10}{169} x^9 \sin(13x) - \frac{90}{2197} x^8 \cos(13x) + \frac{720}{28561} x^7 \sin(13x) - \frac{5040}{371293} x^6 \cos(13x) + \frac{30240}{4826809} x^5 \sin(13x) - \frac{151200}{62748517} x^4 \cos(13x) + \frac{604800}{815730721} x^3 \sin(13x) - \frac{1814400}{10604499373} x^2 \cos(13x) + \frac{3628800}{137858491849} x \sin(13x) - \frac{3628800}{1792160394037} \cos(13x) + C
+\]
+
+Simplifying the coefficients:
+
+\[
+\int x^{10} \sin(13x) \, dx = -\frac{1}{13} x^{10} \cos(13x) + \frac{10}{169} x^9 \sin(13x) - \frac{90}{2197} x^8 \cos(13x) + \frac{720}{28561} x^7 \sin(13x) - \frac{5040}{371293} x^6 \cos(13x) + \frac{30240}{4826809} x^5 \sin(13x) - \frac{151200}{62748517} x^4 \cos(13x) + \frac{604800}{815730721} x^3 \sin(13x) - \frac{1814400}{10604499373} x^2 \cos(13x) + \frac{3628800}{137858491849} x \sin(13x) - \frac{3628800}{1792160394037} \cos(13x) + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{1}{13} x^{10} \cos(13x) + \frac{10}{169} x^9 \sin(13x) - \frac{90}{2197} x^8 \cos(13x) + \frac{720}{28561} x^7 \sin(13x) - \frac{5040}{371293} x^6 \cos(13x) + \frac{30240}{4826809} x^5 \sin(13x) - \frac{151200}{62748517} x^4 \cos(13x) + \frac{604800}{815730721} x^3 \sin(13x) - \frac{1814400}{10604499373} x^2 \cos(13x) + \frac{3628800}{137858491849} x \sin(13x) - \frac{3628800}{1792160394037} \cos(13x) + C}
+\]","To evaluate the integral \(\int x^{10} \sin(13x) \, dx\), we will use integration by parts repeatedly. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) in such a way that the integral becomes simpler with each application. Let's start with:
+
+\[
+u = x^{10}, \quad dv = \sin(13x) \, dx
+\]
+
+Then, we have:
+
+\[
+du = 10x^9 \, dx, \quad v = -\frac{1}{13} \cos(13x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{10} \sin(13x) \, dx = x^{10} \left( -\frac{1}{13} \cos(13x) \right) - \int -\frac{1}{13} \cos(13x) \cdot 10x^9 \, dx
+\]
+
+Simplifying:
+
+\[
+\int x^{10} \sin(13x) \, dx = -\frac{1}{13} x^{10} \cos(13x) + \frac{10}{13} \int x^9 \cos(13x) \, dx
+\]
+
+Now, we need to evaluate \(\int x^9 \cos(13x) \, dx\). We will use integration by parts again:
+
+\[
+u = x^9, \quad dv = \cos(13x) \, dx
+\]
+
+Then, we have:
+
+\[
+du = 9x^8 \, dx, \quad v = \frac{1}{13} \sin(13x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^9 \cos(13x) \, dx = x^9 \left( \frac{1}{13} \sin(13x) \right) - \int \frac{1}{13} \sin(13x) \cdot 9x^8 \, dx
+\]
+
+Simplifying:
+
+\[
+\int x^9 \cos(13x) \, dx = \frac{1}{13} x^9 \sin(13x) - \frac{9}{13} \int x^8 \sin(13x) \, dx
+\]
+
+Substituting back:
+
+\[
+\int x^{10} \sin(13x) \, dx = -\frac{1}{13} x^{10} \cos(13x) + \frac{10}{13} \left( \frac{1}{13} x^9 \sin(13x) - \frac{9}{13} \int x^8 \sin(13x) \, dx \right)
+\]
+
+Simplifying further:
+
+\[
+\int x^{10} \sin(13x) \, dx = -\frac{1}{13} x^{10} \cos(13x) + \frac{10}{169} x^9 \sin(13x) - \frac{90}{169} \int x^8 \sin(13x) \, dx
+\]
+
+We continue this process for each power of \(x\) from \(x^8\) down to \(x^0\). Each step will involve choosing \(u\) and \(dv\) appropriately and applying integration by parts. The pattern will be:
+
+\[
+\int x^n \sin(13x) \, dx = -\frac{1}{13} x^n \cos(13x) + \frac{n}{13} \int x^{n-1} \cos(13x) \, dx
+\]
+
+\[
+\int x^n \cos(13x) \, dx = \frac{1}{13} x^n \sin(13x) - \frac{n}{13} \int x^{n-1} \sin(13x) \, dx
+\]
+
+After 11 applications of integration by parts, we will have:
+
+\[
+\int x^{10} \sin(13x) \, dx = -\frac{1}{13} x^{10} \cos(13x) + \frac{10}{169} x^9 \sin(13x) - \frac{90}{2197} x^8 \cos(13x) + \frac{720}{28561} x^7 \sin(13x) - \frac{5040}{371293} x^6 \cos(13x) + \frac{30240}{4826809} x^5 \sin(13x) - \frac{151200}{62748517} x^4 \cos(13x) + \frac{604800}{815730721} x^3 \sin(13x) - \frac{1814400}{10604499373} x^2 \cos(13x) + \frac{3628800}{137858491849} x \sin(13x) - \frac{3628800}{1792160394037} \cos(13x) + C
+\]
+
+Simplifying the coefficients:
+
+\[
+\int x^{10} \sin(13x) \, dx = -\frac{1}{13} x^{10} \cos(13x) + \frac{10}{169} x^9 \sin(13x) - \frac{90}{2197} x^8 \cos(13x) + \frac{720}{28561} x^7 \sin(13x) - \frac{5040}{371293} x^6 \cos(13x) + \frac{30240}{4826809} x^5 \sin(13x) - \frac{151200}{62748517} x^4 \cos(13x) + \frac{604800}{815730721} x^3 \sin(13x) - \frac{1814400}{10604499373} x^2 \cos(13x) + \frac{3628800}{137858491849} x \sin(13x) - \frac{3628800}{1792160394037} \cos(13x) + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{1}{13} x^{10} \cos(13x) + \frac{10}{169} x^9 \sin(13x) - \frac{90}{2197} x^8 \cos(13x) + \frac{720}{28561} x^7 \sin(13x) - \frac{5040}{371293} x^6 \cos(13x) + \frac{30240}{4826809} x^5 \sin(13x) - \frac{151200}{62748517} x^4 \cos(13x) + \frac{604800}{815730721} x^3 \sin(13x) - \frac{1814400}{10604499373} x^2 \cos(13x) + \frac{3628800}{137858491849} x \sin(13x) - \frac{3628800}{1792160394037} \cos(13x) + C}
+\]",c{10}{169} x^9 \sin(13x) [-] \frac{90}{169} \int x^8,S1_exact,,
+ibp_pts_n10_b31,Silent_Sign_Flip,ibp,failure,- \frac{x^{10} \cos{\left(31 x \right)}}{31} + \frac{10 x^{9} \sin{\left(31 x \right)}}{961} + \frac{90 x^{8} \cos{\left(31 x \right)}}{29791} - \frac{720 x^{7} \sin{\left(31 x \right)}}{923521} - \frac{5040 x^{6} \cos{\left(31 x \right)}}{28629151} + \frac{30240 x^{5} \sin{\left(31 x \right)}}{887503681} + \frac{151200 x^{4} \cos{\left(31 x \right)}}{27512614111} - \frac{604800 x^{3} \sin{\left(31 x \right)}}{852891037441} - \frac{1814400 x^{2} \cos{\left(31 x \right)}}{26439622160671} + \frac{3628800 x \sin{\left(31 x \right)}}{819628286980801} + \frac{3628800 \cos{\left(31 x \right)}}{25408476896404831},-,+,2291,374,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{10} \sin(31x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^{10} \sin(31x) \, dx\), we will use integration by parts repeatedly. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) in such a way that the integral becomes simpler with each application. Let's start with:
+
+\[
+u = x^{10} \quad \text{and} \quad dv = \sin(31x) \, dx
+\]
+
+Then, we have:
+
+\[
+du = 10x^9 \, dx \quad \text{and} \quad v = -\frac{1}{31} \cos(31x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{10} \sin(31x) \, dx = x^{10} \left( -\frac{1}{31} \cos(31x) \right) - \int -\frac{1}{31} \cos(31x) \cdot 10x^9 \, dx
+\]
+
+Simplifying:
+
+\[
+\int x^{10} \sin(31x) \, dx = -\frac{x^{10}}{31} \cos(31x) + \frac{10}{31} \int x^9 \cos(31x) \, dx
+\]
+
+Now, we need to evaluate \(\int x^9 \cos(31x) \, dx\). We will use integration by parts again:
+
+\[
+u = x^9 \quad \text{and} \quad dv = \cos(31x) \, dx
+\]
+
+Then, we have:
+
+\[
+du = 9x^8 \, dx \quad \text{and} \quad v = \frac{1}{31} \sin(31x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^9 \cos(31x) \, dx = x^9 \left( \frac{1}{31} \sin(31x) \right) - \int \frac{1}{31} \sin(31x) \cdot 9x^8 \, dx
+\]
+
+Simplifying:
+
+\[
+\int x^9 \cos(31x) \, dx = \frac{x^9}{31} \sin(31x) - \frac{9}{31} \int x^8 \sin(31x) \, dx
+\]
+
+Substituting back:
+
+\[
+\int x^{10} \sin(31x) \, dx = -\frac{x^{10}}{31} \cos(31x) + \frac{10}{31} \left( \frac{x^9}{31} \sin(31x) - \frac{9}{31} \int x^8 \sin(31x) \, dx \right)
+\]
+
+Simplifying further:
+
+\[
+\int x^{10} \sin(31x) \, dx = -\frac{x^{10}}{31} \cos(31x) + \frac{10x^9}{31^2} \sin(31x) - \frac{90}{31^2} \int x^8 \sin(31x) \, dx
+\]
+
+We continue this process for each power of \(x\) from \(x^8\) down to \(x^0\). Each step will involve integrating by parts and reducing the power of \(x\) by 1. After 11 applications of integration by parts, we will have:
+
+\[
+\int x^{10} \sin(31x) \, dx = -\frac{x^{10}}{31} \cos(31x) + \frac{10x^9}{31^2} \sin(31x) - \frac{90x^8}{31^3} \cos(31x) + \frac{720x^7}{31^4} \sin(31x) - \frac{5040x^6}{31^5} \cos(31x) + \frac{30240x^5}{31^6} \sin(31x) - \frac{151200x^4}{31^7} \cos(31x) + \frac{604800x^3}{31^8} \sin(31x) - \frac{1814400x^2}{31^9} \cos(31x) + \frac{3628800x}{31^{10}} \sin(31x) - \frac{3628800}{31^{11}} \cos(31x) + C
+\]
+
+Combining all terms, we get:
+
+\[
+\boxed{-\frac{x^{10}}{31} \cos(31x) + \frac{10x^9}{31^2} \sin(31x) - \frac{90x^8}{31^3} \cos(31x) + \frac{720x^7}{31^4} \sin(31x) - \frac{5040x^6}{31^5} \cos(31x) + \frac{30240x^5}{31^6} \sin(31x) - \frac{151200x^4}{31^7} \cos(31x) + \frac{604800x^3}{31^8} \sin(31x) - \frac{1814400x^2}{31^9} \cos(31x) + \frac{3628800x}{31^{10}} \sin(31x) - \frac{3628800}{31^{11}} \cos(31x) + C}
+\]","To evaluate the integral \(\int x^{10} \sin(31x) \, dx\), we will use integration by parts repeatedly. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) in such a way that the integral becomes simpler with each application. Let's start with:
+
+\[
+u = x^{10} \quad \text{and} \quad dv = \sin(31x) \, dx
+\]
+
+Then, we have:
+
+\[
+du = 10x^9 \, dx \quad \text{and} \quad v = -\frac{1}{31} \cos(31x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{10} \sin(31x) \, dx = x^{10} \left( -\frac{1}{31} \cos(31x) \right) - \int -\frac{1}{31} \cos(31x) \cdot 10x^9 \, dx
+\]
+
+Simplifying:
+
+\[
+\int x^{10} \sin(31x) \, dx = -\frac{x^{10}}{31} \cos(31x) + \frac{10}{31} \int x^9 \cos(31x) \, dx
+\]
+
+Now, we need to evaluate \(\int x^9 \cos(31x) \, dx\). We will use integration by parts again:
+
+\[
+u = x^9 \quad \text{and} \quad dv = \cos(31x) \, dx
+\]
+
+Then, we have:
+
+\[
+du = 9x^8 \, dx \quad \text{and} \quad v = \frac{1}{31} \sin(31x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^9 \cos(31x) \, dx = x^9 \left( \frac{1}{31} \sin(31x) \right) - \int \frac{1}{31} \sin(31x) \cdot 9x^8 \, dx
+\]
+
+Simplifying:
+
+\[
+\int x^9 \cos(31x) \, dx = \frac{x^9}{31} \sin(31x) - \frac{9}{31} \int x^8 \sin(31x) \, dx
+\]
+
+Substituting back:
+
+\[
+\int x^{10} \sin(31x) \, dx = -\frac{x^{10}}{31} \cos(31x) + \frac{10}{31} \left( \frac{x^9}{31} \sin(31x) - \frac{9}{31} \int x^8 \sin(31x) \, dx \right)
+\]
+
+Simplifying further:
+
+\[
+\int x^{10} \sin(31x) \, dx = -\frac{x^{10}}{31} \cos(31x) + \frac{10x^9}{31^2} \sin(31x) - \frac{90}{31^2} \int x^8 \sin(31x) \, dx
+\]
+
+We continue this process for each power of \(x\) from \(x^8\) down to \(x^0\). Each step will involve integrating by parts and reducing the power of \(x\) by 1. After 11 applications of integration by parts, we will have:
+
+\[
+\int x^{10} \sin(31x) \, dx = -\frac{x^{10}}{31} \cos(31x) + \frac{10x^9}{31^2} \sin(31x) - \frac{90x^8}{31^3} \cos(31x) + \frac{720x^7}{31^4} \sin(31x) - \frac{5040x^6}{31^5} \cos(31x) + \frac{30240x^5}{31^6} \sin(31x) - \frac{151200x^4}{31^7} \cos(31x) + \frac{604800x^3}{31^8} \sin(31x) - \frac{1814400x^2}{31^9} \cos(31x) + \frac{3628800x}{31^{10}} \sin(31x) - \frac{3628800}{31^{11}} \cos(31x) + C
+\]
+
+Combining all terms, we get:
+
+\[
+\boxed{-\frac{x^{10}}{31} \cos(31x) + \frac{10x^9}{31^2} \sin(31x) - \frac{90x^8}{31^3} \cos(31x) + \frac{720x^7}{31^4} \sin(31x) - \frac{5040x^6}{31^5} \cos(31x) + \frac{30240x^5}{31^6} \sin(31x) - \frac{151200x^4}{31^7} \cos(31x) + \frac{604800x^3}{31^8} \sin(31x) - \frac{1814400x^2}{31^9} \cos(31x) + \frac{3628800x}{31^{10}} \sin(31x) - \frac{3628800}{31^{11}} \cos(31x) + C}
+\]",c{10x^9}{31^2} \sin(31x) [-] \frac{90x^8}{31^3} \cos,S1_exact,,
+ibp_pts_n11_b19,Silent_Sign_Flip,ibp,failure,- \frac{x^{11} \cos{\left(19 x \right)}}{19} + \frac{11 x^{10} \sin{\left(19 x \right)}}{361} + \frac{110 x^{9} \cos{\left(19 x \right)}}{6859} - \frac{990 x^{8} \sin{\left(19 x \right)}}{130321} - \frac{7920 x^{7} \cos{\left(19 x \right)}}{2476099} + \frac{55440 x^{6} \sin{\left(19 x \right)}}{47045881} + \frac{332640 x^{5} \cos{\left(19 x \right)}}{893871739} - \frac{1663200 x^{4} \sin{\left(19 x \right)}}{16983563041} - \frac{6652800 x^{3} \cos{\left(19 x \right)}}{322687697779} + \frac{19958400 x^{2} \sin{\left(19 x \right)}}{6131066257801} + \frac{39916800 x \cos{\left(19 x \right)}}{116490258898219} - \frac{39916800 \sin{\left(19 x \right)}}{2213314919066161},-,+,1931,374,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{11} \sin(19x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^{11} \sin(19x) \, dx\), we will use integration by parts repeatedly. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) such that the integral of \(v \, du\) is simpler than the original integral. We will start with:
+
+\[
+u = x^{11}, \quad dv = \sin(19x) \, dx
+\]
+
+Then, we compute \(du\) and \(v\):
+
+\[
+du = 11x^{10} \, dx, \quad v = -\frac{1}{19} \cos(19x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{11} \sin(19x) \, dx = x^{11} \left(-\frac{1}{19} \cos(19x)\right) - \int \left(-\frac{1}{19} \cos(19x)\right) 11x^{10} \, dx
+\]
+
+Simplify the expression:
+
+\[
+= -\frac{1}{19} x^{11} \cos(19x) + \frac{11}{19} \int x^{10} \cos(19x) \, dx
+\]
+
+Now, we need to evaluate \(\int x^{10} \cos(19x) \, dx\). We will use integration by parts again with:
+
+\[
+u = x^{10}, \quad dv = \cos(19x) \, dx
+\]
+
+Then, we compute \(du\) and \(v\):
+
+\[
+du = 10x^9 \, dx, \quad v = \frac{1}{19} \sin(19x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{10} \cos(19x) \, dx = x^{10} \left(\frac{1}{19} \sin(19x)\right) - \int \left(\frac{1}{19} \sin(19x)\right) 10x^9 \, dx
+\]
+
+Simplify the expression:
+
+\[
+= \frac{1}{19} x^{10} \sin(19x) - \frac{10}{19} \int x^9 \sin(19x) \, dx
+\]
+
+Substitute this back into the previous result:
+
+\[
+\int x^{11} \sin(19x) \, dx = -\frac{1}{19} x^{11} \cos(19x) + \frac{11}{19} \left( \frac{1}{19} x^{10} \sin(19x) - \frac{10}{19} \int x^9 \sin(19x) \, dx \right)
+\]
+
+Simplify:
+
+\[
+= -\frac{1}{19} x^{11} \cos(19x) + \frac{11}{361} x^{10} \sin(19x) - \frac{110}{361} \int x^9 \sin(19x) \, dx
+\]
+
+We continue this process for each power of \(x\) from \(x^{10}\) down to \(x^0\). Each step will involve integrating by parts and reducing the power of \(x\) by 1. After 12 applications of integration by parts, we will have:
+
+\[
+\int x^{11} \sin(19x) \, dx = -\frac{1}{19} x^{11} \cos(19x) + \frac{11}{361} x^{10} \sin(19x) - \frac{110}{6859} x^9 \cos(19x) + \frac{990}{130321} x^8 \sin(19x) - \frac{7920}{2476099} x^7 \cos(19x) + \frac{55440}{47045881} x^6 \sin(19x) - \frac{332640}{893871739} x^5 \cos(19x) + \frac{1663200}{16983563041} x^4 \sin(19x) - \frac{6652800}{322687697779} x^3 \cos(19x) + \frac{19958400}{6131066257801} x^2 \sin(19x) - \frac{39916800}{116490258898219} x \cos(19x) + \frac{39916800}{2216436112957161} \sin(19x) + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{1}{19} x^{11} \cos(19x) + \frac{11}{361} x^{10} \sin(19x) - \frac{110}{6859} x^9 \cos(19x) + \frac{990}{130321} x^8 \sin(19x) - \frac{7920}{2476099} x^7 \cos(19x) + \frac{55440}{47045881} x^6 \sin(19x) - \frac{332640}{893871739} x^5 \cos(19x) + \frac{1663200}{16983563041} x^4 \sin(19x) - \frac{6652800}{322687697779} x^3 \cos(19x) + \frac{19958400}{6131066257801} x^2 \sin(19x) - \frac{39916800}{116490258898219} x \cos(19x) + \frac{39916800}{2216436112957161} \sin(19x) + C}
+\]","To evaluate the integral \(\int x^{11} \sin(19x) \, dx\), we will use integration by parts repeatedly. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) such that the integral of \(v \, du\) is simpler than the original integral. We will start with:
+
+\[
+u = x^{11}, \quad dv = \sin(19x) \, dx
+\]
+
+Then, we compute \(du\) and \(v\):
+
+\[
+du = 11x^{10} \, dx, \quad v = -\frac{1}{19} \cos(19x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{11} \sin(19x) \, dx = x^{11} \left(-\frac{1}{19} \cos(19x)\right) - \int \left(-\frac{1}{19} \cos(19x)\right) 11x^{10} \, dx
+\]
+
+Simplify the expression:
+
+\[
+= -\frac{1}{19} x^{11} \cos(19x) + \frac{11}{19} \int x^{10} \cos(19x) \, dx
+\]
+
+Now, we need to evaluate \(\int x^{10} \cos(19x) \, dx\). We will use integration by parts again with:
+
+\[
+u = x^{10}, \quad dv = \cos(19x) \, dx
+\]
+
+Then, we compute \(du\) and \(v\):
+
+\[
+du = 10x^9 \, dx, \quad v = \frac{1}{19} \sin(19x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{10} \cos(19x) \, dx = x^{10} \left(\frac{1}{19} \sin(19x)\right) - \int \left(\frac{1}{19} \sin(19x)\right) 10x^9 \, dx
+\]
+
+Simplify the expression:
+
+\[
+= \frac{1}{19} x^{10} \sin(19x) - \frac{10}{19} \int x^9 \sin(19x) \, dx
+\]
+
+Substitute this back into the previous result:
+
+\[
+\int x^{11} \sin(19x) \, dx = -\frac{1}{19} x^{11} \cos(19x) + \frac{11}{19} \left( \frac{1}{19} x^{10} \sin(19x) - \frac{10}{19} \int x^9 \sin(19x) \, dx \right)
+\]
+
+Simplify:
+
+\[
+= -\frac{1}{19} x^{11} \cos(19x) + \frac{11}{361} x^{10} \sin(19x) - \frac{110}{361} \int x^9 \sin(19x) \, dx
+\]
+
+We continue this process for each power of \(x\) from \(x^{10}\) down to \(x^0\). Each step will involve integrating by parts and reducing the power of \(x\) by 1. After 12 applications of integration by parts, we will have:
+
+\[
+\int x^{11} \sin(19x) \, dx = -\frac{1}{19} x^{11} \cos(19x) + \frac{11}{361} x^{10} \sin(19x) - \frac{110}{6859} x^9 \cos(19x) + \frac{990}{130321} x^8 \sin(19x) - \frac{7920}{2476099} x^7 \cos(19x) + \frac{55440}{47045881} x^6 \sin(19x) - \frac{332640}{893871739} x^5 \cos(19x) + \frac{1663200}{16983563041} x^4 \sin(19x) - \frac{6652800}{322687697779} x^3 \cos(19x) + \frac{19958400}{6131066257801} x^2 \sin(19x) - \frac{39916800}{116490258898219} x \cos(19x) + \frac{39916800}{2216436112957161} \sin(19x) + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{1}{19} x^{11} \cos(19x) + \frac{11}{361} x^{10} \sin(19x) - \frac{110}{6859} x^9 \cos(19x) + \frac{990}{130321} x^8 \sin(19x) - \frac{7920}{2476099} x^7 \cos(19x) + \frac{55440}{47045881} x^6 \sin(19x) - \frac{332640}{893871739} x^5 \cos(19x) + \frac{1663200}{16983563041} x^4 \sin(19x) - \frac{6652800}{322687697779} x^3 \cos(19x) + \frac{19958400}{6131066257801} x^2 \sin(19x) - \frac{39916800}{116490258898219} x \cos(19x) + \frac{39916800}{2216436112957161} \sin(19x) + C}
+\]",1}{361} x^{10} \sin(19x) [-] \frac{110}{361} \int x^,S3_exact,,
+ibp_pts_n11_b29,Silent_Sign_Flip,ibp,failure,- \frac{x^{11} \cos{\left(29 x \right)}}{29} + \frac{11 x^{10} \sin{\left(29 x \right)}}{841} + \frac{110 x^{9} \cos{\left(29 x \right)}}{24389} - \frac{990 x^{8} \sin{\left(29 x \right)}}{707281} - \frac{7920 x^{7} \cos{\left(29 x \right)}}{20511149} + \frac{55440 x^{6} \sin{\left(29 x \right)}}{594823321} + \frac{332640 x^{5} \cos{\left(29 x \right)}}{17249876309} - \frac{1663200 x^{4} \sin{\left(29 x \right)}}{500246412961} - \frac{6652800 x^{3} \cos{\left(29 x \right)}}{14507145975869} + \frac{19958400 x^{2} \sin{\left(29 x \right)}}{420707233300201} + \frac{39916800 x \cos{\left(29 x \right)}}{12200509765705829} - \frac{39916800 \sin{\left(29 x \right)}}{353814783205469041},-,+,2025,374,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{11} \sin(29x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^{11} \sin(29x) \, dx\), we will use integration by parts repeatedly. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) such that the integral of \(v \, du\) is simpler than the original integral. We will start with:
+
+\[
+u = x^{11} \quad \text{and} \quad dv = \sin(29x) \, dx
+\]
+
+Then, we have:
+
+\[
+du = 11x^{10} \, dx \quad \text{and} \quad v = -\frac{1}{29} \cos(29x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{11} \sin(29x) \, dx = x^{11} \left(-\frac{1}{29} \cos(29x)\right) - \int \left(-\frac{1}{29} \cos(29x)\right) 11x^{10} \, dx
+\]
+
+Simplifying:
+
+\[
+\int x^{11} \sin(29x) \, dx = -\frac{1}{29} x^{11} \cos(29x) + \frac{11}{29} \int x^{10} \cos(29x) \, dx
+\]
+
+Now, we need to evaluate \(\int x^{10} \cos(29x) \, dx\). We will use integration by parts again with:
+
+\[
+u = x^{10} \quad \text{and} \quad dv = \cos(29x) \, dx
+\]
+
+Then, we have:
+
+\[
+du = 10x^9 \, dx \quad \text{and} \quad v = \frac{1}{29} \sin(29x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{10} \cos(29x) \, dx = x^{10} \left(\frac{1}{29} \sin(29x)\right) - \int \left(\frac{1}{29} \sin(29x)\right) 10x^9 \, dx
+\]
+
+Simplifying:
+
+\[
+\int x^{10} \cos(29x) \, dx = \frac{1}{29} x^{10} \sin(29x) - \frac{10}{29} \int x^9 \sin(29x) \, dx
+\]
+
+Substituting back into the original integral:
+
+\[
+\int x^{11} \sin(29x) \, dx = -\frac{1}{29} x^{11} \cos(29x) + \frac{11}{29} \left( \frac{1}{29} x^{10} \sin(29x) - \frac{10}{29} \int x^9 \sin(29x) \, dx \right)
+\]
+
+Simplifying further:
+
+\[
+\int x^{11} \sin(29x) \, dx = -\frac{1}{29} x^{11} \cos(29x) + \frac{11}{841} x^{10} \sin(29x) - \frac{110}{841} \int x^9 \sin(29x) \, dx
+\]
+
+We continue this process for each power of \(x\) from \(x^{10}\) down to \(x^0\). Each step will involve integrating by parts and reducing the power of \(x\) by 1. After 12 applications of integration by parts, we will have:
+
+\[
+\int x^{11} \sin(29x) \, dx = -\frac{1}{29} x^{11} \cos(29x) + \frac{11}{841} x^{10} \sin(29x) - \frac{110}{24389} x^9 \cos(29x) - \frac{990}{707281} x^8 \sin(29x) + \cdots
+\]
+
+The final result, after all 12 applications, is:
+
+\[
+\boxed{-\frac{1}{29} x^{11} \cos(29x) + \frac{11}{841} x^{10} \sin(29x) - \frac{110}{24389} x^9 \cos(29x) - \frac{990}{707281} x^8 \sin(29x) + \frac{7920}{20511149} x^7 \cos(29x) + \frac{55440}{594823321} x^6 \sin(29x) - \frac{332640}{17249876309} x^5 \cos(29x) - \frac{1663200}{499246412961} x^4 \sin(29x) + \frac{6652800}{14478145975869} x^3 \cos(29x) + \frac{19958400}{419866233300201} x^2 \sin(29x) - \frac{39916800}{12176110765705829} x \cos(29x) - \frac{39916800}{353107212205468941} \sin(29x) + C}
+\]","To evaluate the integral \(\int x^{11} \sin(29x) \, dx\), we will use integration by parts repeatedly. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) such that the integral of \(v \, du\) is simpler than the original integral. We will start with:
+
+\[
+u = x^{11} \quad \text{and} \quad dv = \sin(29x) \, dx
+\]
+
+Then, we have:
+
+\[
+du = 11x^{10} \, dx \quad \text{and} \quad v = -\frac{1}{29} \cos(29x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{11} \sin(29x) \, dx = x^{11} \left(-\frac{1}{29} \cos(29x)\right) - \int \left(-\frac{1}{29} \cos(29x)\right) 11x^{10} \, dx
+\]
+
+Simplifying:
+
+\[
+\int x^{11} \sin(29x) \, dx = -\frac{1}{29} x^{11} \cos(29x) + \frac{11}{29} \int x^{10} \cos(29x) \, dx
+\]
+
+Now, we need to evaluate \(\int x^{10} \cos(29x) \, dx\). We will use integration by parts again with:
+
+\[
+u = x^{10} \quad \text{and} \quad dv = \cos(29x) \, dx
+\]
+
+Then, we have:
+
+\[
+du = 10x^9 \, dx \quad \text{and} \quad v = \frac{1}{29} \sin(29x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{10} \cos(29x) \, dx = x^{10} \left(\frac{1}{29} \sin(29x)\right) - \int \left(\frac{1}{29} \sin(29x)\right) 10x^9 \, dx
+\]
+
+Simplifying:
+
+\[
+\int x^{10} \cos(29x) \, dx = \frac{1}{29} x^{10} \sin(29x) - \frac{10}{29} \int x^9 \sin(29x) \, dx
+\]
+
+Substituting back into the original integral:
+
+\[
+\int x^{11} \sin(29x) \, dx = -\frac{1}{29} x^{11} \cos(29x) + \frac{11}{29} \left( \frac{1}{29} x^{10} \sin(29x) - \frac{10}{29} \int x^9 \sin(29x) \, dx \right)
+\]
+
+Simplifying further:
+
+\[
+\int x^{11} \sin(29x) \, dx = -\frac{1}{29} x^{11} \cos(29x) + \frac{11}{841} x^{10} \sin(29x) - \frac{110}{841} \int x^9 \sin(29x) \, dx
+\]
+
+We continue this process for each power of \(x\) from \(x^{10}\) down to \(x^0\). Each step will involve integrating by parts and reducing the power of \(x\) by 1. After 12 applications of integration by parts, we will have:
+
+\[
+\int x^{11} \sin(29x) \, dx = -\frac{1}{29} x^{11} \cos(29x) + \frac{11}{841} x^{10} \sin(29x) - \frac{110}{24389} x^9 \cos(29x) - \frac{990}{707281} x^8 \sin(29x) + \cdots
+\]
+
+The final result, after all 12 applications, is:
+
+\[
+\boxed{-\frac{1}{29} x^{11} \cos(29x) + \frac{11}{841} x^{10} \sin(29x) - \frac{110}{24389} x^9 \cos(29x) - \frac{990}{707281} x^8 \sin(29x) + \frac{7920}{20511149} x^7 \cos(29x) + \frac{55440}{594823321} x^6 \sin(29x) - \frac{332640}{17249876309} x^5 \cos(29x) - \frac{1663200}{499246412961} x^4 \sin(29x) + \frac{6652800}{14478145975869} x^3 \cos(29x) + \frac{19958400}{419866233300201} x^2 \sin(29x) - \frac{39916800}{12176110765705829} x \cos(29x) - \frac{39916800}{353107212205468941} \sin(29x) + C}
+\]",1}{841} x^{10} \sin(29x) [-] \frac{110}{841} \int x^,S3_exact,,
+ibp_pts_n11_b3,Silent_Sign_Flip,ibp,failure,- \frac{x^{11} \cos{\left(3 x \right)}}{3} + \frac{11 x^{10} \sin{\left(3 x \right)}}{9} + \frac{110 x^{9} \cos{\left(3 x \right)}}{27} - \frac{110 x^{8} \sin{\left(3 x \right)}}{9} - \frac{880 x^{7} \cos{\left(3 x \right)}}{27} + \frac{6160 x^{6} \sin{\left(3 x \right)}}{81} + \frac{12320 x^{5} \cos{\left(3 x \right)}}{81} - \frac{61600 x^{4} \sin{\left(3 x \right)}}{243} - \frac{246400 x^{3} \cos{\left(3 x \right)}}{729} + \frac{246400 x^{2} \sin{\left(3 x \right)}}{729} + \frac{492800 x \cos{\left(3 x \right)}}{2187} - \frac{492800 \sin{\left(3 x \right)}}{6561},-,+,2438,373,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{11} \sin(3x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^{11} \sin(3x) \, dx\) using integration by parts, we will use the formula:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+
+\[
+u = x^{11} \quad \text{and} \quad dv = \sin(3x) \, dx
+\]
+
+First, we need to find \(du\) and \(v\):
+
+\[
+du = 11x^{10} \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \sin(3x) \, dx
+\]
+
+Using the substitution \(w = 3x\), we get \(dw = 3 \, dx\) or \(dx = \frac{1}{3} \, dw\):
+
+\[
+v = \int \sin(w) \cdot \frac{1}{3} \, dw = \frac{1}{3} \int \sin(w) \, dw = -\frac{1}{3} \cos(w) = -\frac{1}{3} \cos(3x)
+\]
+
+Now we apply the integration by parts formula:
+
+\[
+\int x^{11} \sin(3x) \, dx = x^{11} \left(-\frac{1}{3} \cos(3x)\right) - \int \left(-\frac{1}{3} \cos(3x)\right) \cdot 11x^{10} \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^{11} \sin(3x) \, dx = -\frac{1}{3} x^{11} \cos(3x) + \frac{11}{3} \int x^{10} \cos(3x) \, dx
+\]
+
+Next, we need to evaluate the integral \(\int x^{10} \cos(3x) \, dx\) using integration by parts again. Let:
+
+\[
+u = x^{10} \quad \text{and} \quad dv = \cos(3x) \, dx
+\]
+
+Then:
+
+\[
+du = 10x^9 \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \cos(3x) \, dx
+\]
+
+Using the substitution \(w = 3x\), we get \(dw = 3 \, dx\) or \(dx = \frac{1}{3} \, dw\):
+
+\[
+v = \int \cos(w) \cdot \frac{1}{3} \, dw = \frac{1}{3} \int \cos(w) \, dw = \frac{1}{3} \sin(w) = \frac{1}{3} \sin(3x)
+\]
+
+Now we apply the integration by parts formula again:
+
+\[
+\int x^{10} \cos(3x) \, dx = x^{10} \left(\frac{1}{3} \sin(3x)\right) - \int \left(\frac{1}{3} \sin(3x)\right) \cdot 10x^9 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^{10} \cos(3x) \, dx = \frac{1}{3} x^{10} \sin(3x) - \frac{10}{3} \int x^9 \sin(3x) \, dx
+\]
+
+Substitute this back into our original expression:
+
+\[
+\int x^{11} \sin(3x) \, dx = -\frac{1}{3} x^{11} \cos(3x) + \frac{11}{3} \left( \frac{1}{3} x^{10} \sin(3x) - \frac{10}{3} \int x^9 \sin(3x) \, dx \right)
+\]
+
+Simplify further:
+
+\[
+\int x^{11} \sin(3x) \, dx = -\frac{1}{3} x^{11} \cos(3x) + \frac{11}{9} x^{10} \sin(3x) - \frac{110}{9} \int x^9 \sin(3x) \, dx
+\]
+
+We can see that this process will continue recursively. To avoid this, we can use a reduction formula or recognize a pattern. However, for simplicity, we will continue this process until we reach a manageable form.
+
+After several iterations, we can generalize the pattern and use the reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\). The final result, after applying the reduction formula and simplifying, is:
+
+\[
+\boxed{-\frac{1}{3} x^{11} \cos(3x) + \frac{11}{9} x^{10} \sin(3x) - \frac{110}{27} x^9 \cos(3x) - \frac{1100}{81} x^8 \sin(3x) + \cdots + C}
+\]
+
+This is the final simplified antiderivative.","To evaluate the integral \(\int x^{11} \sin(3x) \, dx\) using integration by parts, we will use the formula:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+
+\[
+u = x^{11} \quad \text{and} \quad dv = \sin(3x) \, dx
+\]
+
+First, we need to find \(du\) and \(v\):
+
+\[
+du = 11x^{10} \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \sin(3x) \, dx
+\]
+
+Using the substitution \(w = 3x\), we get \(dw = 3 \, dx\) or \(dx = \frac{1}{3} \, dw\):
+
+\[
+v = \int \sin(w) \cdot \frac{1}{3} \, dw = \frac{1}{3} \int \sin(w) \, dw = -\frac{1}{3} \cos(w) = -\frac{1}{3} \cos(3x)
+\]
+
+Now we apply the integration by parts formula:
+
+\[
+\int x^{11} \sin(3x) \, dx = x^{11} \left(-\frac{1}{3} \cos(3x)\right) - \int \left(-\frac{1}{3} \cos(3x)\right) \cdot 11x^{10} \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^{11} \sin(3x) \, dx = -\frac{1}{3} x^{11} \cos(3x) + \frac{11}{3} \int x^{10} \cos(3x) \, dx
+\]
+
+Next, we need to evaluate the integral \(\int x^{10} \cos(3x) \, dx\) using integration by parts again. Let:
+
+\[
+u = x^{10} \quad \text{and} \quad dv = \cos(3x) \, dx
+\]
+
+Then:
+
+\[
+du = 10x^9 \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \cos(3x) \, dx
+\]
+
+Using the substitution \(w = 3x\), we get \(dw = 3 \, dx\) or \(dx = \frac{1}{3} \, dw\):
+
+\[
+v = \int \cos(w) \cdot \frac{1}{3} \, dw = \frac{1}{3} \int \cos(w) \, dw = \frac{1}{3} \sin(w) = \frac{1}{3} \sin(3x)
+\]
+
+Now we apply the integration by parts formula again:
+
+\[
+\int x^{10} \cos(3x) \, dx = x^{10} \left(\frac{1}{3} \sin(3x)\right) - \int \left(\frac{1}{3} \sin(3x)\right) \cdot 10x^9 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^{10} \cos(3x) \, dx = \frac{1}{3} x^{10} \sin(3x) - \frac{10}{3} \int x^9 \sin(3x) \, dx
+\]
+
+Substitute this back into our original expression:
+
+\[
+\int x^{11} \sin(3x) \, dx = -\frac{1}{3} x^{11} \cos(3x) + \frac{11}{3} \left( \frac{1}{3} x^{10} \sin(3x) - \frac{10}{3} \int x^9 \sin(3x) \, dx \right)
+\]
+
+Simplify further:
+
+\[
+\int x^{11} \sin(3x) \, dx = -\frac{1}{3} x^{11} \cos(3x) + \frac{11}{9} x^{10} \sin(3x) - \frac{110}{9} \int x^9 \sin(3x) \, dx
+\]
+
+We can see that this process will continue recursively. To avoid this, we can use a reduction formula or recognize a pattern. However, for simplicity, we will continue this process until we reach a manageable form.
+
+After several iterations, we can generalize the pattern and use the reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\). The final result, after applying the reduction formula and simplifying, is:
+
+\[
+\boxed{-\frac{1}{3} x^{11} \cos(3x) + \frac{11}{9} x^{10} \sin(3x) - \frac{110}{27} x^9 \cos(3x) - \frac{1100}{81} x^8 \sin(3x) + \cdots + C}
+\]
+
+This is the final simplified antiderivative.",c{11}{9} x^{10} \sin(3x) [-] \frac{110}{9} \int x^9,S1_exact,,
+ibp_pts_n11_b31,Silent_Sign_Flip,ibp,failure,- \frac{x^{11} \cos{\left(31 x \right)}}{31} + \frac{11 x^{10} \sin{\left(31 x \right)}}{961} + \frac{110 x^{9} \cos{\left(31 x \right)}}{29791} - \frac{990 x^{8} \sin{\left(31 x \right)}}{923521} - \frac{7920 x^{7} \cos{\left(31 x \right)}}{28629151} + \frac{55440 x^{6} \sin{\left(31 x \right)}}{887503681} + \frac{332640 x^{5} \cos{\left(31 x \right)}}{27512614111} - \frac{1663200 x^{4} \sin{\left(31 x \right)}}{852891037441} - \frac{6652800 x^{3} \cos{\left(31 x \right)}}{26439622160671} + \frac{19958400 x^{2} \sin{\left(31 x \right)}}{819628286980801} + \frac{39916800 x \cos{\left(31 x \right)}}{25408476896404831} - \frac{39916800 \sin{\left(31 x \right)}}{787662783788549761},-,+,1996,374,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{11} \sin(31x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^{11} \sin(31x) \, dx\), we will use integration by parts repeatedly. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) such that the integral of \(v \, du\) is simpler than the original integral. We will start with:
+
+\[
+u = x^{11} \quad \text{and} \quad dv = \sin(31x) \, dx
+\]
+
+Then, we compute \(du\) and \(v\):
+
+\[
+du = 11x^{10} \, dx \quad \text{and} \quad v = -\frac{1}{31} \cos(31x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{11} \sin(31x) \, dx = x^{11} \left(-\frac{1}{31} \cos(31x)\right) - \int \left(-\frac{1}{31} \cos(31x)\right) 11x^{10} \, dx
+\]
+
+Simplify the expression:
+
+\[
+= -\frac{1}{31} x^{11} \cos(31x) + \frac{11}{31} \int x^{10} \cos(31x) \, dx
+\]
+
+Now, we need to evaluate \(\int x^{10} \cos(31x) \, dx\). We will use integration by parts again with:
+
+\[
+u = x^{10} \quad \text{and} \quad dv = \cos(31x) \, dx
+\]
+
+Then, we compute \(du\) and \(v\):
+
+\[
+du = 10x^9 \, dx \quad \text{and} \quad v = \frac{1}{31} \sin(31x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{10} \cos(31x) \, dx = x^{10} \left(\frac{1}{31} \sin(31x)\right) - \int \left(\frac{1}{31} \sin(31x)\right) 10x^9 \, dx
+\]
+
+Simplify the expression:
+
+\[
+= \frac{1}{31} x^{10} \sin(31x) - \frac{10}{31} \int x^9 \sin(31x) \, dx
+\]
+
+Substitute this back into our previous result:
+
+\[
+\int x^{11} \sin(31x) \, dx = -\frac{1}{31} x^{11} \cos(31x) + \frac{11}{31} \left( \frac{1}{31} x^{10} \sin(31x) - \frac{10}{31} \int x^9 \sin(31x) \, dx \right)
+\]
+
+Simplify:
+
+\[
+= -\frac{1}{31} x^{11} \cos(31x) + \frac{11}{31^2} x^{10} \sin(31x) - \frac{110}{31^2} \int x^9 \sin(31x) \, dx
+\]
+
+We continue this process for each power of \(x\) from \(x^{10}\) down to \(x^0\). Each step will involve integrating by parts and reducing the power of \(x\) by 1. After 12 applications of integration by parts, we will have:
+
+\[
+\int x^{11} \sin(31x) \, dx = \sum_{k=0}^{11} \left( \text{terms involving } x^{11-k} \cos(31x) \text{ and } x^{11-k} \sin(31x) \right) + C
+\]
+
+The final result, after all the steps, is:
+
+\[
+\boxed{-\frac{1}{31} x^{11} \cos(31x) + \frac{11}{31^2} x^{10} \sin(31x) - \frac{110}{31^3} x^9 \cos(31x) - \frac{990}{31^4} x^8 \sin(31x) + \frac{7920}{31^5} x^7 \cos(31x) + \frac{55440}{31^6} x^6 \sin(31x) - \frac{332640}{31^7} x^5 \cos(31x) - \frac{1663200}{31^8} x^4 \sin(31x) + \frac{6652800}{31^9} x^3 \cos(31x) + \frac{19958400}{31^{10}} x^2 \sin(31x) - \frac{39916800}{31^{11}} x \cos(31x) - \frac{39916800}{31^{12}} \sin(31x) + C}
+\]","To evaluate the integral \(\int x^{11} \sin(31x) \, dx\), we will use integration by parts repeatedly. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) such that the integral of \(v \, du\) is simpler than the original integral. We will start with:
+
+\[
+u = x^{11} \quad \text{and} \quad dv = \sin(31x) \, dx
+\]
+
+Then, we compute \(du\) and \(v\):
+
+\[
+du = 11x^{10} \, dx \quad \text{and} \quad v = -\frac{1}{31} \cos(31x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{11} \sin(31x) \, dx = x^{11} \left(-\frac{1}{31} \cos(31x)\right) - \int \left(-\frac{1}{31} \cos(31x)\right) 11x^{10} \, dx
+\]
+
+Simplify the expression:
+
+\[
+= -\frac{1}{31} x^{11} \cos(31x) + \frac{11}{31} \int x^{10} \cos(31x) \, dx
+\]
+
+Now, we need to evaluate \(\int x^{10} \cos(31x) \, dx\). We will use integration by parts again with:
+
+\[
+u = x^{10} \quad \text{and} \quad dv = \cos(31x) \, dx
+\]
+
+Then, we compute \(du\) and \(v\):
+
+\[
+du = 10x^9 \, dx \quad \text{and} \quad v = \frac{1}{31} \sin(31x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{10} \cos(31x) \, dx = x^{10} \left(\frac{1}{31} \sin(31x)\right) - \int \left(\frac{1}{31} \sin(31x)\right) 10x^9 \, dx
+\]
+
+Simplify the expression:
+
+\[
+= \frac{1}{31} x^{10} \sin(31x) - \frac{10}{31} \int x^9 \sin(31x) \, dx
+\]
+
+Substitute this back into our previous result:
+
+\[
+\int x^{11} \sin(31x) \, dx = -\frac{1}{31} x^{11} \cos(31x) + \frac{11}{31} \left( \frac{1}{31} x^{10} \sin(31x) - \frac{10}{31} \int x^9 \sin(31x) \, dx \right)
+\]
+
+Simplify:
+
+\[
+= -\frac{1}{31} x^{11} \cos(31x) + \frac{11}{31^2} x^{10} \sin(31x) - \frac{110}{31^2} \int x^9 \sin(31x) \, dx
+\]
+
+We continue this process for each power of \(x\) from \(x^{10}\) down to \(x^0\). Each step will involve integrating by parts and reducing the power of \(x\) by 1. After 12 applications of integration by parts, we will have:
+
+\[
+\int x^{11} \sin(31x) \, dx = \sum_{k=0}^{11} \left( \text{terms involving } x^{11-k} \cos(31x) \text{ and } x^{11-k} \sin(31x) \right) + C
+\]
+
+The final result, after all the steps, is:
+
+\[
+\boxed{-\frac{1}{31} x^{11} \cos(31x) + \frac{11}{31^2} x^{10} \sin(31x) - \frac{110}{31^3} x^9 \cos(31x) - \frac{990}{31^4} x^8 \sin(31x) + \frac{7920}{31^5} x^7 \cos(31x) + \frac{55440}{31^6} x^6 \sin(31x) - \frac{332640}{31^7} x^5 \cos(31x) - \frac{1663200}{31^8} x^4 \sin(31x) + \frac{6652800}{31^9} x^3 \cos(31x) + \frac{19958400}{31^{10}} x^2 \sin(31x) - \frac{39916800}{31^{11}} x \cos(31x) - \frac{39916800}{31^{12}} \sin(31x) + C}
+\]",}{31^2} x^{10} \sin(31x) [-] \frac{110}{31^2} \int x,S1_exact,,
+ibp_pts_n12_b11,Silent_Sign_Flip,ibp,failure,- \frac{x^{12} \cos{\left(11 x \right)}}{11} + \frac{12 x^{11} \sin{\left(11 x \right)}}{121} + \frac{12 x^{10} \cos{\left(11 x \right)}}{121} - \frac{120 x^{9} \sin{\left(11 x \right)}}{1331} - \frac{1080 x^{8} \cos{\left(11 x \right)}}{14641} + \frac{8640 x^{7} \sin{\left(11 x \right)}}{161051} + \frac{60480 x^{6} \cos{\left(11 x \right)}}{1771561} - \frac{362880 x^{5} \sin{\left(11 x \right)}}{19487171} - \frac{1814400 x^{4} \cos{\left(11 x \right)}}{214358881} + \frac{7257600 x^{3} \sin{\left(11 x \right)}}{2357947691} + \frac{21772800 x^{2} \cos{\left(11 x \right)}}{25937424601} - \frac{43545600 x \sin{\left(11 x \right)}}{285311670611} - \frac{43545600 \cos{\left(11 x \right)}}{3138428376721},-,+,2682,374,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{12} \sin(11x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^{12} \sin(11x) \, dx\), we will use integration by parts repeatedly. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) in such a way that the integral of \(v \, du\) is simpler than the original integral. For this problem, we will set:
+
+\[
+u = x^{12} \quad \text{and} \quad dv = \sin(11x) \, dx
+\]
+
+Then, we need to find \(du\) and \(v\):
+
+\[
+du = 12x^{11} \, dx \quad \text{and} \quad v = -\frac{1}{11} \cos(11x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{12} \sin(11x) \, dx = x^{12} \left( -\frac{1}{11} \cos(11x) \right) - \int \left( -\frac{1}{11} \cos(11x) \right) 12x^{11} \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^{12} \sin(11x) \, dx = -\frac{1}{11} x^{12} \cos(11x) + \frac{12}{11} \int x^{11} \cos(11x) \, dx
+\]
+
+Now, we need to evaluate \(\int x^{11} \cos(11x) \, dx\). We will use integration by parts again, setting:
+
+\[
+u = x^{11} \quad \text{and} \quad dv = \cos(11x) \, dx
+\]
+
+Then, we find \(du\) and \(v\):
+
+\[
+du = 11x^{10} \, dx \quad \text{and} \quad v = \frac{1}{11} \sin(11x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{11} \cos(11x) \, dx = x^{11} \left( \frac{1}{11} \sin(11x) \right) - \int \left( \frac{1}{11} \sin(11x) \right) 11x^{10} \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^{11} \cos(11x) \, dx = \frac{1}{11} x^{11} \sin(11x) - \int x^{10} \sin(11x) \, dx
+\]
+
+Substitute this back into the original integral:
+
+\[
+\int x^{12} \sin(11x) \, dx = -\frac{1}{11} x^{12} \cos(11x) + \frac{12}{11} \left( \frac{1}{11} x^{11} \sin(11x) - \int x^{10} \sin(11x) \, dx \right)
+\]
+
+Simplify:
+
+\[
+\int x^{12} \sin(11x) \, dx = -\frac{1}{11} x^{12} \cos(11x) + \frac{12}{121} x^{11} \sin(11x) - \frac{12}{11} \int x^{10} \sin(11x) \, dx
+\]
+
+We continue this process 13 times, each time reducing the power of \(x\) by 1. The general form after \(n\) applications of integration by parts is:
+
+\[
+\int x^{12} \sin(11x) \, dx = \sum_{k=0}^{12} \left( \frac{(-1)^k 12!}{11^{k+1} (12-k)!} x^{12-k} \sin(11x + k \cdot \frac{\pi}{2}) \right) + C
+\]
+
+After 13 applications, the integral of \(x^0 \sin(11x)\) is simply:
+
+\[
+\int \sin(11x) \, dx = -\frac{1}{11} \cos(11x)
+\]
+
+Thus, the final antiderivative is:
+
+\[
+\boxed{-\frac{1}{11} x^{12} \cos(11x) + \frac{12}{121} x^{11} \sin(11x) - \frac{132}{1331} x^{10} \cos(11x) - \frac{1320}{14641} x^9 \sin(11x) + \frac{11880}{161051} x^8 \cos(11x) + \frac{95040}{1771561} x^7 \sin(11x) - \frac{665280}{19487171} x^6 \cos(11x) - \frac{3991680}{214358881} x^5 \sin(11x) + \frac{19958400}{2357947691} x^4 \cos(11x) + \frac{79833600}{25937424601} x^3 \sin(11x) - \frac{239500800}{285311670611} x^2 \cos(11x) - \frac{479001600}{3138428376721} x \sin(11x) + \frac{479001600}{34522712143931} \cos(11x) + C}
+\]","To evaluate the integral \(\int x^{12} \sin(11x) \, dx\), we will use integration by parts repeatedly. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) in such a way that the integral of \(v \, du\) is simpler than the original integral. For this problem, we will set:
+
+\[
+u = x^{12} \quad \text{and} \quad dv = \sin(11x) \, dx
+\]
+
+Then, we need to find \(du\) and \(v\):
+
+\[
+du = 12x^{11} \, dx \quad \text{and} \quad v = -\frac{1}{11} \cos(11x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{12} \sin(11x) \, dx = x^{12} \left( -\frac{1}{11} \cos(11x) \right) - \int \left( -\frac{1}{11} \cos(11x) \right) 12x^{11} \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^{12} \sin(11x) \, dx = -\frac{1}{11} x^{12} \cos(11x) + \frac{12}{11} \int x^{11} \cos(11x) \, dx
+\]
+
+Now, we need to evaluate \(\int x^{11} \cos(11x) \, dx\). We will use integration by parts again, setting:
+
+\[
+u = x^{11} \quad \text{and} \quad dv = \cos(11x) \, dx
+\]
+
+Then, we find \(du\) and \(v\):
+
+\[
+du = 11x^{10} \, dx \quad \text{and} \quad v = \frac{1}{11} \sin(11x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{11} \cos(11x) \, dx = x^{11} \left( \frac{1}{11} \sin(11x) \right) - \int \left( \frac{1}{11} \sin(11x) \right) 11x^{10} \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^{11} \cos(11x) \, dx = \frac{1}{11} x^{11} \sin(11x) - \int x^{10} \sin(11x) \, dx
+\]
+
+Substitute this back into the original integral:
+
+\[
+\int x^{12} \sin(11x) \, dx = -\frac{1}{11} x^{12} \cos(11x) + \frac{12}{11} \left( \frac{1}{11} x^{11} \sin(11x) - \int x^{10} \sin(11x) \, dx \right)
+\]
+
+Simplify:
+
+\[
+\int x^{12} \sin(11x) \, dx = -\frac{1}{11} x^{12} \cos(11x) + \frac{12}{121} x^{11} \sin(11x) - \frac{12}{11} \int x^{10} \sin(11x) \, dx
+\]
+
+We continue this process 13 times, each time reducing the power of \(x\) by 1. The general form after \(n\) applications of integration by parts is:
+
+\[
+\int x^{12} \sin(11x) \, dx = \sum_{k=0}^{12} \left( \frac{(-1)^k 12!}{11^{k+1} (12-k)!} x^{12-k} \sin(11x + k \cdot \frac{\pi}{2}) \right) + C
+\]
+
+After 13 applications, the integral of \(x^0 \sin(11x)\) is simply:
+
+\[
+\int \sin(11x) \, dx = -\frac{1}{11} \cos(11x)
+\]
+
+Thus, the final antiderivative is:
+
+\[
+\boxed{-\frac{1}{11} x^{12} \cos(11x) + \frac{12}{121} x^{11} \sin(11x) - \frac{132}{1331} x^{10} \cos(11x) - \frac{1320}{14641} x^9 \sin(11x) + \frac{11880}{161051} x^8 \cos(11x) + \frac{95040}{1771561} x^7 \sin(11x) - \frac{665280}{19487171} x^6 \cos(11x) - \frac{3991680}{214358881} x^5 \sin(11x) + \frac{19958400}{2357947691} x^4 \cos(11x) + \frac{79833600}{25937424601} x^3 \sin(11x) - \frac{239500800}{285311670611} x^2 \cos(11x) - \frac{479001600}{3138428376721} x \sin(11x) + \frac{479001600}{34522712143931} \cos(11x) + C}
+\]",2}{121} x^{11} \sin(11x) [-] \frac{132}{1331} x^{10},S1_exact,,
+ibp_pts_n12_b23,Silent_Sign_Flip,ibp,failure,- \frac{x^{12} \cos{\left(23 x \right)}}{23} + \frac{12 x^{11} \sin{\left(23 x \right)}}{529} + \frac{132 x^{10} \cos{\left(23 x \right)}}{12167} - \frac{1320 x^{9} \sin{\left(23 x \right)}}{279841} - \frac{11880 x^{8} \cos{\left(23 x \right)}}{6436343} + \frac{95040 x^{7} \sin{\left(23 x \right)}}{148035889} + \frac{665280 x^{6} \cos{\left(23 x \right)}}{3404825447} - \frac{3991680 x^{5} \sin{\left(23 x \right)}}{78310985281} - \frac{19958400 x^{4} \cos{\left(23 x \right)}}{1801152661463} + \frac{79833600 x^{3} \sin{\left(23 x \right)}}{41426511213649} + \frac{239500800 x^{2} \cos{\left(23 x \right)}}{952809757913927} - \frac{479001600 x \sin{\left(23 x \right)}}{21914624432020321} - \frac{479001600 \cos{\left(23 x \right)}}{504036361936467383},-,+,2133,374,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{12} \sin(23x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^{12} \sin(23x) \, dx\) using integration by parts, we will use the formula:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+
+\[
+u = x^{12} \quad \text{and} \quad dv = \sin(23x) \, dx
+\]
+
+First, we need to find \(du\) and \(v\):
+
+\[
+du = 12x^{11} \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \sin(23x) \, dx
+\]
+
+Using the integral of \(\sin(ax)\):
+
+\[
+v = -\frac{1}{23} \cos(23x)
+\]
+
+Now, we apply the integration by parts formula:
+
+\[
+\int x^{12} \sin(23x) \, dx = x^{12} \left( -\frac{1}{23} \cos(23x) \right) - \int \left( -\frac{1}{23} \cos(23x) \right) 12x^{11} \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^{12} \sin(23x) \, dx = -\frac{1}{23} x^{12} \cos(23x) + \frac{12}{23} \int x^{11} \cos(23x) \, dx
+\]
+
+Next, we need to evaluate the integral \(\int x^{11} \cos(23x) \, dx\) using integration by parts again. Let:
+
+\[
+u = x^{11} \quad \text{and} \quad dv = \cos(23x) \, dx
+\]
+
+Then:
+
+\[
+du = 11x^{10} \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \cos(23x) \, dx = \frac{1}{23} \sin(23x)
+\]
+
+Applying integration by parts again:
+
+\[
+\int x^{11} \cos(23x) \, dx = x^{11} \left( \frac{1}{23} \sin(23x) \right) - \int \left( \frac{1}{23} \sin(23x) \right) 11x^{10} \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^{11} \cos(23x) \, dx = \frac{1}{23} x^{11} \sin(23x) - \frac{11}{23} \int x^{10} \sin(23x) \, dx
+\]
+
+Substitute this back into our original expression:
+
+\[
+\int x^{12} \sin(23x) \, dx = -\frac{1}{23} x^{12} \cos(23x) + \frac{12}{23} \left( \frac{1}{23} x^{11} \sin(23x) - \frac{11}{23} \int x^{10} \sin(23x) \, dx \right)
+\]
+
+Simplify further:
+
+\[
+\int x^{12} \sin(23x) \, dx = -\frac{1}{23} x^{12} \cos(23x) + \frac{12}{529} x^{11} \sin(23x) - \frac{132}{529} \int x^{10} \sin(23x) \, dx
+\]
+
+We continue this process iteratively, reducing the power of \(x\) each time. However, this process can be quite lengthy. Instead, we recognize that the integral will eventually reduce to a form that can be directly integrated. The general form of the solution will involve a combination of terms with \(\sin(23x)\) and \(\cos(23x)\) multiplied by polynomials in \(x\).
+
+After completing all the steps, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{1}{23} x^{12} \cos(23x) + \frac{12}{529} x^{11} \sin(23x) - \frac{132}{12167} x^{10} \cos(23x) + \cdots + C}
+\]
+
+where \(C\) is the constant of integration. The exact form of the polynomial coefficients can be determined by continuing the integration by parts process.","To evaluate the integral \(\int x^{12} \sin(23x) \, dx\) using integration by parts, we will use the formula:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+
+\[
+u = x^{12} \quad \text{and} \quad dv = \sin(23x) \, dx
+\]
+
+First, we need to find \(du\) and \(v\):
+
+\[
+du = 12x^{11} \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \sin(23x) \, dx
+\]
+
+Using the integral of \(\sin(ax)\):
+
+\[
+v = -\frac{1}{23} \cos(23x)
+\]
+
+Now, we apply the integration by parts formula:
+
+\[
+\int x^{12} \sin(23x) \, dx = x^{12} \left( -\frac{1}{23} \cos(23x) \right) - \int \left( -\frac{1}{23} \cos(23x) \right) 12x^{11} \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^{12} \sin(23x) \, dx = -\frac{1}{23} x^{12} \cos(23x) + \frac{12}{23} \int x^{11} \cos(23x) \, dx
+\]
+
+Next, we need to evaluate the integral \(\int x^{11} \cos(23x) \, dx\) using integration by parts again. Let:
+
+\[
+u = x^{11} \quad \text{and} \quad dv = \cos(23x) \, dx
+\]
+
+Then:
+
+\[
+du = 11x^{10} \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \cos(23x) \, dx = \frac{1}{23} \sin(23x)
+\]
+
+Applying integration by parts again:
+
+\[
+\int x^{11} \cos(23x) \, dx = x^{11} \left( \frac{1}{23} \sin(23x) \right) - \int \left( \frac{1}{23} \sin(23x) \right) 11x^{10} \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^{11} \cos(23x) \, dx = \frac{1}{23} x^{11} \sin(23x) - \frac{11}{23} \int x^{10} \sin(23x) \, dx
+\]
+
+Substitute this back into our original expression:
+
+\[
+\int x^{12} \sin(23x) \, dx = -\frac{1}{23} x^{12} \cos(23x) + \frac{12}{23} \left( \frac{1}{23} x^{11} \sin(23x) - \frac{11}{23} \int x^{10} \sin(23x) \, dx \right)
+\]
+
+Simplify further:
+
+\[
+\int x^{12} \sin(23x) \, dx = -\frac{1}{23} x^{12} \cos(23x) + \frac{12}{529} x^{11} \sin(23x) - \frac{132}{529} \int x^{10} \sin(23x) \, dx
+\]
+
+We continue this process iteratively, reducing the power of \(x\) each time. However, this process can be quite lengthy. Instead, we recognize that the integral will eventually reduce to a form that can be directly integrated. The general form of the solution will involve a combination of terms with \(\sin(23x)\) and \(\cos(23x)\) multiplied by polynomials in \(x\).
+
+After completing all the steps, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{1}{23} x^{12} \cos(23x) + \frac{12}{529} x^{11} \sin(23x) - \frac{132}{12167} x^{10} \cos(23x) + \cdots + C}
+\]
+
+where \(C\) is the constant of integration. The exact form of the polynomial coefficients can be determined by continuing the integration by parts process.",2}{529} x^{11} \sin(23x) [-] \frac{132}{529} \int x^,S1_exact,,
+ibp_pts_n12_b5,Silent_Sign_Flip,ibp,failure,- \frac{x^{12} \cos{\left(5 x \right)}}{5} + \frac{12 x^{11} \sin{\left(5 x \right)}}{25} + \frac{132 x^{10} \cos{\left(5 x \right)}}{125} - \frac{264 x^{9} \sin{\left(5 x \right)}}{125} - \frac{2376 x^{8} \cos{\left(5 x \right)}}{625} + \frac{19008 x^{7} \sin{\left(5 x \right)}}{3125} + \frac{133056 x^{6} \cos{\left(5 x \right)}}{15625} - \frac{798336 x^{5} \sin{\left(5 x \right)}}{78125} - \frac{798336 x^{4} \cos{\left(5 x \right)}}{78125} + \frac{3193344 x^{3} \sin{\left(5 x \right)}}{390625} + \frac{9580032 x^{2} \cos{\left(5 x \right)}}{1953125} - \frac{19160064 x \sin{\left(5 x \right)}}{9765625} - \frac{19160064 \cos{\left(5 x \right)}}{48828125},-,+,2447,373,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{12} \sin(5x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^{12} \sin(5x) \, dx\) using integration by parts, we will use the formula:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+
+\[
+u = x^{12} \quad \text{and} \quad dv = \sin(5x) \, dx
+\]
+
+First, we need to find \(du\) and \(v\):
+
+\[
+du = 12x^{11} \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \sin(5x) \, dx
+\]
+
+Using the substitution \(w = 5x\), we get \(dw = 5 \, dx\) or \(dx = \frac{1}{5} \, dw\):
+
+\[
+v = \int \sin(w) \cdot \frac{1}{5} \, dw = \frac{1}{5} \int \sin(w) \, dw = -\frac{1}{5} \cos(w) = -\frac{1}{5} \cos(5x)
+\]
+
+Now we apply the integration by parts formula:
+
+\[
+\int x^{12} \sin(5x) \, dx = x^{12} \left( -\frac{1}{5} \cos(5x) \right) - \int \left( -\frac{1}{5} \cos(5x) \right) 12x^{11} \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^{12} \sin(5x) \, dx = -\frac{1}{5} x^{12} \cos(5x) + \frac{12}{5} \int x^{11} \cos(5x) \, dx
+\]
+
+Next, we need to evaluate the integral \(\int x^{11} \cos(5x) \, dx\) using integration by parts again. Let:
+
+\[
+u = x^{11} \quad \text{and} \quad dv = \cos(5x) \, dx
+\]
+
+Then:
+
+\[
+du = 11x^{10} \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \cos(5x) \, dx
+\]
+
+Using the substitution \(w = 5x\), we get \(dw = 5 \, dx\) or \(dx = \frac{1}{5} \, dw\):
+
+\[
+v = \int \cos(w) \cdot \frac{1}{5} \, dw = \frac{1}{5} \int \cos(w) \, dw = \frac{1}{5} \sin(w) = \frac{1}{5} \sin(5x)
+\]
+
+Now we apply the integration by parts formula again:
+
+\[
+\int x^{11} \cos(5x) \, dx = x^{11} \left( \frac{1}{5} \sin(5x) \right) - \int \left( \frac{1}{5} \sin(5x) \right) 11x^{10} \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^{11} \cos(5x) \, dx = \frac{1}{5} x^{11} \sin(5x) - \frac{11}{5} \int x^{10} \sin(5x) \, dx
+\]
+
+Substitute this back into our original expression:
+
+\[
+\int x^{12} \sin(5x) \, dx = -\frac{1}{5} x^{12} \cos(5x) + \frac{12}{5} \left( \frac{1}{5} x^{11} \sin(5x) - \frac{11}{5} \int x^{10} \sin(5x) \, dx \right)
+\]
+
+Simplify further:
+
+\[
+\int x^{12} \sin(5x) \, dx = -\frac{1}{5} x^{12} \cos(5x) + \frac{12}{25} x^{11} \sin(5x) - \frac{132}{25} \int x^{10} \sin(5x) \, dx
+\]
+
+We continue this process iteratively, reducing the power of \(x\) each time. However, this process can be quite lengthy. Instead, we recognize that the integral will eventually reduce to a form that can be directly integrated. The general form of the solution will involve a combination of terms with \(x^n \cos(5x)\) and \(x^n \sin(5x)\).
+
+After completing all the steps, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{1}{5} x^{12} \cos(5x) + \frac{12}{25} x^{11} \sin(5x) - \frac{132}{125} x^{10} \cos(5x) + \cdots + C}
+\]
+
+where \(C\) is the constant of integration. The exact form of the remaining terms can be derived by continuing the integration by parts process.","To evaluate the integral \(\int x^{12} \sin(5x) \, dx\) using integration by parts, we will use the formula:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+
+\[
+u = x^{12} \quad \text{and} \quad dv = \sin(5x) \, dx
+\]
+
+First, we need to find \(du\) and \(v\):
+
+\[
+du = 12x^{11} \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \sin(5x) \, dx
+\]
+
+Using the substitution \(w = 5x\), we get \(dw = 5 \, dx\) or \(dx = \frac{1}{5} \, dw\):
+
+\[
+v = \int \sin(w) \cdot \frac{1}{5} \, dw = \frac{1}{5} \int \sin(w) \, dw = -\frac{1}{5} \cos(w) = -\frac{1}{5} \cos(5x)
+\]
+
+Now we apply the integration by parts formula:
+
+\[
+\int x^{12} \sin(5x) \, dx = x^{12} \left( -\frac{1}{5} \cos(5x) \right) - \int \left( -\frac{1}{5} \cos(5x) \right) 12x^{11} \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^{12} \sin(5x) \, dx = -\frac{1}{5} x^{12} \cos(5x) + \frac{12}{5} \int x^{11} \cos(5x) \, dx
+\]
+
+Next, we need to evaluate the integral \(\int x^{11} \cos(5x) \, dx\) using integration by parts again. Let:
+
+\[
+u = x^{11} \quad \text{and} \quad dv = \cos(5x) \, dx
+\]
+
+Then:
+
+\[
+du = 11x^{10} \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \cos(5x) \, dx
+\]
+
+Using the substitution \(w = 5x\), we get \(dw = 5 \, dx\) or \(dx = \frac{1}{5} \, dw\):
+
+\[
+v = \int \cos(w) \cdot \frac{1}{5} \, dw = \frac{1}{5} \int \cos(w) \, dw = \frac{1}{5} \sin(w) = \frac{1}{5} \sin(5x)
+\]
+
+Now we apply the integration by parts formula again:
+
+\[
+\int x^{11} \cos(5x) \, dx = x^{11} \left( \frac{1}{5} \sin(5x) \right) - \int \left( \frac{1}{5} \sin(5x) \right) 11x^{10} \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^{11} \cos(5x) \, dx = \frac{1}{5} x^{11} \sin(5x) - \frac{11}{5} \int x^{10} \sin(5x) \, dx
+\]
+
+Substitute this back into our original expression:
+
+\[
+\int x^{12} \sin(5x) \, dx = -\frac{1}{5} x^{12} \cos(5x) + \frac{12}{5} \left( \frac{1}{5} x^{11} \sin(5x) - \frac{11}{5} \int x^{10} \sin(5x) \, dx \right)
+\]
+
+Simplify further:
+
+\[
+\int x^{12} \sin(5x) \, dx = -\frac{1}{5} x^{12} \cos(5x) + \frac{12}{25} x^{11} \sin(5x) - \frac{132}{25} \int x^{10} \sin(5x) \, dx
+\]
+
+We continue this process iteratively, reducing the power of \(x\) each time. However, this process can be quite lengthy. Instead, we recognize that the integral will eventually reduce to a form that can be directly integrated. The general form of the solution will involve a combination of terms with \(x^n \cos(5x)\) and \(x^n \sin(5x)\).
+
+After completing all the steps, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{1}{5} x^{12} \cos(5x) + \frac{12}{25} x^{11} \sin(5x) - \frac{132}{125} x^{10} \cos(5x) + \cdots + C}
+\]
+
+where \(C\) is the constant of integration. The exact form of the remaining terms can be derived by continuing the integration by parts process.",{12}{25} x^{11} \sin(5x) [-] \frac{132}{25} \int x^{,S1_exact,,
+ibp_pts_n13_b13,Silent_Sign_Flip,ibp,failure,- \frac{x^{13} \cos{\left(13 x \right)}}{13} + \frac{x^{12} \sin{\left(13 x \right)}}{13} + \frac{12 x^{11} \cos{\left(13 x \right)}}{169} - \frac{132 x^{10} \sin{\left(13 x \right)}}{2197} - \frac{1320 x^{9} \cos{\left(13 x \right)}}{28561} + \frac{11880 x^{8} \sin{\left(13 x \right)}}{371293} + \frac{95040 x^{7} \cos{\left(13 x \right)}}{4826809} - \frac{665280 x^{6} \sin{\left(13 x \right)}}{62748517} - \frac{3991680 x^{5} \cos{\left(13 x \right)}}{815730721} + \frac{19958400 x^{4} \sin{\left(13 x \right)}}{10604499373} + \frac{79833600 x^{3} \cos{\left(13 x \right)}}{137858491849} - \frac{239500800 x^{2} \sin{\left(13 x \right)}}{1792160394037} - \frac{479001600 x \cos{\left(13 x \right)}}{23298085122481} + \frac{479001600 \sin{\left(13 x \right)}}{302875106592253},-,+,1555,374,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{13} \sin(13x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^{13} \sin(13x) \, dx\), we will use integration by parts repeatedly. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) in such a way that the integral becomes simpler with each application. Let's start with:
+
+\[
+u = x^{13}, \quad dv = \sin(13x) \, dx
+\]
+
+Then, we have:
+
+\[
+du = 13x^{12} \, dx, \quad v = -\frac{1}{13} \cos(13x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{13} \sin(13x) \, dx = x^{13} \left(-\frac{1}{13} \cos(13x)\right) - \int \left(-\frac{1}{13} \cos(13x)\right) 13x^{12} \, dx
+\]
+
+Simplifying:
+
+\[
+\int x^{13} \sin(13x) \, dx = -\frac{1}{13} x^{13} \cos(13x) + \int x^{12} \cos(13x) \, dx
+\]
+
+Now, we need to evaluate \(\int x^{12} \cos(13x) \, dx\). We apply integration by parts again:
+
+\[
+u = x^{12}, \quad dv = \cos(13x) \, dx
+\]
+
+Then, we have:
+
+\[
+du = 12x^{11} \, dx, \quad v = \frac{1}{13} \sin(13x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{12} \cos(13x) \, dx = x^{12} \left(\frac{1}{13} \sin(13x)\right) - \int \left(\frac{1}{13} \sin(13x)\right) 12x^{11} \, dx
+\]
+
+Simplifying:
+
+\[
+\int x^{12} \cos(13x) \, dx = \frac{1}{13} x^{12} \sin(13x) - \frac{12}{13} \int x^{11} \sin(13x) \, dx
+\]
+
+Substituting back:
+
+\[
+\int x^{13} \sin(13x) \, dx = -\frac{1}{13} x^{13} \cos(13x) + \frac{1}{13} x^{12} \sin(13x) - \frac{12}{13} \int x^{11} \sin(13x) \, dx
+\]
+
+We continue this process 14 times. Each time, the power of \(x\) decreases by 1, and the trigonometric function alternates between \(\sin(13x)\) and \(\cos(13x)\). After 14 applications, we will have:
+
+\[
+\int x^{13} \sin(13x) \, dx = -\frac{1}{13} x^{13} \cos(13x) + \frac{1}{13} x^{12} \sin(13x) - \frac{12}{13^2} x^{11} \cos(13x) - \frac{12 \cdot 11}{13^3} x^{10} \sin(13x) + \cdots
+\]
+
+The final term will be:
+
+\[
+\cdots + \frac{12!}{13^{13}} \sin(13x)
+\]
+
+Combining all terms, we get:
+
+\[
+\int x^{13} \sin(13x) \, dx = -\frac{1}{13} x^{13} \cos(13x) + \frac{1}{13} x^{12} \sin(13x) - \frac{12}{13^2} x^{11} \cos(13x) - \frac{12 \cdot 11}{13^3} x^{10} \sin(13x) + \cdots + \frac{12!}{13^{13}} \sin(13x) + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{1}{13} x^{13} \cos(13x) + \frac{1}{13} x^{12} \sin(13x) - \frac{12}{13^2} x^{11} \cos(13x) - \frac{12 \cdot 11}{13^3} x^{10} \sin(13x) + \cdots + \frac{12!}{13^{13}} \sin(13x) + C}
+\]","To evaluate the integral \(\int x^{13} \sin(13x) \, dx\), we will use integration by parts repeatedly. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) in such a way that the integral becomes simpler with each application. Let's start with:
+
+\[
+u = x^{13}, \quad dv = \sin(13x) \, dx
+\]
+
+Then, we have:
+
+\[
+du = 13x^{12} \, dx, \quad v = -\frac{1}{13} \cos(13x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{13} \sin(13x) \, dx = x^{13} \left(-\frac{1}{13} \cos(13x)\right) - \int \left(-\frac{1}{13} \cos(13x)\right) 13x^{12} \, dx
+\]
+
+Simplifying:
+
+\[
+\int x^{13} \sin(13x) \, dx = -\frac{1}{13} x^{13} \cos(13x) + \int x^{12} \cos(13x) \, dx
+\]
+
+Now, we need to evaluate \(\int x^{12} \cos(13x) \, dx\). We apply integration by parts again:
+
+\[
+u = x^{12}, \quad dv = \cos(13x) \, dx
+\]
+
+Then, we have:
+
+\[
+du = 12x^{11} \, dx, \quad v = \frac{1}{13} \sin(13x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{12} \cos(13x) \, dx = x^{12} \left(\frac{1}{13} \sin(13x)\right) - \int \left(\frac{1}{13} \sin(13x)\right) 12x^{11} \, dx
+\]
+
+Simplifying:
+
+\[
+\int x^{12} \cos(13x) \, dx = \frac{1}{13} x^{12} \sin(13x) - \frac{12}{13} \int x^{11} \sin(13x) \, dx
+\]
+
+Substituting back:
+
+\[
+\int x^{13} \sin(13x) \, dx = -\frac{1}{13} x^{13} \cos(13x) + \frac{1}{13} x^{12} \sin(13x) - \frac{12}{13} \int x^{11} \sin(13x) \, dx
+\]
+
+We continue this process 14 times. Each time, the power of \(x\) decreases by 1, and the trigonometric function alternates between \(\sin(13x)\) and \(\cos(13x)\). After 14 applications, we will have:
+
+\[
+\int x^{13} \sin(13x) \, dx = -\frac{1}{13} x^{13} \cos(13x) + \frac{1}{13} x^{12} \sin(13x) - \frac{12}{13^2} x^{11} \cos(13x) - \frac{12 \cdot 11}{13^3} x^{10} \sin(13x) + \cdots
+\]
+
+The final term will be:
+
+\[
+\cdots + \frac{12!}{13^{13}} \sin(13x)
+\]
+
+Combining all terms, we get:
+
+\[
+\int x^{13} \sin(13x) \, dx = -\frac{1}{13} x^{13} \cos(13x) + \frac{1}{13} x^{12} \sin(13x) - \frac{12}{13^2} x^{11} \cos(13x) - \frac{12 \cdot 11}{13^3} x^{10} \sin(13x) + \cdots + \frac{12!}{13^{13}} \sin(13x) + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{1}{13} x^{13} \cos(13x) + \frac{1}{13} x^{12} \sin(13x) - \frac{12}{13^2} x^{11} \cos(13x) - \frac{12 \cdot 11}{13^3} x^{10} \sin(13x) + \cdots + \frac{12!}{13^{13}} \sin(13x) + C}
+\]",{1}{13} x^{12} \sin(13x) [-] \frac{12}{13} \int x^{1,S1_exact,,
+ibp_pts_n14_b17,Silent_Sign_Flip,ibp,failure,- \frac{x^{14} \cos{\left(17 x \right)}}{17} + \frac{14 x^{13} \sin{\left(17 x \right)}}{289} + \frac{182 x^{12} \cos{\left(17 x \right)}}{4913} - \frac{2184 x^{11} \sin{\left(17 x \right)}}{83521} - \frac{24024 x^{10} \cos{\left(17 x \right)}}{1419857} + \frac{240240 x^{9} \sin{\left(17 x \right)}}{24137569} + \frac{2162160 x^{8} \cos{\left(17 x \right)}}{410338673} - \frac{17297280 x^{7} \sin{\left(17 x \right)}}{6975757441} - \frac{121080960 x^{6} \cos{\left(17 x \right)}}{118587876497} + \frac{726485760 x^{5} \sin{\left(17 x \right)}}{2015993900449} + \frac{3632428800 x^{4} \cos{\left(17 x \right)}}{34271896307633} - \frac{14529715200 x^{3} \sin{\left(17 x \right)}}{582622237229761} - \frac{43589145600 x^{2} \cos{\left(17 x \right)}}{9904578032905937} + \frac{87178291200 x \sin{\left(17 x \right)}}{168377826559400929} + \frac{87178291200 \cos{\left(17 x \right)}}{2862423051509815793},-,+,1943,374,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{14} \sin(17x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^{14} \sin(17x) \, dx\), we will use integration by parts repeatedly. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) such that the integral of \(v \, du\) is simpler than the original integral. We will start with:
+
+\[
+u = x^{14}, \quad dv = \sin(17x) \, dx
+\]
+
+Then, we compute \(du\) and \(v\):
+
+\[
+du = 14x^{13} \, dx, \quad v = -\frac{1}{17} \cos(17x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{14} \sin(17x) \, dx = x^{14} \left(-\frac{1}{17} \cos(17x)\right) - \int \left(-\frac{1}{17} \cos(17x)\right) 14x^{13} \, dx
+\]
+
+Simplify the expression:
+
+\[
+= -\frac{1}{17} x^{14} \cos(17x) + \frac{14}{17} \int x^{13} \cos(17x) \, dx
+\]
+
+Now, we need to evaluate \(\int x^{13} \cos(17x) \, dx\). We will use integration by parts again with:
+
+\[
+u = x^{13}, \quad dv = \cos(17x) \, dx
+\]
+
+Then, we compute \(du\) and \(v\):
+
+\[
+du = 13x^{12} \, dx, \quad v = \frac{1}{17} \sin(17x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{13} \cos(17x) \, dx = x^{13} \left(\frac{1}{17} \sin(17x)\right) - \int \left(\frac{1}{17} \sin(17x)\right) 13x^{12} \, dx
+\]
+
+Simplify the expression:
+
+\[
+= \frac{1}{17} x^{13} \sin(17x) - \frac{13}{17} \int x^{12} \sin(17x) \, dx
+\]
+
+Substitute this back into the previous result:
+
+\[
+\int x^{14} \sin(17x) \, dx = -\frac{1}{17} x^{14} \cos(17x) + \frac{14}{17} \left( \frac{1}{17} x^{13} \sin(17x) - \frac{13}{17} \int x^{12} \sin(17x) \, dx \right)
+\]
+
+Simplify:
+
+\[
+= -\frac{1}{17} x^{14} \cos(17x) + \frac{14}{289} x^{13} \sin(17x) - \frac{182}{289} \int x^{12} \sin(17x) \, dx
+\]
+
+We continue this process 15 times, each time reducing the power of \(x\) by 1. The general form after \(n\) applications of integration by parts is:
+
+\[
+\int x^{14} \sin(17x) \, dx = \sum_{k=0}^{14} \left( \frac{(-1)^{k+1} 14!}{17^{k+1} (14-k)!} x^{14-k} \cos(17x) + \frac{(-1)^k 14!}{17^{k+1} (14-k)!} x^{14-k} \sin(17x) \right) + C
+\]
+
+After 15 applications, the integral of \(x^0 \sin(17x)\) is simply:
+
+\[
+\int \sin(17x) \, dx = -\frac{1}{17} \cos(17x)
+\]
+
+Thus, the final result is:
+
+\[
+\boxed{-\frac{1}{17} x^{14} \cos(17x) + \frac{14}{289} x^{13} \sin(17x) - \frac{182}{4913} x^{12} \cos(17x) + \frac{2548}{83521} x^{11} \sin(17x) - \frac{28028}{1419857} x^{10} \cos(17x) + \frac{280280}{24137569} x^9 \sin(17x) - \frac{2522520}{410338673} x^8 \cos(17x) + \frac{20180160}{6975757441} x^7 \sin(17x) - \frac{141261120}{118587876497} x^6 \cos(17x) + \frac{847566720}{2015993900449} x^5 \sin(17x) - \frac{4237833600}{34271896307633} x^4 \cos(17x) + \frac{16951334400}{582622237229761} x^3 \sin(17x) - \frac{50854003200}{9904578032905937} x^2 \cos(17x) + \frac{101708006400}{168377826559400929} x \sin(17x) - \frac{101708006400}{2862423051509815793} \cos(17x) + C}
+\]","To evaluate the integral \(\int x^{14} \sin(17x) \, dx\), we will use integration by parts repeatedly. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) such that the integral of \(v \, du\) is simpler than the original integral. We will start with:
+
+\[
+u = x^{14}, \quad dv = \sin(17x) \, dx
+\]
+
+Then, we compute \(du\) and \(v\):
+
+\[
+du = 14x^{13} \, dx, \quad v = -\frac{1}{17} \cos(17x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{14} \sin(17x) \, dx = x^{14} \left(-\frac{1}{17} \cos(17x)\right) - \int \left(-\frac{1}{17} \cos(17x)\right) 14x^{13} \, dx
+\]
+
+Simplify the expression:
+
+\[
+= -\frac{1}{17} x^{14} \cos(17x) + \frac{14}{17} \int x^{13} \cos(17x) \, dx
+\]
+
+Now, we need to evaluate \(\int x^{13} \cos(17x) \, dx\). We will use integration by parts again with:
+
+\[
+u = x^{13}, \quad dv = \cos(17x) \, dx
+\]
+
+Then, we compute \(du\) and \(v\):
+
+\[
+du = 13x^{12} \, dx, \quad v = \frac{1}{17} \sin(17x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{13} \cos(17x) \, dx = x^{13} \left(\frac{1}{17} \sin(17x)\right) - \int \left(\frac{1}{17} \sin(17x)\right) 13x^{12} \, dx
+\]
+
+Simplify the expression:
+
+\[
+= \frac{1}{17} x^{13} \sin(17x) - \frac{13}{17} \int x^{12} \sin(17x) \, dx
+\]
+
+Substitute this back into the previous result:
+
+\[
+\int x^{14} \sin(17x) \, dx = -\frac{1}{17} x^{14} \cos(17x) + \frac{14}{17} \left( \frac{1}{17} x^{13} \sin(17x) - \frac{13}{17} \int x^{12} \sin(17x) \, dx \right)
+\]
+
+Simplify:
+
+\[
+= -\frac{1}{17} x^{14} \cos(17x) + \frac{14}{289} x^{13} \sin(17x) - \frac{182}{289} \int x^{12} \sin(17x) \, dx
+\]
+
+We continue this process 15 times, each time reducing the power of \(x\) by 1. The general form after \(n\) applications of integration by parts is:
+
+\[
+\int x^{14} \sin(17x) \, dx = \sum_{k=0}^{14} \left( \frac{(-1)^{k+1} 14!}{17^{k+1} (14-k)!} x^{14-k} \cos(17x) + \frac{(-1)^k 14!}{17^{k+1} (14-k)!} x^{14-k} \sin(17x) \right) + C
+\]
+
+After 15 applications, the integral of \(x^0 \sin(17x)\) is simply:
+
+\[
+\int \sin(17x) \, dx = -\frac{1}{17} \cos(17x)
+\]
+
+Thus, the final result is:
+
+\[
+\boxed{-\frac{1}{17} x^{14} \cos(17x) + \frac{14}{289} x^{13} \sin(17x) - \frac{182}{4913} x^{12} \cos(17x) + \frac{2548}{83521} x^{11} \sin(17x) - \frac{28028}{1419857} x^{10} \cos(17x) + \frac{280280}{24137569} x^9 \sin(17x) - \frac{2522520}{410338673} x^8 \cos(17x) + \frac{20180160}{6975757441} x^7 \sin(17x) - \frac{141261120}{118587876497} x^6 \cos(17x) + \frac{847566720}{2015993900449} x^5 \sin(17x) - \frac{4237833600}{34271896307633} x^4 \cos(17x) + \frac{16951334400}{582622237229761} x^3 \sin(17x) - \frac{50854003200}{9904578032905937} x^2 \cos(17x) + \frac{101708006400}{168377826559400929} x \sin(17x) - \frac{101708006400}{2862423051509815793} \cos(17x) + C}
+\]",4}{289} x^{13} \sin(17x) [-] \frac{182}{289} \int x^,S1_exact,,
+ibp_pts_n15_b1,Silent_Sign_Flip,ibp,failure,- x^{15} \cos{\left(x \right)} + 15 x^{14} \sin{\left(x \right)} + 210 x^{13} \cos{\left(x \right)} - 2730 x^{12} \sin{\left(x \right)} - 32760 x^{11} \cos{\left(x \right)} + 360360 x^{10} \sin{\left(x \right)} + 3603600 x^{9} \cos{\left(x \right)} - 32432400 x^{8} \sin{\left(x \right)} - 259459200 x^{7} \cos{\left(x \right)} + 1816214400 x^{6} \sin{\left(x \right)} + 10897286400 x^{5} \cos{\left(x \right)} - 54486432000 x^{4} \sin{\left(x \right)} - 217945728000 x^{3} \cos{\left(x \right)} + 653837184000 x^{2} \sin{\left(x \right)} + 1307674368000 x \cos{\left(x \right)} - 1307674368000 \sin{\left(x \right)},-,+,2242,373,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{15} \sin(1x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^{15} \sin(x) \, dx\), we will use integration by parts repeatedly. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) in such a way that the integral of \(v \, du\) is simpler than the original integral. For this problem, we will set:
+
+\[
+u = x^{15} \quad \text{and} \quad dv = \sin(x) \, dx
+\]
+
+Then, we have:
+
+\[
+du = 15x^{14} \, dx \quad \text{and} \quad v = -\cos(x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{15} \sin(x) \, dx = -x^{15} \cos(x) - \int -\cos(x) \cdot 15x^{14} \, dx
+\]
+
+Simplifying the integral on the right-hand side:
+
+\[
+\int x^{15} \sin(x) \, dx = -x^{15} \cos(x) + 15 \int x^{14} \cos(x) \, dx
+\]
+
+Now, we need to evaluate \(\int x^{14} \cos(x) \, dx\). We will use integration by parts again, setting:
+
+\[
+u = x^{14} \quad \text{and} \quad dv = \cos(x) \, dx
+\]
+
+Then, we have:
+
+\[
+du = 14x^{13} \, dx \quad \text{and} \quad v = \sin(x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{14} \cos(x) \, dx = x^{14} \sin(x) - \int \sin(x) \cdot 14x^{13} \, dx
+\]
+
+Simplifying the integral on the right-hand side:
+
+\[
+\int x^{14} \cos(x) \, dx = x^{14} \sin(x) - 14 \int x^{13} \sin(x) \, dx
+\]
+
+Substituting this back into our previous result:
+
+\[
+\int x^{15} \sin(x) \, dx = -x^{15} \cos(x) + 15 \left( x^{14} \sin(x) - 14 \int x^{13} \sin(x) \, dx \right)
+\]
+
+Simplifying:
+
+\[
+\int x^{15} \sin(x) \, dx = -x^{15} \cos(x) + 15x^{14} \sin(x) - 210 \int x^{13} \sin(x) \, dx
+\]
+
+We continue this process for each power of \(x\) from \(x^{13}\) down to \(x^0\). Each step will involve integrating by parts, reducing the power of \(x\) by 1 and alternating the trigonometric function between \(\sin(x)\) and \(\cos(x)\).
+
+After 16 applications of integration by parts, we will have:
+
+\[
+\int x^{15} \sin(x) \, dx = -x^{15} \cos(x) + 15x^{14} \sin(x) - 210x^{13} \cos(x) + 2730x^{12} \sin(x) - 32760x^{11} \cos(x) + 360360x^{10} \sin(x) - 3963960x^9 \cos(x) + 43603560x^8 \sin(x) - 479639160x^7 \cos(x) + 5276030760x^6 \sin(x) - 57036338340x^5 \cos(x) + 613881552540x^4 \sin(x) - 6570756296640x^3 \cos(x) + 69942941114880x^2 \sin(x) - 741350881706240x \cos(x) + 7834184258415360 \sin(x) + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-x^{15} \cos(x) + 15x^{14} \sin(x) - 210x^{13} \cos(x) + 2730x^{12} \sin(x) - 32760x^{11} \cos(x) + 360360x^{10} \sin(x) - 3963960x^9 \cos(x) + 43603560x^8 \sin(x) - 479639160x^7 \cos(x) + 5276030760x^6 \sin(x) - 57036338340x^5 \cos(x) + 613881552540x^4 \sin(x) - 6570756296640x^3 \cos(x) + 69942941114880x^2 \sin(x) - 741350881706240x \cos(x) + 7834184258415360 \sin(x) + C}
+\]","To evaluate the integral \(\int x^{15} \sin(x) \, dx\), we will use integration by parts repeatedly. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) in such a way that the integral of \(v \, du\) is simpler than the original integral. For this problem, we will set:
+
+\[
+u = x^{15} \quad \text{and} \quad dv = \sin(x) \, dx
+\]
+
+Then, we have:
+
+\[
+du = 15x^{14} \, dx \quad \text{and} \quad v = -\cos(x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{15} \sin(x) \, dx = -x^{15} \cos(x) - \int -\cos(x) \cdot 15x^{14} \, dx
+\]
+
+Simplifying the integral on the right-hand side:
+
+\[
+\int x^{15} \sin(x) \, dx = -x^{15} \cos(x) + 15 \int x^{14} \cos(x) \, dx
+\]
+
+Now, we need to evaluate \(\int x^{14} \cos(x) \, dx\). We will use integration by parts again, setting:
+
+\[
+u = x^{14} \quad \text{and} \quad dv = \cos(x) \, dx
+\]
+
+Then, we have:
+
+\[
+du = 14x^{13} \, dx \quad \text{and} \quad v = \sin(x)
+\]
+
+Applying integration by parts:
+
+\[
+\int x^{14} \cos(x) \, dx = x^{14} \sin(x) - \int \sin(x) \cdot 14x^{13} \, dx
+\]
+
+Simplifying the integral on the right-hand side:
+
+\[
+\int x^{14} \cos(x) \, dx = x^{14} \sin(x) - 14 \int x^{13} \sin(x) \, dx
+\]
+
+Substituting this back into our previous result:
+
+\[
+\int x^{15} \sin(x) \, dx = -x^{15} \cos(x) + 15 \left( x^{14} \sin(x) - 14 \int x^{13} \sin(x) \, dx \right)
+\]
+
+Simplifying:
+
+\[
+\int x^{15} \sin(x) \, dx = -x^{15} \cos(x) + 15x^{14} \sin(x) - 210 \int x^{13} \sin(x) \, dx
+\]
+
+We continue this process for each power of \(x\) from \(x^{13}\) down to \(x^0\). Each step will involve integrating by parts, reducing the power of \(x\) by 1 and alternating the trigonometric function between \(\sin(x)\) and \(\cos(x)\).
+
+After 16 applications of integration by parts, we will have:
+
+\[
+\int x^{15} \sin(x) \, dx = -x^{15} \cos(x) + 15x^{14} \sin(x) - 210x^{13} \cos(x) + 2730x^{12} \sin(x) - 32760x^{11} \cos(x) + 360360x^{10} \sin(x) - 3963960x^9 \cos(x) + 43603560x^8 \sin(x) - 479639160x^7 \cos(x) + 5276030760x^6 \sin(x) - 57036338340x^5 \cos(x) + 613881552540x^4 \sin(x) - 6570756296640x^3 \cos(x) + 69942941114880x^2 \sin(x) - 741350881706240x \cos(x) + 7834184258415360 \sin(x) + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-x^{15} \cos(x) + 15x^{14} \sin(x) - 210x^{13} \cos(x) + 2730x^{12} \sin(x) - 32760x^{11} \cos(x) + 360360x^{10} \sin(x) - 3963960x^9 \cos(x) + 43603560x^8 \sin(x) - 479639160x^7 \cos(x) + 5276030760x^6 \sin(x) - 57036338340x^5 \cos(x) + 613881552540x^4 \sin(x) - 6570756296640x^3 \cos(x) + 69942941114880x^2 \sin(x) - 741350881706240x \cos(x) + 7834184258415360 \sin(x) + C}
+\]",os(x) + 15x^{14} \sin(x) [-] 210x^{13} \cos(x) + 273,S1_exact,,
+ibp_pts_n6_b17,Silent_Sign_Flip,ibp,failure,- \frac{x^{6} \cos{\left(17 x \right)}}{17} + \frac{6 x^{5} \sin{\left(17 x \right)}}{289} + \frac{30 x^{4} \cos{\left(17 x \right)}}{4913} - \frac{120 x^{3} \sin{\left(17 x \right)}}{83521} - \frac{360 x^{2} \cos{\left(17 x \right)}}{1419857} + \frac{720 x \sin{\left(17 x \right)}}{24137569} + \frac{720 \cos{\left(17 x \right)}}{410338673},-,+,2010,373,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{6} \sin(17x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^6 \sin(17x) \, dx\) using integration by parts, we will use the formula:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+
+\[
+u = x^6 \quad \text{and} \quad dv = \sin(17x) \, dx
+\]
+
+First, we need to find \(du\) and \(v\):
+
+\[
+du = 6x^5 \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \sin(17x) \, dx = -\frac{1}{17} \cos(17x)
+\]
+
+Now, applying the integration by parts formula:
+
+\[
+\int x^6 \sin(17x) \, dx = x^6 \left( -\frac{1}{17} \cos(17x) \right) - \int \left( -\frac{1}{17} \cos(17x) \right) 6x^5 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^6 \sin(17x) \, dx = -\frac{1}{17} x^6 \cos(17x) + \frac{6}{17} \int x^5 \cos(17x) \, dx
+\]
+
+Next, we need to evaluate the integral \(\int x^5 \cos(17x) \, dx\) using integration by parts again. Let:
+
+\[
+u = x^5 \quad \text{and} \quad dv = \cos(17x) \, dx
+\]
+
+Then:
+
+\[
+du = 5x^4 \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \cos(17x) \, dx = \frac{1}{17} \sin(17x)
+\]
+
+Applying the integration by parts formula again:
+
+\[
+\int x^5 \cos(17x) \, dx = x^5 \left( \frac{1}{17} \sin(17x) \right) - \int \left( \frac{1}{17} \sin(17x) \right) 5x^4 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^5 \cos(17x) \, dx = \frac{1}{17} x^5 \sin(17x) - \frac{5}{17} \int x^4 \sin(17x) \, dx
+\]
+
+Substitute this back into our previous result:
+
+\[
+\int x^6 \sin(17x) \, dx = -\frac{1}{17} x^6 \cos(17x) + \frac{6}{17} \left( \frac{1}{17} x^5 \sin(17x) - \frac{5}{17} \int x^4 \sin(17x) \, dx \right)
+\]
+
+Simplify further:
+
+\[
+\int x^6 \sin(17x) \, dx = -\frac{1}{17} x^6 \cos(17x) + \frac{6}{289} x^5 \sin(17x) - \frac{30}{289} \int x^4 \sin(17x) \, dx
+\]
+
+We continue this process for each subsequent integral until we reach a simple integral. However, for brevity, we will assume the pattern and use the reduction formula for \(\int x^n \sin(ax) \, dx\):
+
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Applying this recursively, we eventually get:
+
+\[
+\int x^6 \sin(17x) \, dx = -\frac{1}{17} x^6 \cos(17x) + \frac{6}{289} x^5 \sin(17x) - \frac{30}{4913} x^4 \cos(17x) - \frac{120}{83521} x^3 \sin(17x) + \frac{360}{1419857} x^2 \cos(17x) + \frac{720}{24137569} x \sin(17x) - \frac{720}{410338673} \cos(17x) + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{1}{17} x^6 \cos(17x) + \frac{6}{289} x^5 \sin(17x) - \frac{30}{4913} x^4 \cos(17x) - \frac{120}{83521} x^3 \sin(17x) + \frac{360}{1419857} x^2 \cos(17x) + \frac{720}{24137569} x \sin(17x) - \frac{720}{410338673} \cos(17x) + C}
+\]","To evaluate the integral \(\int x^6 \sin(17x) \, dx\) using integration by parts, we will use the formula:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+
+\[
+u = x^6 \quad \text{and} \quad dv = \sin(17x) \, dx
+\]
+
+First, we need to find \(du\) and \(v\):
+
+\[
+du = 6x^5 \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \sin(17x) \, dx = -\frac{1}{17} \cos(17x)
+\]
+
+Now, applying the integration by parts formula:
+
+\[
+\int x^6 \sin(17x) \, dx = x^6 \left( -\frac{1}{17} \cos(17x) \right) - \int \left( -\frac{1}{17} \cos(17x) \right) 6x^5 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^6 \sin(17x) \, dx = -\frac{1}{17} x^6 \cos(17x) + \frac{6}{17} \int x^5 \cos(17x) \, dx
+\]
+
+Next, we need to evaluate the integral \(\int x^5 \cos(17x) \, dx\) using integration by parts again. Let:
+
+\[
+u = x^5 \quad \text{and} \quad dv = \cos(17x) \, dx
+\]
+
+Then:
+
+\[
+du = 5x^4 \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \cos(17x) \, dx = \frac{1}{17} \sin(17x)
+\]
+
+Applying the integration by parts formula again:
+
+\[
+\int x^5 \cos(17x) \, dx = x^5 \left( \frac{1}{17} \sin(17x) \right) - \int \left( \frac{1}{17} \sin(17x) \right) 5x^4 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^5 \cos(17x) \, dx = \frac{1}{17} x^5 \sin(17x) - \frac{5}{17} \int x^4 \sin(17x) \, dx
+\]
+
+Substitute this back into our previous result:
+
+\[
+\int x^6 \sin(17x) \, dx = -\frac{1}{17} x^6 \cos(17x) + \frac{6}{17} \left( \frac{1}{17} x^5 \sin(17x) - \frac{5}{17} \int x^4 \sin(17x) \, dx \right)
+\]
+
+Simplify further:
+
+\[
+\int x^6 \sin(17x) \, dx = -\frac{1}{17} x^6 \cos(17x) + \frac{6}{289} x^5 \sin(17x) - \frac{30}{289} \int x^4 \sin(17x) \, dx
+\]
+
+We continue this process for each subsequent integral until we reach a simple integral. However, for brevity, we will assume the pattern and use the reduction formula for \(\int x^n \sin(ax) \, dx\):
+
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Applying this recursively, we eventually get:
+
+\[
+\int x^6 \sin(17x) \, dx = -\frac{1}{17} x^6 \cos(17x) + \frac{6}{289} x^5 \sin(17x) - \frac{30}{4913} x^4 \cos(17x) - \frac{120}{83521} x^3 \sin(17x) + \frac{360}{1419857} x^2 \cos(17x) + \frac{720}{24137569} x \sin(17x) - \frac{720}{410338673} \cos(17x) + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{1}{17} x^6 \cos(17x) + \frac{6}{289} x^5 \sin(17x) - \frac{30}{4913} x^4 \cos(17x) - \frac{120}{83521} x^3 \sin(17x) + \frac{360}{1419857} x^2 \cos(17x) + \frac{720}{24137569} x \sin(17x) - \frac{720}{410338673} \cos(17x) + C}
+\]",ac{6}{289} x^5 \sin(17x) [-] \frac{30}{289} \int x^4,S1_exact,,
+ibp_pts_n6_b29,Silent_Sign_Flip,ibp,failure,- \frac{x^{6} \cos{\left(29 x \right)}}{29} + \frac{6 x^{5} \sin{\left(29 x \right)}}{841} + \frac{30 x^{4} \cos{\left(29 x \right)}}{24389} - \frac{120 x^{3} \sin{\left(29 x \right)}}{707281} - \frac{360 x^{2} \cos{\left(29 x \right)}}{20511149} + \frac{720 x \sin{\left(29 x \right)}}{594823321} + \frac{720 \cos{\left(29 x \right)}}{17249876309},-,+,2651,373,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{6} \sin(29x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^6 \sin(29x) \, dx\) using integration by parts, we will use the formula:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+\[
+u = x^6 \quad \text{and} \quad dv = \sin(29x) \, dx
+\]
+
+First, we need to find \(du\) and \(v\):
+\[
+du = 6x^5 \, dx
+\]
+\[
+v = \int \sin(29x) \, dx = -\frac{1}{29} \cos(29x)
+\]
+
+Now, applying the integration by parts formula:
+\[
+\int x^6 \sin(29x) \, dx = x^6 \left( -\frac{1}{29} \cos(29x) \right) - \int \left( -\frac{1}{29} \cos(29x) \right) 6x^5 \, dx
+\]
+
+Simplify the expression:
+\[
+\int x^6 \sin(29x) \, dx = -\frac{x^6}{29} \cos(29x) + \frac{6}{29} \int x^5 \cos(29x) \, dx
+\]
+
+Next, we need to evaluate the integral \(\int x^5 \cos(29x) \, dx\) using integration by parts again. Let:
+\[
+u = x^5 \quad \text{and} \quad dv = \cos(29x) \, dx
+\]
+
+Find \(du\) and \(v\):
+\[
+du = 5x^4 \, dx
+\]
+\[
+v = \int \cos(29x) \, dx = \frac{1}{29} \sin(29x)
+\]
+
+Applying integration by parts again:
+\[
+\int x^5 \cos(29x) \, dx = x^5 \left( \frac{1}{29} \sin(29x) \right) - \int \left( \frac{1}{29} \sin(29x) \right) 5x^4 \, dx
+\]
+
+Simplify the expression:
+\[
+\int x^5 \cos(29x) \, dx = \frac{x^5}{29} \sin(29x) - \frac{5}{29} \int x^4 \sin(29x) \, dx
+\]
+
+Substitute this back into our previous result:
+\[
+\int x^6 \sin(29x) \, dx = -\frac{x^6}{29} \cos(29x) + \frac{6}{29} \left( \frac{x^5}{29} \sin(29x) - \frac{5}{29} \int x^4 \sin(29x) \, dx \right)
+\]
+
+Simplify:
+\[
+\int x^6 \sin(29x) \, dx = -\frac{x^6}{29} \cos(29x) + \frac{6x^5}{841} \sin(29x) - \frac{30}{841} \int x^4 \sin(29x) \, dx
+\]
+
+We need to continue this process for \(\int x^4 \sin(29x) \, dx\), \(\int x^3 \sin(29x) \, dx\), \(\int x^2 \sin(29x) \, dx\), and \(\int x \sin(29x) \, dx\). However, this process can be quite lengthy. Instead, we can recognize a pattern and use a reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\).
+
+The reduction formula for \(\int x^n \sin(ax) \, dx\) is:
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Using this formula iteratively, we can find the final result. However, for the sake of brevity, we will use the result directly:
+
+\[
+\int x^6 \sin(29x) \, dx = -\frac{x^6 \cos(29x)}{29} + \frac{6x^5 \sin(29x)}{841} - \frac{30x^4 \cos(29x)}{24389} + \frac{120x^3 \sin(29x)}{707281} - \frac{360x^2 \cos(29x)}{20511149} + \frac{720x \sin(29x)}{594823321} - \frac{720 \cos(29x)}{17249876309} + C
+\]
+
+Thus, the final simplified antiderivative is:
+\[
+\boxed{-\frac{x^6 \cos(29x)}{29} + \frac{6x^5 \sin(29x)}{841} - \frac{30x^4 \cos(29x)}{24389} + \frac{120x^3 \sin(29x)}{707281} - \frac{360x^2 \cos(29x)}{20511149} + \frac{720x \sin(29x)}{594823321} - \frac{720 \cos(29x)}{17249876309} + C}
+\]","To evaluate the integral \(\int x^6 \sin(29x) \, dx\) using integration by parts, we will use the formula:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+\[
+u = x^6 \quad \text{and} \quad dv = \sin(29x) \, dx
+\]
+
+First, we need to find \(du\) and \(v\):
+\[
+du = 6x^5 \, dx
+\]
+\[
+v = \int \sin(29x) \, dx = -\frac{1}{29} \cos(29x)
+\]
+
+Now, applying the integration by parts formula:
+\[
+\int x^6 \sin(29x) \, dx = x^6 \left( -\frac{1}{29} \cos(29x) \right) - \int \left( -\frac{1}{29} \cos(29x) \right) 6x^5 \, dx
+\]
+
+Simplify the expression:
+\[
+\int x^6 \sin(29x) \, dx = -\frac{x^6}{29} \cos(29x) + \frac{6}{29} \int x^5 \cos(29x) \, dx
+\]
+
+Next, we need to evaluate the integral \(\int x^5 \cos(29x) \, dx\) using integration by parts again. Let:
+\[
+u = x^5 \quad \text{and} \quad dv = \cos(29x) \, dx
+\]
+
+Find \(du\) and \(v\):
+\[
+du = 5x^4 \, dx
+\]
+\[
+v = \int \cos(29x) \, dx = \frac{1}{29} \sin(29x)
+\]
+
+Applying integration by parts again:
+\[
+\int x^5 \cos(29x) \, dx = x^5 \left( \frac{1}{29} \sin(29x) \right) - \int \left( \frac{1}{29} \sin(29x) \right) 5x^4 \, dx
+\]
+
+Simplify the expression:
+\[
+\int x^5 \cos(29x) \, dx = \frac{x^5}{29} \sin(29x) - \frac{5}{29} \int x^4 \sin(29x) \, dx
+\]
+
+Substitute this back into our previous result:
+\[
+\int x^6 \sin(29x) \, dx = -\frac{x^6}{29} \cos(29x) + \frac{6}{29} \left( \frac{x^5}{29} \sin(29x) - \frac{5}{29} \int x^4 \sin(29x) \, dx \right)
+\]
+
+Simplify:
+\[
+\int x^6 \sin(29x) \, dx = -\frac{x^6}{29} \cos(29x) + \frac{6x^5}{841} \sin(29x) - \frac{30}{841} \int x^4 \sin(29x) \, dx
+\]
+
+We need to continue this process for \(\int x^4 \sin(29x) \, dx\), \(\int x^3 \sin(29x) \, dx\), \(\int x^2 \sin(29x) \, dx\), and \(\int x \sin(29x) \, dx\). However, this process can be quite lengthy. Instead, we can recognize a pattern and use a reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\).
+
+The reduction formula for \(\int x^n \sin(ax) \, dx\) is:
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Using this formula iteratively, we can find the final result. However, for the sake of brevity, we will use the result directly:
+
+\[
+\int x^6 \sin(29x) \, dx = -\frac{x^6 \cos(29x)}{29} + \frac{6x^5 \sin(29x)}{841} - \frac{30x^4 \cos(29x)}{24389} + \frac{120x^3 \sin(29x)}{707281} - \frac{360x^2 \cos(29x)}{20511149} + \frac{720x \sin(29x)}{594823321} - \frac{720 \cos(29x)}{17249876309} + C
+\]
+
+Thus, the final simplified antiderivative is:
+\[
+\boxed{-\frac{x^6 \cos(29x)}{29} + \frac{6x^5 \sin(29x)}{841} - \frac{30x^4 \cos(29x)}{24389} + \frac{120x^3 \sin(29x)}{707281} - \frac{360x^2 \cos(29x)}{20511149} + \frac{720x \sin(29x)}{594823321} - \frac{720 \cos(29x)}{17249876309} + C}
+\]",rac{6x^5 \sin(29x)}{841} [-] \frac{30x^4 \cos(29x)}{,S1_exact,,
+ibp_pts_n7_b29,Silent_Sign_Flip,ibp,failure,- \frac{x^{7} \cos{\left(29 x \right)}}{29} + \frac{7 x^{6} \sin{\left(29 x \right)}}{841} + \frac{42 x^{5} \cos{\left(29 x \right)}}{24389} - \frac{210 x^{4} \sin{\left(29 x \right)}}{707281} - \frac{840 x^{3} \cos{\left(29 x \right)}}{20511149} + \frac{2520 x^{2} \sin{\left(29 x \right)}}{594823321} + \frac{5040 x \cos{\left(29 x \right)}}{17249876309} - \frac{5040 \sin{\left(29 x \right)}}{500246412961},-,+,2478,373,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{7} \sin(29x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^7 \sin(29x) \, dx\) using integration by parts, we will use the formula:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+
+\[
+u = x^7 \quad \text{and} \quad dv = \sin(29x) \, dx
+\]
+
+First, we need to find \(du\) and \(v\):
+
+\[
+du = 7x^6 \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \sin(29x) \, dx = -\frac{1}{29} \cos(29x)
+\]
+
+Now, applying the integration by parts formula:
+
+\[
+\int x^7 \sin(29x) \, dx = x^7 \left( -\frac{1}{29} \cos(29x) \right) - \int \left( -\frac{1}{29} \cos(29x) \right) 7x^6 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^7 \sin(29x) \, dx = -\frac{1}{29} x^7 \cos(29x) + \frac{7}{29} \int x^6 \cos(29x) \, dx
+\]
+
+Next, we need to evaluate the integral \(\int x^6 \cos(29x) \, dx\) using integration by parts again. Let:
+
+\[
+u = x^6 \quad \text{and} \quad dv = \cos(29x) \, dx
+\]
+
+Then:
+
+\[
+du = 6x^5 \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \cos(29x) \, dx = \frac{1}{29} \sin(29x)
+\]
+
+Applying the integration by parts formula again:
+
+\[
+\int x^6 \cos(29x) \, dx = x^6 \left( \frac{1}{29} \sin(29x) \right) - \int \left( \frac{1}{29} \sin(29x) \right) 6x^5 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^6 \cos(29x) \, dx = \frac{1}{29} x^6 \sin(29x) - \frac{6}{29} \int x^5 \sin(29x) \, dx
+\]
+
+Substitute this back into our previous result:
+
+\[
+\int x^7 \sin(29x) \, dx = -\frac{1}{29} x^7 \cos(29x) + \frac{7}{29} \left( \frac{1}{29} x^6 \sin(29x) - \frac{6}{29} \int x^5 \sin(29x) \, dx \right)
+\]
+
+Simplify:
+
+\[
+\int x^7 \sin(29x) \, dx = -\frac{1}{29} x^7 \cos(29x) + \frac{7}{841} x^6 \sin(29x) - \frac{42}{841} \int x^5 \sin(29x) \, dx
+\]
+
+We continue this process iteratively until we reach a simple integral. However, for brevity, we will use the pattern and the reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\):
+
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Applying this iteratively, we eventually get:
+
+\[
+\int x^7 \sin(29x) \, dx = -\frac{x^7 \cos(29x)}{29} + \frac{7x^6 \sin(29x)}{841} - \frac{42x^5 \cos(29x)}{24389} + \frac{210x^4 \sin(29x)}{707281} - \frac{840x^3 \cos(29x)}{20511149} + \frac{2520x^2 \sin(29x)}{594823321} - \frac{5040x \cos(29x)}{17250336309} + \frac{5040 \sin(29x)}{499259752961} + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{x^7 \cos(29x)}{29} + \frac{7x^6 \sin(29x)}{841} - \frac{42x^5 \cos(29x)}{24389} + \frac{210x^4 \sin(29x)}{707281} - \frac{840x^3 \cos(29x)}{20511149} + \frac{2520x^2 \sin(29x)}{594823321} - \frac{5040x \cos(29x)}{17250336309} + \frac{5040 \sin(29x)}{499259752961} + C}
+\]","To evaluate the integral \(\int x^7 \sin(29x) \, dx\) using integration by parts, we will use the formula:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+
+\[
+u = x^7 \quad \text{and} \quad dv = \sin(29x) \, dx
+\]
+
+First, we need to find \(du\) and \(v\):
+
+\[
+du = 7x^6 \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \sin(29x) \, dx = -\frac{1}{29} \cos(29x)
+\]
+
+Now, applying the integration by parts formula:
+
+\[
+\int x^7 \sin(29x) \, dx = x^7 \left( -\frac{1}{29} \cos(29x) \right) - \int \left( -\frac{1}{29} \cos(29x) \right) 7x^6 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^7 \sin(29x) \, dx = -\frac{1}{29} x^7 \cos(29x) + \frac{7}{29} \int x^6 \cos(29x) \, dx
+\]
+
+Next, we need to evaluate the integral \(\int x^6 \cos(29x) \, dx\) using integration by parts again. Let:
+
+\[
+u = x^6 \quad \text{and} \quad dv = \cos(29x) \, dx
+\]
+
+Then:
+
+\[
+du = 6x^5 \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \cos(29x) \, dx = \frac{1}{29} \sin(29x)
+\]
+
+Applying the integration by parts formula again:
+
+\[
+\int x^6 \cos(29x) \, dx = x^6 \left( \frac{1}{29} \sin(29x) \right) - \int \left( \frac{1}{29} \sin(29x) \right) 6x^5 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^6 \cos(29x) \, dx = \frac{1}{29} x^6 \sin(29x) - \frac{6}{29} \int x^5 \sin(29x) \, dx
+\]
+
+Substitute this back into our previous result:
+
+\[
+\int x^7 \sin(29x) \, dx = -\frac{1}{29} x^7 \cos(29x) + \frac{7}{29} \left( \frac{1}{29} x^6 \sin(29x) - \frac{6}{29} \int x^5 \sin(29x) \, dx \right)
+\]
+
+Simplify:
+
+\[
+\int x^7 \sin(29x) \, dx = -\frac{1}{29} x^7 \cos(29x) + \frac{7}{841} x^6 \sin(29x) - \frac{42}{841} \int x^5 \sin(29x) \, dx
+\]
+
+We continue this process iteratively until we reach a simple integral. However, for brevity, we will use the pattern and the reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\):
+
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Applying this iteratively, we eventually get:
+
+\[
+\int x^7 \sin(29x) \, dx = -\frac{x^7 \cos(29x)}{29} + \frac{7x^6 \sin(29x)}{841} - \frac{42x^5 \cos(29x)}{24389} + \frac{210x^4 \sin(29x)}{707281} - \frac{840x^3 \cos(29x)}{20511149} + \frac{2520x^2 \sin(29x)}{594823321} - \frac{5040x \cos(29x)}{17250336309} + \frac{5040 \sin(29x)}{499259752961} + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{x^7 \cos(29x)}{29} + \frac{7x^6 \sin(29x)}{841} - \frac{42x^5 \cos(29x)}{24389} + \frac{210x^4 \sin(29x)}{707281} - \frac{840x^3 \cos(29x)}{20511149} + \frac{2520x^2 \sin(29x)}{594823321} - \frac{5040x \cos(29x)}{17250336309} + \frac{5040 \sin(29x)}{499259752961} + C}
+\]",rac{7x^6 \sin(29x)}{841} [-] \frac{42x^5 \cos(29x)}{,S1_exact,,
+ibp_pts_n7_b33,Silent_Sign_Flip,ibp,failure,- \frac{x^{7} \cos{\left(33 x \right)}}{33} + \frac{7 x^{6} \sin{\left(33 x \right)}}{1089} + \frac{14 x^{5} \cos{\left(33 x \right)}}{11979} - \frac{70 x^{4} \sin{\left(33 x \right)}}{395307} - \frac{280 x^{3} \cos{\left(33 x \right)}}{13045131} + \frac{280 x^{2} \sin{\left(33 x \right)}}{143496441} + \frac{560 x \cos{\left(33 x \right)}}{4735382553} - \frac{560 \sin{\left(33 x \right)}}{156267624249},-,+,1835,373,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{7} \sin(33x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^7 \sin(33x) \, dx\), we will use integration by parts. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+- Let \(u = x^7\)
+- Then \(du = 7x^6 \, dx\)
+
+- Let \(dv = \sin(33x) \, dx\)
+- Then \(v = -\frac{1}{33} \cos(33x)\)
+
+Applying the integration by parts formula:
+
+\[
+\int x^7 \sin(33x) \, dx = x^7 \left(-\frac{1}{33} \cos(33x)\right) - \int \left(-\frac{1}{33} \cos(33x)\right) 7x^6 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^7 \sin(33x) \, dx = -\frac{1}{33} x^7 \cos(33x) + \frac{7}{33} \int x^6 \cos(33x) \, dx
+\]
+
+Now, we need to evaluate the integral \(\int x^6 \cos(33x) \, dx\) using integration by parts again. Let:
+- \(u = x^6\)
+- Then \(du = 6x^5 \, dx\)
+
+- \(dv = \cos(33x) \, dx\)
+- Then \(v = \frac{1}{33} \sin(33x)\)
+
+Applying the integration by parts formula again:
+
+\[
+\int x^6 \cos(33x) \, dx = x^6 \left(\frac{1}{33} \sin(33x)\right) - \int \left(\frac{1}{33} \sin(33x)\right) 6x^5 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^6 \cos(33x) \, dx = \frac{1}{33} x^6 \sin(33x) - \frac{6}{33} \int x^5 \sin(33x) \, dx
+\]
+
+Substitute this back into the original integral:
+
+\[
+\int x^7 \sin(33x) \, dx = -\frac{1}{33} x^7 \cos(33x) + \frac{7}{33} \left( \frac{1}{33} x^6 \sin(33x) - \frac{6}{33} \int x^5 \sin(33x) \, dx \right)
+\]
+
+Simplify:
+
+\[
+\int x^7 \sin(33x) \, dx = -\frac{1}{33} x^7 \cos(33x) + \frac{7}{33^2} x^6 \sin(33x) - \frac{42}{33^2} \int x^5 \sin(33x) \, dx
+\]
+
+We need to continue this process for each power of \(x\) until we reach a simple integral. However, this process can be quite lengthy. Instead, we can recognize a pattern and use a reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\).
+
+The reduction formula for \(\int x^n \sin(ax) \, dx\) is:
+
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Using this formula iteratively, we can find the antiderivative. However, for the sake of brevity, we will use the result directly:
+
+\[
+\int x^7 \sin(33x) \, dx = -\frac{1}{33} x^7 \cos(33x) + \frac{7}{33^2} x^6 \sin(33x) - \frac{42}{33^3} x^5 \cos(33x) + \frac{210}{33^4} x^4 \sin(33x) - \frac{840}{33^5} x^3 \cos(33x) + \frac{2520}{33^6} x^2 \sin(33x) - \frac{5040}{33^7} x \cos(33x) + \frac{5040}{33^8} \sin(33x) + C
+\]
+
+Simplify the constants:
+
+\[
+\int x^7 \sin(33x) \, dx = -\frac{1}{33} x^7 \cos(33x) + \frac{7}{1089} x^6 \sin(33x) - \frac{14}{11979} x^5 \cos(33x) + \frac{70}{131769} x^4 \sin(33x) - \frac{280}{1449459} x^3 \cos(33x) + \frac{840}{15944049} x^2 \sin(33x) - \frac{1680}{175384539} x \cos(33x) + \frac{1680}{1929229929} \sin(33x) + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{1}{33} x^7 \cos(33x) + \frac{7}{1089} x^6 \sin(33x) - \frac{14}{11979} x^5 \cos(33x) + \frac{70}{131769} x^4 \sin(33x) - \frac{280}{1449459} x^3 \cos(33x) + \frac{840}{15944049} x^2 \sin(33x) - \frac{1680}{175384539} x \cos(33x) + \frac{1680}{1929229929} \sin(33x) + C}
+\]","To evaluate the integral \(\int x^7 \sin(33x) \, dx\), we will use integration by parts. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+- Let \(u = x^7\)
+- Then \(du = 7x^6 \, dx\)
+
+- Let \(dv = \sin(33x) \, dx\)
+- Then \(v = -\frac{1}{33} \cos(33x)\)
+
+Applying the integration by parts formula:
+
+\[
+\int x^7 \sin(33x) \, dx = x^7 \left(-\frac{1}{33} \cos(33x)\right) - \int \left(-\frac{1}{33} \cos(33x)\right) 7x^6 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^7 \sin(33x) \, dx = -\frac{1}{33} x^7 \cos(33x) + \frac{7}{33} \int x^6 \cos(33x) \, dx
+\]
+
+Now, we need to evaluate the integral \(\int x^6 \cos(33x) \, dx\) using integration by parts again. Let:
+- \(u = x^6\)
+- Then \(du = 6x^5 \, dx\)
+
+- \(dv = \cos(33x) \, dx\)
+- Then \(v = \frac{1}{33} \sin(33x)\)
+
+Applying the integration by parts formula again:
+
+\[
+\int x^6 \cos(33x) \, dx = x^6 \left(\frac{1}{33} \sin(33x)\right) - \int \left(\frac{1}{33} \sin(33x)\right) 6x^5 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^6 \cos(33x) \, dx = \frac{1}{33} x^6 \sin(33x) - \frac{6}{33} \int x^5 \sin(33x) \, dx
+\]
+
+Substitute this back into the original integral:
+
+\[
+\int x^7 \sin(33x) \, dx = -\frac{1}{33} x^7 \cos(33x) + \frac{7}{33} \left( \frac{1}{33} x^6 \sin(33x) - \frac{6}{33} \int x^5 \sin(33x) \, dx \right)
+\]
+
+Simplify:
+
+\[
+\int x^7 \sin(33x) \, dx = -\frac{1}{33} x^7 \cos(33x) + \frac{7}{33^2} x^6 \sin(33x) - \frac{42}{33^2} \int x^5 \sin(33x) \, dx
+\]
+
+We need to continue this process for each power of \(x\) until we reach a simple integral. However, this process can be quite lengthy. Instead, we can recognize a pattern and use a reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\).
+
+The reduction formula for \(\int x^n \sin(ax) \, dx\) is:
+
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Using this formula iteratively, we can find the antiderivative. However, for the sake of brevity, we will use the result directly:
+
+\[
+\int x^7 \sin(33x) \, dx = -\frac{1}{33} x^7 \cos(33x) + \frac{7}{33^2} x^6 \sin(33x) - \frac{42}{33^3} x^5 \cos(33x) + \frac{210}{33^4} x^4 \sin(33x) - \frac{840}{33^5} x^3 \cos(33x) + \frac{2520}{33^6} x^2 \sin(33x) - \frac{5040}{33^7} x \cos(33x) + \frac{5040}{33^8} \sin(33x) + C
+\]
+
+Simplify the constants:
+
+\[
+\int x^7 \sin(33x) \, dx = -\frac{1}{33} x^7 \cos(33x) + \frac{7}{1089} x^6 \sin(33x) - \frac{14}{11979} x^5 \cos(33x) + \frac{70}{131769} x^4 \sin(33x) - \frac{280}{1449459} x^3 \cos(33x) + \frac{840}{15944049} x^2 \sin(33x) - \frac{1680}{175384539} x \cos(33x) + \frac{1680}{1929229929} \sin(33x) + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{1}{33} x^7 \cos(33x) + \frac{7}{1089} x^6 \sin(33x) - \frac{14}{11979} x^5 \cos(33x) + \frac{70}{131769} x^4 \sin(33x) - \frac{280}{1449459} x^3 \cos(33x) + \frac{840}{15944049} x^2 \sin(33x) - \frac{1680}{175384539} x \cos(33x) + \frac{1680}{1929229929} \sin(33x) + C}
+\]",c{7}{33^2} x^6 \sin(33x) [-] \frac{42}{33^2} \int x^,S1_exact,,
+ibp_pts_n7_b41,Silent_Sign_Flip,ibp,failure,- \frac{x^{7} \cos{\left(41 x \right)}}{41} + \frac{7 x^{6} \sin{\left(41 x \right)}}{1681} + \frac{42 x^{5} \cos{\left(41 x \right)}}{68921} - \frac{210 x^{4} \sin{\left(41 x \right)}}{2825761} - \frac{840 x^{3} \cos{\left(41 x \right)}}{115856201} + \frac{2520 x^{2} \sin{\left(41 x \right)}}{4750104241} + \frac{5040 x \cos{\left(41 x \right)}}{194754273881} - \frac{5040 \sin{\left(41 x \right)}}{7984925229121},-,+,2353,373,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{7} \sin(41x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^7 \sin(41x) \, dx\), we will use integration by parts. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+- Let \(u = x^7\)
+- Then \(du = 7x^6 \, dx\)
+
+- Let \(dv = \sin(41x) \, dx\)
+- Then \(v = -\frac{1}{41} \cos(41x)\)
+
+Applying the integration by parts formula:
+
+\[
+\int x^7 \sin(41x) \, dx = x^7 \left(-\frac{1}{41} \cos(41x)\right) - \int \left(-\frac{1}{41} \cos(41x)\right) 7x^6 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^7 \sin(41x) \, dx = -\frac{x^7}{41} \cos(41x) + \frac{7}{41} \int x^6 \cos(41x) \, dx
+\]
+
+Now, we need to evaluate the integral \(\int x^6 \cos(41x) \, dx\). We will use integration by parts again.
+
+For the second integration by parts:
+- Let \(u = x^6\)
+- Then \(du = 6x^5 \, dx\)
+
+- Let \(dv = \cos(41x) \, dx\)
+- Then \(v = \frac{1}{41} \sin(41x)\)
+
+Applying the integration by parts formula again:
+
+\[
+\int x^6 \cos(41x) \, dx = x^6 \left(\frac{1}{41} \sin(41x)\right) - \int \left(\frac{1}{41} \sin(41x)\right) 6x^5 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^6 \cos(41x) \, dx = \frac{x^6}{41} \sin(41x) - \frac{6}{41} \int x^5 \sin(41x) \, dx
+\]
+
+Substitute this back into our original expression:
+
+\[
+\int x^7 \sin(41x) \, dx = -\frac{x^7}{41} \cos(41x) + \frac{7}{41} \left( \frac{x^6}{41} \sin(41x) - \frac{6}{41} \int x^5 \sin(41x) \, dx \right)
+\]
+
+Simplify further:
+
+\[
+\int x^7 \sin(41x) \, dx = -\frac{x^7}{41} \cos(41x) + \frac{7x^6}{41^2} \sin(41x) - \frac{42}{41^2} \int x^5 \sin(41x) \, dx
+\]
+
+We need to evaluate \(\int x^5 \sin(41x) \, dx\) using integration by parts again. This process will continue, reducing the power of \(x\) each time until we reach a simple integral. However, for brevity, we will assume the pattern and write the final result.
+
+The final result, after performing the integration by parts multiple times and simplifying, is:
+
+\[
+\boxed{-\frac{x^7}{41} \cos(41x) + \frac{7x^6}{41^2} \sin(41x) - \frac{42x^5}{41^3} \cos(41x) - \frac{210x^4}{41^4} \sin(41x) + \frac{840x^3}{41^5} \cos(41x) + \frac{2520x^2}{41^6} \sin(41x) - \frac{5040x}{41^7} \cos(41x) - \frac{5040}{41^8} \sin(41x) + C}
+\]","To evaluate the integral \(\int x^7 \sin(41x) \, dx\), we will use integration by parts. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+- Let \(u = x^7\)
+- Then \(du = 7x^6 \, dx\)
+
+- Let \(dv = \sin(41x) \, dx\)
+- Then \(v = -\frac{1}{41} \cos(41x)\)
+
+Applying the integration by parts formula:
+
+\[
+\int x^7 \sin(41x) \, dx = x^7 \left(-\frac{1}{41} \cos(41x)\right) - \int \left(-\frac{1}{41} \cos(41x)\right) 7x^6 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^7 \sin(41x) \, dx = -\frac{x^7}{41} \cos(41x) + \frac{7}{41} \int x^6 \cos(41x) \, dx
+\]
+
+Now, we need to evaluate the integral \(\int x^6 \cos(41x) \, dx\). We will use integration by parts again.
+
+For the second integration by parts:
+- Let \(u = x^6\)
+- Then \(du = 6x^5 \, dx\)
+
+- Let \(dv = \cos(41x) \, dx\)
+- Then \(v = \frac{1}{41} \sin(41x)\)
+
+Applying the integration by parts formula again:
+
+\[
+\int x^6 \cos(41x) \, dx = x^6 \left(\frac{1}{41} \sin(41x)\right) - \int \left(\frac{1}{41} \sin(41x)\right) 6x^5 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^6 \cos(41x) \, dx = \frac{x^6}{41} \sin(41x) - \frac{6}{41} \int x^5 \sin(41x) \, dx
+\]
+
+Substitute this back into our original expression:
+
+\[
+\int x^7 \sin(41x) \, dx = -\frac{x^7}{41} \cos(41x) + \frac{7}{41} \left( \frac{x^6}{41} \sin(41x) - \frac{6}{41} \int x^5 \sin(41x) \, dx \right)
+\]
+
+Simplify further:
+
+\[
+\int x^7 \sin(41x) \, dx = -\frac{x^7}{41} \cos(41x) + \frac{7x^6}{41^2} \sin(41x) - \frac{42}{41^2} \int x^5 \sin(41x) \, dx
+\]
+
+We need to evaluate \(\int x^5 \sin(41x) \, dx\) using integration by parts again. This process will continue, reducing the power of \(x\) each time until we reach a simple integral. However, for brevity, we will assume the pattern and write the final result.
+
+The final result, after performing the integration by parts multiple times and simplifying, is:
+
+\[
+\boxed{-\frac{x^7}{41} \cos(41x) + \frac{7x^6}{41^2} \sin(41x) - \frac{42x^5}{41^3} \cos(41x) - \frac{210x^4}{41^4} \sin(41x) + \frac{840x^3}{41^5} \cos(41x) + \frac{2520x^2}{41^6} \sin(41x) - \frac{5040x}{41^7} \cos(41x) - \frac{5040}{41^8} \sin(41x) + C}
+\]",ac{7x^6}{41^2} \sin(41x) [-] \frac{42x^5}{41^3} \cos,S1_exact,,
+ibp_pts_n7_b43,Silent_Sign_Flip,ibp,failure,- \frac{x^{7} \cos{\left(43 x \right)}}{43} + \frac{7 x^{6} \sin{\left(43 x \right)}}{1849} + \frac{42 x^{5} \cos{\left(43 x \right)}}{79507} - \frac{210 x^{4} \sin{\left(43 x \right)}}{3418801} - \frac{840 x^{3} \cos{\left(43 x \right)}}{147008443} + \frac{2520 x^{2} \sin{\left(43 x \right)}}{6321363049} + \frac{5040 x \cos{\left(43 x \right)}}{271818611107} - \frac{5040 \sin{\left(43 x \right)}}{11688200277601},-,+,2706,373,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{7} \sin(43x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^7 \sin(43x) \, dx\), we will use integration by parts. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+
+\[
+u = x^7 \quad \text{and} \quad dv = \sin(43x) \, dx
+\]
+
+First, we need to find \(du\) and \(v\):
+
+\[
+du = 7x^6 \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \sin(43x) \, dx = -\frac{1}{43} \cos(43x)
+\]
+
+Now, applying the integration by parts formula:
+
+\[
+\int x^7 \sin(43x) \, dx = x^7 \left( -\frac{1}{43} \cos(43x) \right) - \int \left( -\frac{1}{43} \cos(43x) \right) 7x^6 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^7 \sin(43x) \, dx = -\frac{x^7}{43} \cos(43x) + \frac{7}{43} \int x^6 \cos(43x) \, dx
+\]
+
+Next, we need to evaluate the integral \(\int x^6 \cos(43x) \, dx\) using integration by parts again. Let:
+
+\[
+u = x^6 \quad \text{and} \quad dv = \cos(43x) \, dx
+\]
+
+Then:
+
+\[
+du = 6x^5 \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \cos(43x) \, dx = \frac{1}{43} \sin(43x)
+\]
+
+Applying integration by parts again:
+
+\[
+\int x^6 \cos(43x) \, dx = x^6 \left( \frac{1}{43} \sin(43x) \right) - \int \left( \frac{1}{43} \sin(43x) \right) 6x^5 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^6 \cos(43x) \, dx = \frac{x^6}{43} \sin(43x) - \frac{6}{43} \int x^5 \sin(43x) \, dx
+\]
+
+Substitute this back into our previous result:
+
+\[
+\int x^7 \sin(43x) \, dx = -\frac{x^7}{43} \cos(43x) + \frac{7}{43} \left( \frac{x^6}{43} \sin(43x) - \frac{6}{43} \int x^5 \sin(43x) \, dx \right)
+\]
+
+Simplify further:
+
+\[
+\int x^7 \sin(43x) \, dx = -\frac{x^7}{43} \cos(43x) + \frac{7x^6}{43^2} \sin(43x) - \frac{42}{43^2} \int x^5 \sin(43x) \, dx
+\]
+
+We continue this process for each power of \(x\) until we reach a simple integral. However, this process can be quite lengthy. Instead, we can recognize a pattern and use a reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\).
+
+The reduction formula for \(\int x^n \sin(ax) \, dx\) is:
+
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Applying this formula iteratively, we can find the final result. However, for the sake of brevity, we will use the pattern and the reduction formula to write the final result:
+
+\[
+\boxed{-\frac{x^7 \cos(43x)}{43} + \frac{7x^6 \sin(43x)}{43^2} - \frac{42x^5 \cos(43x)}{43^3} - \frac{210x^4 \sin(43x)}{43^4} + \frac{840x^3 \cos(43x)}{43^5} + \frac{2520x^2 \sin(43x)}{43^6} - \frac{5040x \cos(43x)}{43^7} - \frac{5040 \sin(43x)}{43^8} + C}
+\]","To evaluate the integral \(\int x^7 \sin(43x) \, dx\), we will use integration by parts. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+
+\[
+u = x^7 \quad \text{and} \quad dv = \sin(43x) \, dx
+\]
+
+First, we need to find \(du\) and \(v\):
+
+\[
+du = 7x^6 \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \sin(43x) \, dx = -\frac{1}{43} \cos(43x)
+\]
+
+Now, applying the integration by parts formula:
+
+\[
+\int x^7 \sin(43x) \, dx = x^7 \left( -\frac{1}{43} \cos(43x) \right) - \int \left( -\frac{1}{43} \cos(43x) \right) 7x^6 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^7 \sin(43x) \, dx = -\frac{x^7}{43} \cos(43x) + \frac{7}{43} \int x^6 \cos(43x) \, dx
+\]
+
+Next, we need to evaluate the integral \(\int x^6 \cos(43x) \, dx\) using integration by parts again. Let:
+
+\[
+u = x^6 \quad \text{and} \quad dv = \cos(43x) \, dx
+\]
+
+Then:
+
+\[
+du = 6x^5 \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \cos(43x) \, dx = \frac{1}{43} \sin(43x)
+\]
+
+Applying integration by parts again:
+
+\[
+\int x^6 \cos(43x) \, dx = x^6 \left( \frac{1}{43} \sin(43x) \right) - \int \left( \frac{1}{43} \sin(43x) \right) 6x^5 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^6 \cos(43x) \, dx = \frac{x^6}{43} \sin(43x) - \frac{6}{43} \int x^5 \sin(43x) \, dx
+\]
+
+Substitute this back into our previous result:
+
+\[
+\int x^7 \sin(43x) \, dx = -\frac{x^7}{43} \cos(43x) + \frac{7}{43} \left( \frac{x^6}{43} \sin(43x) - \frac{6}{43} \int x^5 \sin(43x) \, dx \right)
+\]
+
+Simplify further:
+
+\[
+\int x^7 \sin(43x) \, dx = -\frac{x^7}{43} \cos(43x) + \frac{7x^6}{43^2} \sin(43x) - \frac{42}{43^2} \int x^5 \sin(43x) \, dx
+\]
+
+We continue this process for each power of \(x\) until we reach a simple integral. However, this process can be quite lengthy. Instead, we can recognize a pattern and use a reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\).
+
+The reduction formula for \(\int x^n \sin(ax) \, dx\) is:
+
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Applying this formula iteratively, we can find the final result. However, for the sake of brevity, we will use the pattern and the reduction formula to write the final result:
+
+\[
+\boxed{-\frac{x^7 \cos(43x)}{43} + \frac{7x^6 \sin(43x)}{43^2} - \frac{42x^5 \cos(43x)}{43^3} - \frac{210x^4 \sin(43x)}{43^4} + \frac{840x^3 \cos(43x)}{43^5} + \frac{2520x^2 \sin(43x)}{43^6} - \frac{5040x \cos(43x)}{43^7} - \frac{5040 \sin(43x)}{43^8} + C}
+\]",ac{7x^6 \sin(43x)}{43^2} [-] \frac{42x^5 \cos(43x)}{,S1_exact,,
+ibp_pts_n7_b47,Silent_Sign_Flip,ibp,failure,- \frac{x^{7} \cos{\left(47 x \right)}}{47} + \frac{7 x^{6} \sin{\left(47 x \right)}}{2209} + \frac{42 x^{5} \cos{\left(47 x \right)}}{103823} - \frac{210 x^{4} \sin{\left(47 x \right)}}{4879681} - \frac{840 x^{3} \cos{\left(47 x \right)}}{229345007} + \frac{2520 x^{2} \sin{\left(47 x \right)}}{10779215329} + \frac{5040 x \cos{\left(47 x \right)}}{506623120463} - \frac{5040 \sin{\left(47 x \right)}}{23811286661761},-,+,2563,373,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{7} \sin(47x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^7 \sin(47x) \, dx\), we will use integration by parts. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+- Let \(u = x^7\)
+- Then \(du = 7x^6 \, dx\)
+
+- Let \(dv = \sin(47x) \, dx\)
+- Then \(v = -\frac{1}{47} \cos(47x)\)
+
+Applying the integration by parts formula:
+
+\[
+\int x^7 \sin(47x) \, dx = x^7 \left(-\frac{1}{47} \cos(47x)\right) - \int \left(-\frac{1}{47} \cos(47x)\right) 7x^6 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^7 \sin(47x) \, dx = -\frac{x^7}{47} \cos(47x) + \frac{7}{47} \int x^6 \cos(47x) \, dx
+\]
+
+\[
+\int x^7 \sin(47x) \, dx = -\frac{x^7}{47} \cos(47x) + \frac{7}{47} \int x^6 \cos(47x) \, dx
+\]
+
+Now, we need to evaluate \(\int x^6 \cos(47x) \, dx\) using integration by parts again. Let:
+- \(u = x^6\)
+- Then \(du = 6x^5 \, dx\)
+
+- \(dv = \cos(47x) \, dx\)
+- Then \(v = \frac{1}{47} \sin(47x)\)
+
+Applying integration by parts again:
+
+\[
+\int x^6 \cos(47x) \, dx = x^6 \left(\frac{1}{47} \sin(47x)\right) - \int \left(\frac{1}{47} \sin(47x)\right) 6x^5 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^6 \cos(47x) \, dx = \frac{x^6}{47} \sin(47x) - \frac{6}{47} \int x^5 \sin(47x) \, dx
+\]
+
+Substitute this back into the original integral:
+
+\[
+\int x^7 \sin(47x) \, dx = -\frac{x^7}{47} \cos(47x) + \frac{7}{47} \left( \frac{x^6}{47} \sin(47x) - \frac{6}{47} \int x^5 \sin(47x) \, dx \right)
+\]
+
+\[
+\int x^7 \sin(47x) \, dx = -\frac{x^7}{47} \cos(47x) + \frac{7x^6}{47^2} \sin(47x) - \frac{42}{47^2} \int x^5 \sin(47x) \, dx
+\]
+
+We need to continue this process for \(\int x^5 \sin(47x) \, dx\), and so on, until we reach a simple integral. However, this process can be quite lengthy. Instead, we can use a reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\).
+
+The reduction formula for \(\int x^n \sin(ax) \, dx\) is:
+
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Using this formula iteratively, we can find the antiderivative. However, for the sake of brevity, we will use the result directly:
+
+\[
+\int x^7 \sin(47x) \, dx = -\frac{x^7 \cos(47x)}{47} + \frac{7x^6 \sin(47x)}{47^2} - \frac{42x^5 \cos(47x)}{47^3} + \frac{210x^4 \sin(47x)}{47^4} - \frac{840x^3 \cos(47x)}{47^5} + \frac{2520x^2 \sin(47x)}{47^6} - \frac{5040x \cos(47x)}{47^7} + \frac{5040 \sin(47x)}{47^8} + C
+\]
+
+Simplifying the constants:
+
+\[
+\int x^7 \sin(47x) \, dx = -\frac{x^7 \cos(47x)}{47} + \frac{7x^6 \sin(47x)}{2209} - \frac{42x^5 \cos(47x)}{103823} + \frac{210x^4 \sin(47x)}{4879681} - \frac{840x^3 \cos(47x)}{229345007} + \frac{2520x^2 \sin(47x)}{10779215329} - \frac{5040x \cos(47x)}{508032130483} + \frac{5040 \sin(47x)}{23887510132761} + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{x^7 \cos(47x)}{47} + \frac{7x^6 \sin(47x)}{2209} - \frac{42x^5 \cos(47x)}{103823} + \frac{210x^4 \sin(47x)}{4879681} - \frac{840x^3 \cos(47x)}{229345007} + \frac{2520x^2 \sin(47x)}{10779215329} - \frac{5040x \cos(47x)}{508032130483} + \frac{5040 \sin(47x)}{23887510132761} + C}
+\]","To evaluate the integral \(\int x^7 \sin(47x) \, dx\), we will use integration by parts. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+- Let \(u = x^7\)
+- Then \(du = 7x^6 \, dx\)
+
+- Let \(dv = \sin(47x) \, dx\)
+- Then \(v = -\frac{1}{47} \cos(47x)\)
+
+Applying the integration by parts formula:
+
+\[
+\int x^7 \sin(47x) \, dx = x^7 \left(-\frac{1}{47} \cos(47x)\right) - \int \left(-\frac{1}{47} \cos(47x)\right) 7x^6 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^7 \sin(47x) \, dx = -\frac{x^7}{47} \cos(47x) + \frac{7}{47} \int x^6 \cos(47x) \, dx
+\]
+
+\[
+\int x^7 \sin(47x) \, dx = -\frac{x^7}{47} \cos(47x) + \frac{7}{47} \int x^6 \cos(47x) \, dx
+\]
+
+Now, we need to evaluate \(\int x^6 \cos(47x) \, dx\) using integration by parts again. Let:
+- \(u = x^6\)
+- Then \(du = 6x^5 \, dx\)
+
+- \(dv = \cos(47x) \, dx\)
+- Then \(v = \frac{1}{47} \sin(47x)\)
+
+Applying integration by parts again:
+
+\[
+\int x^6 \cos(47x) \, dx = x^6 \left(\frac{1}{47} \sin(47x)\right) - \int \left(\frac{1}{47} \sin(47x)\right) 6x^5 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^6 \cos(47x) \, dx = \frac{x^6}{47} \sin(47x) - \frac{6}{47} \int x^5 \sin(47x) \, dx
+\]
+
+Substitute this back into the original integral:
+
+\[
+\int x^7 \sin(47x) \, dx = -\frac{x^7}{47} \cos(47x) + \frac{7}{47} \left( \frac{x^6}{47} \sin(47x) - \frac{6}{47} \int x^5 \sin(47x) \, dx \right)
+\]
+
+\[
+\int x^7 \sin(47x) \, dx = -\frac{x^7}{47} \cos(47x) + \frac{7x^6}{47^2} \sin(47x) - \frac{42}{47^2} \int x^5 \sin(47x) \, dx
+\]
+
+We need to continue this process for \(\int x^5 \sin(47x) \, dx\), and so on, until we reach a simple integral. However, this process can be quite lengthy. Instead, we can use a reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\).
+
+The reduction formula for \(\int x^n \sin(ax) \, dx\) is:
+
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Using this formula iteratively, we can find the antiderivative. However, for the sake of brevity, we will use the result directly:
+
+\[
+\int x^7 \sin(47x) \, dx = -\frac{x^7 \cos(47x)}{47} + \frac{7x^6 \sin(47x)}{47^2} - \frac{42x^5 \cos(47x)}{47^3} + \frac{210x^4 \sin(47x)}{47^4} - \frac{840x^3 \cos(47x)}{47^5} + \frac{2520x^2 \sin(47x)}{47^6} - \frac{5040x \cos(47x)}{47^7} + \frac{5040 \sin(47x)}{47^8} + C
+\]
+
+Simplifying the constants:
+
+\[
+\int x^7 \sin(47x) \, dx = -\frac{x^7 \cos(47x)}{47} + \frac{7x^6 \sin(47x)}{2209} - \frac{42x^5 \cos(47x)}{103823} + \frac{210x^4 \sin(47x)}{4879681} - \frac{840x^3 \cos(47x)}{229345007} + \frac{2520x^2 \sin(47x)}{10779215329} - \frac{5040x \cos(47x)}{508032130483} + \frac{5040 \sin(47x)}{23887510132761} + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{x^7 \cos(47x)}{47} + \frac{7x^6 \sin(47x)}{2209} - \frac{42x^5 \cos(47x)}{103823} + \frac{210x^4 \sin(47x)}{4879681} - \frac{840x^3 \cos(47x)}{229345007} + \frac{2520x^2 \sin(47x)}{10779215329} - \frac{5040x \cos(47x)}{508032130483} + \frac{5040 \sin(47x)}{23887510132761} + C}
+\]",ac{7x^6 \sin(47x)}{47^2} [-] \frac{42x^5 \cos(47x)}{,S1_exact,,
+ibp_pts_n8_b37,Silent_Sign_Flip,ibp,failure,- \frac{x^{8} \cos{\left(37 x \right)}}{37} + \frac{8 x^{7} \sin{\left(37 x \right)}}{1369} + \frac{56 x^{6} \cos{\left(37 x \right)}}{50653} - \frac{336 x^{5} \sin{\left(37 x \right)}}{1874161} - \frac{1680 x^{4} \cos{\left(37 x \right)}}{69343957} + \frac{6720 x^{3} \sin{\left(37 x \right)}}{2565726409} + \frac{20160 x^{2} \cos{\left(37 x \right)}}{94931877133} - \frac{40320 x \sin{\left(37 x \right)}}{3512479453921} - \frac{40320 \cos{\left(37 x \right)}}{129961739795077},-,+,2507,373,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{8} \sin(37x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^8 \sin(37x) \, dx\), we will use integration by parts. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+- Let \(u = x^8\)
+- Then \(du = 8x^7 \, dx\)
+
+- Let \(dv = \sin(37x) \, dx\)
+- Then \(v = -\frac{1}{37} \cos(37x)\)
+
+Applying the integration by parts formula:
+
+\[
+\int x^8 \sin(37x) \, dx = x^8 \left(-\frac{1}{37} \cos(37x)\right) - \int \left(-\frac{1}{37} \cos(37x)\right) 8x^7 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^8 \sin(37x) \, dx = -\frac{x^8}{37} \cos(37x) + \frac{8}{37} \int x^7 \cos(37x) \, dx
+\]
+
+Now, we need to evaluate the integral \(\int x^7 \cos(37x) \, dx\) using integration by parts again. Let:
+- \(u = x^7\)
+- Then \(du = 7x^6 \, dx\)
+
+- \(dv = \cos(37x) \, dx\)
+- Then \(v = \frac{1}{37} \sin(37x)\)
+
+Applying the integration by parts formula again:
+
+\[
+\int x^7 \cos(37x) \, dx = x^7 \left(\frac{1}{37} \sin(37x)\right) - \int \left(\frac{1}{37} \sin(37x)\right) 7x^6 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^7 \cos(37x) \, dx = \frac{x^7}{37} \sin(37x) - \frac{7}{37} \int x^6 \sin(37x) \, dx
+\]
+
+Substitute this back into our original expression:
+
+\[
+\int x^8 \sin(37x) \, dx = -\frac{x^8}{37} \cos(37x) + \frac{8}{37} \left( \frac{x^7}{37} \sin(37x) - \frac{7}{37} \int x^6 \sin(37x) \, dx \right)
+\]
+
+Simplify further:
+
+\[
+\int x^8 \sin(37x) \, dx = -\frac{x^8}{37} \cos(37x) + \frac{8x^7}{37^2} \sin(37x) - \frac{56}{37^2} \int x^6 \sin(37x) \, dx
+\]
+
+We need to continue this process for each power of \(x\) until we reach a constant. However, this process can be quite lengthy. Instead, we can recognize a pattern and use the reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\).
+
+The reduction formula for \(\int x^n \sin(ax) \, dx\) is:
+
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Using this formula iteratively, we can find the antiderivative. However, for the sake of brevity, we will use the result directly:
+
+\[
+\int x^8 \sin(37x) \, dx = -\frac{x^8 \cos(37x)}{37} + \frac{8x^7 \sin(37x)}{37^2} - \frac{56x^6 \cos(37x)}{37^3} - \frac{336x^5 \sin(37x)}{37^4} + \frac{1680x^4 \cos(37x)}{37^5} + \frac{6720x^3 \sin(37x)}{37^6} - \frac{20160x^2 \cos(37x)}{37^7} - \frac{40320x \sin(37x)}{37^8} + \frac{40320 \cos(37x)}{37^9} + C
+\]
+
+Simplify the constants:
+
+\[
+\int x^8 \sin(37x) \, dx = -\frac{x^8 \cos(37x)}{37} + \frac{8x^7 \sin(37x)}{1369} - \frac{56x^6 \cos(37x)}{50653} - \frac{336x^5 \sin(37x)}{1874161} + \frac{1680x^4 \cos(37x)}{69343957} + \frac{6720x^3 \sin(37x)}{2565726409} - \frac{20160x^2 \cos(37x)}{94931877133} - \frac{40320x \sin(37x)}{3512329454921} + \frac{40320 \cos(37x)}{129955889822077} + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{x^8 \cos(37x)}{37} + \frac{8x^7 \sin(37x)}{1369} - \frac{56x^6 \cos(37x)}{50653} - \frac{336x^5 \sin(37x)}{1874161} + \frac{1680x^4 \cos(37x)}{69343957} + \frac{6720x^3 \sin(37x)}{2565726409} - \frac{20160x^2 \cos(37x)}{94931877133} - \frac{40320x \sin(37x)}{3512329454921} + \frac{40320 \cos(37x)}{129955889822077} + C}
+\]","To evaluate the integral \(\int x^8 \sin(37x) \, dx\), we will use integration by parts. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+- Let \(u = x^8\)
+- Then \(du = 8x^7 \, dx\)
+
+- Let \(dv = \sin(37x) \, dx\)
+- Then \(v = -\frac{1}{37} \cos(37x)\)
+
+Applying the integration by parts formula:
+
+\[
+\int x^8 \sin(37x) \, dx = x^8 \left(-\frac{1}{37} \cos(37x)\right) - \int \left(-\frac{1}{37} \cos(37x)\right) 8x^7 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^8 \sin(37x) \, dx = -\frac{x^8}{37} \cos(37x) + \frac{8}{37} \int x^7 \cos(37x) \, dx
+\]
+
+Now, we need to evaluate the integral \(\int x^7 \cos(37x) \, dx\) using integration by parts again. Let:
+- \(u = x^7\)
+- Then \(du = 7x^6 \, dx\)
+
+- \(dv = \cos(37x) \, dx\)
+- Then \(v = \frac{1}{37} \sin(37x)\)
+
+Applying the integration by parts formula again:
+
+\[
+\int x^7 \cos(37x) \, dx = x^7 \left(\frac{1}{37} \sin(37x)\right) - \int \left(\frac{1}{37} \sin(37x)\right) 7x^6 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^7 \cos(37x) \, dx = \frac{x^7}{37} \sin(37x) - \frac{7}{37} \int x^6 \sin(37x) \, dx
+\]
+
+Substitute this back into our original expression:
+
+\[
+\int x^8 \sin(37x) \, dx = -\frac{x^8}{37} \cos(37x) + \frac{8}{37} \left( \frac{x^7}{37} \sin(37x) - \frac{7}{37} \int x^6 \sin(37x) \, dx \right)
+\]
+
+Simplify further:
+
+\[
+\int x^8 \sin(37x) \, dx = -\frac{x^8}{37} \cos(37x) + \frac{8x^7}{37^2} \sin(37x) - \frac{56}{37^2} \int x^6 \sin(37x) \, dx
+\]
+
+We need to continue this process for each power of \(x\) until we reach a constant. However, this process can be quite lengthy. Instead, we can recognize a pattern and use the reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\).
+
+The reduction formula for \(\int x^n \sin(ax) \, dx\) is:
+
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Using this formula iteratively, we can find the antiderivative. However, for the sake of brevity, we will use the result directly:
+
+\[
+\int x^8 \sin(37x) \, dx = -\frac{x^8 \cos(37x)}{37} + \frac{8x^7 \sin(37x)}{37^2} - \frac{56x^6 \cos(37x)}{37^3} - \frac{336x^5 \sin(37x)}{37^4} + \frac{1680x^4 \cos(37x)}{37^5} + \frac{6720x^3 \sin(37x)}{37^6} - \frac{20160x^2 \cos(37x)}{37^7} - \frac{40320x \sin(37x)}{37^8} + \frac{40320 \cos(37x)}{37^9} + C
+\]
+
+Simplify the constants:
+
+\[
+\int x^8 \sin(37x) \, dx = -\frac{x^8 \cos(37x)}{37} + \frac{8x^7 \sin(37x)}{1369} - \frac{56x^6 \cos(37x)}{50653} - \frac{336x^5 \sin(37x)}{1874161} + \frac{1680x^4 \cos(37x)}{69343957} + \frac{6720x^3 \sin(37x)}{2565726409} - \frac{20160x^2 \cos(37x)}{94931877133} - \frac{40320x \sin(37x)}{3512329454921} + \frac{40320 \cos(37x)}{129955889822077} + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{x^8 \cos(37x)}{37} + \frac{8x^7 \sin(37x)}{1369} - \frac{56x^6 \cos(37x)}{50653} - \frac{336x^5 \sin(37x)}{1874161} + \frac{1680x^4 \cos(37x)}{69343957} + \frac{6720x^3 \sin(37x)}{2565726409} - \frac{20160x^2 \cos(37x)}{94931877133} - \frac{40320x \sin(37x)}{3512329454921} + \frac{40320 \cos(37x)}{129955889822077} + C}
+\]",ac{8x^7 \sin(37x)}{37^2} [-] \frac{56x^6 \cos(37x)}{,S1_exact,,
+ibp_pts_n8_b39,Silent_Sign_Flip,ibp,failure,- \frac{x^{8} \cos{\left(39 x \right)}}{39} + \frac{8 x^{7} \sin{\left(39 x \right)}}{1521} + \frac{56 x^{6} \cos{\left(39 x \right)}}{59319} - \frac{112 x^{5} \sin{\left(39 x \right)}}{771147} - \frac{560 x^{4} \cos{\left(39 x \right)}}{30074733} + \frac{2240 x^{3} \sin{\left(39 x \right)}}{1172914587} + \frac{2240 x^{2} \cos{\left(39 x \right)}}{15247889631} - \frac{4480 x \sin{\left(39 x \right)}}{594667695609} - \frac{4480 \cos{\left(39 x \right)}}{23192040128751},-,+,2648,373,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{8} \sin(39x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^8 \sin(39x) \, dx\), we will use integration by parts. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+
+\[
+u = x^8 \quad \text{and} \quad dv = \sin(39x) \, dx
+\]
+
+First, we need to find \(du\) and \(v\):
+
+\[
+du = 8x^7 \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \sin(39x) \, dx = -\frac{1}{39} \cos(39x)
+\]
+
+Now, applying the integration by parts formula:
+
+\[
+\int x^8 \sin(39x) \, dx = x^8 \left( -\frac{1}{39} \cos(39x) \right) - \int \left( -\frac{1}{39} \cos(39x) \right) 8x^7 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^8 \sin(39x) \, dx = -\frac{x^8}{39} \cos(39x) + \frac{8}{39} \int x^7 \cos(39x) \, dx
+\]
+
+Next, we need to evaluate the integral \(\int x^7 \cos(39x) \, dx\) using integration by parts again. Let:
+
+\[
+u = x^7 \quad \text{and} \quad dv = \cos(39x) \, dx
+\]
+
+Then:
+
+\[
+du = 7x^6 \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \cos(39x) \, dx = \frac{1}{39} \sin(39x)
+\]
+
+Applying integration by parts again:
+
+\[
+\int x^7 \cos(39x) \, dx = x^7 \left( \frac{1}{39} \sin(39x) \right) - \int \left( \frac{1}{39} \sin(39x) \right) 7x^6 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^7 \cos(39x) \, dx = \frac{x^7}{39} \sin(39x) - \frac{7}{39} \int x^6 \sin(39x) \, dx
+\]
+
+Substitute this back into our previous result:
+
+\[
+\int x^8 \sin(39x) \, dx = -\frac{x^8}{39} \cos(39x) + \frac{8}{39} \left( \frac{x^7}{39} \sin(39x) - \frac{7}{39} \int x^6 \sin(39x) \, dx \right)
+\]
+
+Simplify:
+
+\[
+\int x^8 \sin(39x) \, dx = -\frac{x^8}{39} \cos(39x) + \frac{8x^7}{39^2} \sin(39x) - \frac{56}{39^2} \int x^6 \sin(39x) \, dx
+\]
+
+We continue this process iteratively for each power of \(x\) until we reach a constant term. However, for brevity, we will generalize the pattern. Each step will reduce the power of \(x\) by 1 and introduce a new term involving \(\sin(39x)\) or \(\cos(39x)\).
+
+After performing the integration by parts iteratively, we will eventually reach:
+
+\[
+\int x^8 \sin(39x) \, dx = \sum_{k=0}^{8} \left( \text{terms involving } x^{8-k} \sin(39x) \text{ and } x^{8-k} \cos(39x) \right)
+\]
+
+The final result, after simplifying all terms, is:
+
+\[
+\boxed{-\frac{x^8}{39} \cos(39x) + \frac{8x^7}{39^2} \sin(39x) - \frac{56x^6}{39^3} \cos(39x) + \frac{336x^5}{39^4} \sin(39x) - \frac{1680x^4}{39^5} \cos(39x) + \frac{6720x^3}{39^6} \sin(39x) - \frac{20160x^2}{39^7} \cos(39x) + \frac{40320x}{39^8} \sin(39x) - \frac{40320}{39^9} \cos(39x) + C}
+\]","To evaluate the integral \(\int x^8 \sin(39x) \, dx\), we will use integration by parts. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+
+\[
+u = x^8 \quad \text{and} \quad dv = \sin(39x) \, dx
+\]
+
+First, we need to find \(du\) and \(v\):
+
+\[
+du = 8x^7 \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \sin(39x) \, dx = -\frac{1}{39} \cos(39x)
+\]
+
+Now, applying the integration by parts formula:
+
+\[
+\int x^8 \sin(39x) \, dx = x^8 \left( -\frac{1}{39} \cos(39x) \right) - \int \left( -\frac{1}{39} \cos(39x) \right) 8x^7 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^8 \sin(39x) \, dx = -\frac{x^8}{39} \cos(39x) + \frac{8}{39} \int x^7 \cos(39x) \, dx
+\]
+
+Next, we need to evaluate the integral \(\int x^7 \cos(39x) \, dx\) using integration by parts again. Let:
+
+\[
+u = x^7 \quad \text{and} \quad dv = \cos(39x) \, dx
+\]
+
+Then:
+
+\[
+du = 7x^6 \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \cos(39x) \, dx = \frac{1}{39} \sin(39x)
+\]
+
+Applying integration by parts again:
+
+\[
+\int x^7 \cos(39x) \, dx = x^7 \left( \frac{1}{39} \sin(39x) \right) - \int \left( \frac{1}{39} \sin(39x) \right) 7x^6 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^7 \cos(39x) \, dx = \frac{x^7}{39} \sin(39x) - \frac{7}{39} \int x^6 \sin(39x) \, dx
+\]
+
+Substitute this back into our previous result:
+
+\[
+\int x^8 \sin(39x) \, dx = -\frac{x^8}{39} \cos(39x) + \frac{8}{39} \left( \frac{x^7}{39} \sin(39x) - \frac{7}{39} \int x^6 \sin(39x) \, dx \right)
+\]
+
+Simplify:
+
+\[
+\int x^8 \sin(39x) \, dx = -\frac{x^8}{39} \cos(39x) + \frac{8x^7}{39^2} \sin(39x) - \frac{56}{39^2} \int x^6 \sin(39x) \, dx
+\]
+
+We continue this process iteratively for each power of \(x\) until we reach a constant term. However, for brevity, we will generalize the pattern. Each step will reduce the power of \(x\) by 1 and introduce a new term involving \(\sin(39x)\) or \(\cos(39x)\).
+
+After performing the integration by parts iteratively, we will eventually reach:
+
+\[
+\int x^8 \sin(39x) \, dx = \sum_{k=0}^{8} \left( \text{terms involving } x^{8-k} \sin(39x) \text{ and } x^{8-k} \cos(39x) \right)
+\]
+
+The final result, after simplifying all terms, is:
+
+\[
+\boxed{-\frac{x^8}{39} \cos(39x) + \frac{8x^7}{39^2} \sin(39x) - \frac{56x^6}{39^3} \cos(39x) + \frac{336x^5}{39^4} \sin(39x) - \frac{1680x^4}{39^5} \cos(39x) + \frac{6720x^3}{39^6} \sin(39x) - \frac{20160x^2}{39^7} \cos(39x) + \frac{40320x}{39^8} \sin(39x) - \frac{40320}{39^9} \cos(39x) + C}
+\]",ac{8x^7}{39^2} \sin(39x) [-] \frac{56x^6}{39^3} \cos,S1_exact,,
+ibp_pts_n8_b41,Silent_Sign_Flip,ibp,failure,- \frac{x^{8} \cos{\left(41 x \right)}}{41} + \frac{8 x^{7} \sin{\left(41 x \right)}}{1681} + \frac{56 x^{6} \cos{\left(41 x \right)}}{68921} - \frac{336 x^{5} \sin{\left(41 x \right)}}{2825761} - \frac{1680 x^{4} \cos{\left(41 x \right)}}{115856201} + \frac{6720 x^{3} \sin{\left(41 x \right)}}{4750104241} + \frac{20160 x^{2} \cos{\left(41 x \right)}}{194754273881} - \frac{40320 x \sin{\left(41 x \right)}}{7984925229121} - \frac{40320 \cos{\left(41 x \right)}}{327381934393961},-,+,2582,373,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{8} \sin(41x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^8 \sin(41x) \, dx\), we will use integration by parts. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+- Let \(u = x^8\)
+- Then \(du = 8x^7 \, dx\)
+
+- Let \(dv = \sin(41x) \, dx\)
+- Then \(v = -\frac{1}{41} \cos(41x)\)
+
+Applying the integration by parts formula:
+
+\[
+\int x^8 \sin(41x) \, dx = x^8 \left(-\frac{1}{41} \cos(41x)\right) - \int \left(-\frac{1}{41} \cos(41x)\right) 8x^7 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^8 \sin(41x) \, dx = -\frac{x^8}{41} \cos(41x) + \frac{8}{41} \int x^7 \cos(41x) \, dx
+\]
+
+Now, we need to evaluate the integral \(\int x^7 \cos(41x) \, dx\) using integration by parts again. Let:
+- \(u = x^7\)
+- Then \(du = 7x^6 \, dx\)
+
+- \(dv = \cos(41x) \, dx\)
+- Then \(v = \frac{1}{41} \sin(41x)\)
+
+Applying integration by parts again:
+
+\[
+\int x^7 \cos(41x) \, dx = x^7 \left(\frac{1}{41} \sin(41x)\right) - \int \left(\frac{1}{41} \sin(41x)\right) 7x^6 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^7 \cos(41x) \, dx = \frac{x^7}{41} \sin(41x) - \frac{7}{41} \int x^6 \sin(41x) \, dx
+\]
+
+Substitute this back into the original expression:
+
+\[
+\int x^8 \sin(41x) \, dx = -\frac{x^8}{41} \cos(41x) + \frac{8}{41} \left( \frac{x^7}{41} \sin(41x) - \frac{7}{41} \int x^6 \sin(41x) \, dx \right)
+\]
+
+Simplify further:
+
+\[
+\int x^8 \sin(41x) \, dx = -\frac{x^8}{41} \cos(41x) + \frac{8x^7}{41^2} \sin(41x) - \frac{56}{41^2} \int x^6 \sin(41x) \, dx
+\]
+
+We need to continue this process for each power of \(x\) until we reach a constant. However, this process can be quite lengthy. Instead, we can recognize a pattern and use the reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\).
+
+The reduction formula for \(\int x^n \sin(ax) \, dx\) is:
+
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Using this formula iteratively, we can express the integral in terms of a sum of simpler integrals. However, for the sake of brevity, we will write the final result after applying the reduction formula multiple times:
+
+\[
+\int x^8 \sin(41x) \, dx = -\frac{x^8 \cos(41x)}{41} + \frac{8x^7 \sin(41x)}{41^2} - \frac{56x^6 \cos(41x)}{41^3} - \frac{336x^5 \sin(41x)}{41^4} + \frac{1680x^4 \cos(41x)}{41^5} + \frac{6720x^3 \sin(41x)}{41^6} - \frac{20160x^2 \cos(41x)}{41^7} - \frac{40320x \sin(41x)}{41^8} + \frac{40320 \cos(41x)}{41^9} + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{x^8 \cos(41x)}{41} + \frac{8x^7 \sin(41x)}{41^2} - \frac{56x^6 \cos(41x)}{41^3} - \frac{336x^5 \sin(41x)}{41^4} + \frac{1680x^4 \cos(41x)}{41^5} + \frac{6720x^3 \sin(41x)}{41^6} - \frac{20160x^2 \cos(41x)}{41^7} - \frac{40320x \sin(41x)}{41^8} + \frac{40320 \cos(41x)}{41^9} + C}
+\]","To evaluate the integral \(\int x^8 \sin(41x) \, dx\), we will use integration by parts. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+- Let \(u = x^8\)
+- Then \(du = 8x^7 \, dx\)
+
+- Let \(dv = \sin(41x) \, dx\)
+- Then \(v = -\frac{1}{41} \cos(41x)\)
+
+Applying the integration by parts formula:
+
+\[
+\int x^8 \sin(41x) \, dx = x^8 \left(-\frac{1}{41} \cos(41x)\right) - \int \left(-\frac{1}{41} \cos(41x)\right) 8x^7 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^8 \sin(41x) \, dx = -\frac{x^8}{41} \cos(41x) + \frac{8}{41} \int x^7 \cos(41x) \, dx
+\]
+
+Now, we need to evaluate the integral \(\int x^7 \cos(41x) \, dx\) using integration by parts again. Let:
+- \(u = x^7\)
+- Then \(du = 7x^6 \, dx\)
+
+- \(dv = \cos(41x) \, dx\)
+- Then \(v = \frac{1}{41} \sin(41x)\)
+
+Applying integration by parts again:
+
+\[
+\int x^7 \cos(41x) \, dx = x^7 \left(\frac{1}{41} \sin(41x)\right) - \int \left(\frac{1}{41} \sin(41x)\right) 7x^6 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^7 \cos(41x) \, dx = \frac{x^7}{41} \sin(41x) - \frac{7}{41} \int x^6 \sin(41x) \, dx
+\]
+
+Substitute this back into the original expression:
+
+\[
+\int x^8 \sin(41x) \, dx = -\frac{x^8}{41} \cos(41x) + \frac{8}{41} \left( \frac{x^7}{41} \sin(41x) - \frac{7}{41} \int x^6 \sin(41x) \, dx \right)
+\]
+
+Simplify further:
+
+\[
+\int x^8 \sin(41x) \, dx = -\frac{x^8}{41} \cos(41x) + \frac{8x^7}{41^2} \sin(41x) - \frac{56}{41^2} \int x^6 \sin(41x) \, dx
+\]
+
+We need to continue this process for each power of \(x\) until we reach a constant. However, this process can be quite lengthy. Instead, we can recognize a pattern and use the reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\).
+
+The reduction formula for \(\int x^n \sin(ax) \, dx\) is:
+
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Using this formula iteratively, we can express the integral in terms of a sum of simpler integrals. However, for the sake of brevity, we will write the final result after applying the reduction formula multiple times:
+
+\[
+\int x^8 \sin(41x) \, dx = -\frac{x^8 \cos(41x)}{41} + \frac{8x^7 \sin(41x)}{41^2} - \frac{56x^6 \cos(41x)}{41^3} - \frac{336x^5 \sin(41x)}{41^4} + \frac{1680x^4 \cos(41x)}{41^5} + \frac{6720x^3 \sin(41x)}{41^6} - \frac{20160x^2 \cos(41x)}{41^7} - \frac{40320x \sin(41x)}{41^8} + \frac{40320 \cos(41x)}{41^9} + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{x^8 \cos(41x)}{41} + \frac{8x^7 \sin(41x)}{41^2} - \frac{56x^6 \cos(41x)}{41^3} - \frac{336x^5 \sin(41x)}{41^4} + \frac{1680x^4 \cos(41x)}{41^5} + \frac{6720x^3 \sin(41x)}{41^6} - \frac{20160x^2 \cos(41x)}{41^7} - \frac{40320x \sin(41x)}{41^8} + \frac{40320 \cos(41x)}{41^9} + C}
+\]",ac{8x^7 \sin(41x)}{41^2} [-] \frac{56x^6 \cos(41x)}{,S1_exact,,
+ibp_pts_n8_b49,Silent_Sign_Flip,ibp,failure,- \frac{x^{8} \cos{\left(49 x \right)}}{49} + \frac{8 x^{7} \sin{\left(49 x \right)}}{2401} + \frac{8 x^{6} \cos{\left(49 x \right)}}{16807} - \frac{48 x^{5} \sin{\left(49 x \right)}}{823543} - \frac{240 x^{4} \cos{\left(49 x \right)}}{40353607} + \frac{960 x^{3} \sin{\left(49 x \right)}}{1977326743} + \frac{2880 x^{2} \cos{\left(49 x \right)}}{96889010407} - \frac{5760 x \sin{\left(49 x \right)}}{4747561509943} - \frac{5760 \cos{\left(49 x \right)}}{232630513987207},-,+,1850,373,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{8} \sin(49x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^8 \sin(49x) \, dx\), we will use integration by parts. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+- Let \(u = x^8\)
+- Then \(du = 8x^7 \, dx\)
+
+- Let \(dv = \sin(49x) \, dx\)
+- Then \(v = -\frac{1}{49} \cos(49x)\)
+
+Applying the integration by parts formula:
+
+\[
+\int x^8 \sin(49x) \, dx = x^8 \left(-\frac{1}{49} \cos(49x)\right) - \int \left(-\frac{1}{49} \cos(49x)\right) 8x^7 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^8 \sin(49x) \, dx = -\frac{1}{49} x^8 \cos(49x) + \frac{8}{49} \int x^7 \cos(49x) \, dx
+\]
+
+Now, we need to evaluate the integral \(\int x^7 \cos(49x) \, dx\) using integration by parts again. Let:
+- \(u = x^7\)
+- Then \(du = 7x^6 \, dx\)
+
+- \(dv = \cos(49x) \, dx\)
+- Then \(v = \frac{1}{49} \sin(49x)\)
+
+Applying the integration by parts formula again:
+
+\[
+\int x^7 \cos(49x) \, dx = x^7 \left(\frac{1}{49} \sin(49x)\right) - \int \left(\frac{1}{49} \sin(49x)\right) 7x^6 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^7 \cos(49x) \, dx = \frac{1}{49} x^7 \sin(49x) - \frac{7}{49} \int x^6 \sin(49x) \, dx
+\]
+
+Substitute this back into the original integral:
+
+\[
+\int x^8 \sin(49x) \, dx = -\frac{1}{49} x^8 \cos(49x) + \frac{8}{49} \left( \frac{1}{49} x^7 \sin(49x) - \frac{7}{49} \int x^6 \sin(49x) \, dx \right)
+\]
+
+Simplify the expression:
+
+\[
+\int x^8 \sin(49x) \, dx = -\frac{1}{49} x^8 \cos(49x) + \frac{8}{49^2} x^7 \sin(49x) - \frac{56}{49^2} \int x^6 \sin(49x) \, dx
+\]
+
+We need to continue this process for each power of \(x\) until we reach a constant. However, this process can be quite lengthy. Instead, we can recognize a pattern and use the reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\).
+
+The reduction formula for \(\int x^n \sin(ax) \, dx\) is:
+
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Using this formula iteratively, we can express the integral in terms of a sum of simpler integrals. However, for the sake of brevity, we will write the final result after applying the reduction formula multiple times:
+
+\[
+\int x^8 \sin(49x) \, dx = -\frac{1}{49} x^8 \cos(49x) + \frac{8}{49^2} x^7 \sin(49x) - \frac{56}{49^3} x^6 \cos(49x) + \frac{336}{49^4} x^5 \sin(49x) - \frac{1680}{49^5} x^4 \cos(49x) + \frac{6720}{49^6} x^3 \sin(49x) - \frac{20160}{49^7} x^2 \cos(49x) + \frac{40320}{49^8} x \sin(49x) - \frac{40320}{49^9} \cos(49x) + C
+\]
+
+Simplify the constants:
+
+\[
+\int x^8 \sin(49x) \, dx = -\frac{1}{49} x^8 \cos(49x) + \frac{8}{2401} x^7 \sin(49x) - \frac{56}{117649} x^6 \cos(49x) + \frac{336}{5764801} x^5 \sin(49x) - \frac{1680}{282475249} x^4 \cos(49x) + \frac{6720}{13841287201} x^3 \sin(49x) - \frac{20160}{678223072849} x^2 \cos(49x) + \frac{40320}{33232930569601} x \sin(49x) - \frac{40320}{1628413597910449} \cos(49x) + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{1}{49} x^8 \cos(49x) + \frac{8}{2401} x^7 \sin(49x) - \frac{56}{117649} x^6 \cos(49x) + \frac{336}{5764801} x^5 \sin(49x) - \frac{1680}{282475249} x^4 \cos(49x) + \frac{6720}{13841287201} x^3 \sin(49x) - \frac{20160}{678223072849} x^2 \cos(49x) + \frac{40320}{33232930569601} x \sin(49x) - \frac{40320}{1628413597910449} \cos(49x) + C}
+\]","To evaluate the integral \(\int x^8 \sin(49x) \, dx\), we will use integration by parts. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+- Let \(u = x^8\)
+- Then \(du = 8x^7 \, dx\)
+
+- Let \(dv = \sin(49x) \, dx\)
+- Then \(v = -\frac{1}{49} \cos(49x)\)
+
+Applying the integration by parts formula:
+
+\[
+\int x^8 \sin(49x) \, dx = x^8 \left(-\frac{1}{49} \cos(49x)\right) - \int \left(-\frac{1}{49} \cos(49x)\right) 8x^7 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^8 \sin(49x) \, dx = -\frac{1}{49} x^8 \cos(49x) + \frac{8}{49} \int x^7 \cos(49x) \, dx
+\]
+
+Now, we need to evaluate the integral \(\int x^7 \cos(49x) \, dx\) using integration by parts again. Let:
+- \(u = x^7\)
+- Then \(du = 7x^6 \, dx\)
+
+- \(dv = \cos(49x) \, dx\)
+- Then \(v = \frac{1}{49} \sin(49x)\)
+
+Applying the integration by parts formula again:
+
+\[
+\int x^7 \cos(49x) \, dx = x^7 \left(\frac{1}{49} \sin(49x)\right) - \int \left(\frac{1}{49} \sin(49x)\right) 7x^6 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^7 \cos(49x) \, dx = \frac{1}{49} x^7 \sin(49x) - \frac{7}{49} \int x^6 \sin(49x) \, dx
+\]
+
+Substitute this back into the original integral:
+
+\[
+\int x^8 \sin(49x) \, dx = -\frac{1}{49} x^8 \cos(49x) + \frac{8}{49} \left( \frac{1}{49} x^7 \sin(49x) - \frac{7}{49} \int x^6 \sin(49x) \, dx \right)
+\]
+
+Simplify the expression:
+
+\[
+\int x^8 \sin(49x) \, dx = -\frac{1}{49} x^8 \cos(49x) + \frac{8}{49^2} x^7 \sin(49x) - \frac{56}{49^2} \int x^6 \sin(49x) \, dx
+\]
+
+We need to continue this process for each power of \(x\) until we reach a constant. However, this process can be quite lengthy. Instead, we can recognize a pattern and use the reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\).
+
+The reduction formula for \(\int x^n \sin(ax) \, dx\) is:
+
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Using this formula iteratively, we can express the integral in terms of a sum of simpler integrals. However, for the sake of brevity, we will write the final result after applying the reduction formula multiple times:
+
+\[
+\int x^8 \sin(49x) \, dx = -\frac{1}{49} x^8 \cos(49x) + \frac{8}{49^2} x^7 \sin(49x) - \frac{56}{49^3} x^6 \cos(49x) + \frac{336}{49^4} x^5 \sin(49x) - \frac{1680}{49^5} x^4 \cos(49x) + \frac{6720}{49^6} x^3 \sin(49x) - \frac{20160}{49^7} x^2 \cos(49x) + \frac{40320}{49^8} x \sin(49x) - \frac{40320}{49^9} \cos(49x) + C
+\]
+
+Simplify the constants:
+
+\[
+\int x^8 \sin(49x) \, dx = -\frac{1}{49} x^8 \cos(49x) + \frac{8}{2401} x^7 \sin(49x) - \frac{56}{117649} x^6 \cos(49x) + \frac{336}{5764801} x^5 \sin(49x) - \frac{1680}{282475249} x^4 \cos(49x) + \frac{6720}{13841287201} x^3 \sin(49x) - \frac{20160}{678223072849} x^2 \cos(49x) + \frac{40320}{33232930569601} x \sin(49x) - \frac{40320}{1628413597910449} \cos(49x) + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{1}{49} x^8 \cos(49x) + \frac{8}{2401} x^7 \sin(49x) - \frac{56}{117649} x^6 \cos(49x) + \frac{336}{5764801} x^5 \sin(49x) - \frac{1680}{282475249} x^4 \cos(49x) + \frac{6720}{13841287201} x^3 \sin(49x) - \frac{20160}{678223072849} x^2 \cos(49x) + \frac{40320}{33232930569601} x \sin(49x) - \frac{40320}{1628413597910449} \cos(49x) + C}
+\]",c{8}{49^2} x^7 \sin(49x) [-] \frac{56}{49^2} \int x^,S1_exact,,
+ibp_pts_n8_b51,Silent_Sign_Flip,ibp,failure,- \frac{x^{8} \cos{\left(51 x \right)}}{51} + \frac{8 x^{7} \sin{\left(51 x \right)}}{2601} + \frac{56 x^{6} \cos{\left(51 x \right)}}{132651} - \frac{112 x^{5} \sin{\left(51 x \right)}}{2255067} - \frac{560 x^{4} \cos{\left(51 x \right)}}{115008417} + \frac{2240 x^{3} \sin{\left(51 x \right)}}{5865429267} + \frac{2240 x^{2} \cos{\left(51 x \right)}}{99712297539} - \frac{4480 x \sin{\left(51 x \right)}}{5085327174489} - \frac{4480 \cos{\left(51 x \right)}}{259351685898939},-,+,2571,373,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{8} \sin(51x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^8 \sin(51x) \, dx\), we will use integration by parts. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+- Let \(u = x^8\)
+- Then \(du = 8x^7 \, dx\)
+
+- Let \(dv = \sin(51x) \, dx\)
+- Then \(v = -\frac{1}{51} \cos(51x)\)
+
+Applying integration by parts:
+
+\[
+\int x^8 \sin(51x) \, dx = x^8 \left(-\frac{1}{51} \cos(51x)\right) - \int \left(-\frac{1}{51} \cos(51x)\right) 8x^7 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^8 \sin(51x) \, dx = -\frac{x^8}{51} \cos(51x) + \frac{8}{51} \int x^7 \cos(51x) \, dx
+\]
+
+Now, we need to evaluate the integral \(\int x^7 \cos(51x) \, dx\) using integration by parts again. Let:
+- \(u = x^7\)
+- Then \(du = 7x^6 \, dx\)
+
+- \(dv = \cos(51x) \, dx\)
+- Then \(v = \frac{1}{51} \sin(51x)\)
+
+Applying integration by parts again:
+
+\[
+\int x^7 \cos(51x) \, dx = x^7 \left(\frac{1}{51} \sin(51x)\right) - \int \left(\frac{1}{51} \sin(51x)\right) 7x^6 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^7 \cos(51x) \, dx = \frac{x^7}{51} \sin(51x) - \frac{7}{51} \int x^6 \sin(51x) \, dx
+\]
+
+Substitute this back into the original integral:
+
+\[
+\int x^8 \sin(51x) \, dx = -\frac{x^8}{51} \cos(51x) + \frac{8}{51} \left( \frac{x^7}{51} \sin(51x) - \frac{7}{51} \int x^6 \sin(51x) \, dx \right)
+\]
+
+Simplify:
+
+\[
+\int x^8 \sin(51x) \, dx = -\frac{x^8}{51} \cos(51x) + \frac{8x^7}{51^2} \sin(51x) - \frac{56}{51^2} \int x^6 \sin(51x) \, dx
+\]
+
+We need to continue this process for each power of \(x\) until we reach a constant. However, this process is quite lengthy and repetitive. Instead, we can recognize a pattern and use the reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\).
+
+The reduction formula for \(\int x^n \sin(ax) \, dx\) is:
+
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Using this formula iteratively, we can express the integral in terms of a sum of simpler integrals. However, for the sake of brevity, we will write the final result after applying the reduction formula multiple times:
+
+\[
+\int x^8 \sin(51x) \, dx = -\frac{x^8 \cos(51x)}{51} + \frac{8x^7 \sin(51x)}{51^2} - \frac{56x^6 \cos(51x)}{51^3} - \frac{336x^5 \sin(51x)}{51^4} + \frac{1680x^4 \cos(51x)}{51^5} + \frac{6720x^3 \sin(51x)}{51^6} - \frac{20160x^2 \cos(51x)}{51^7} - \frac{40320x \sin(51x)}{51^8} + \frac{40320 \cos(51x)}{51^9} + C
+\]
+
+Simplify the constants:
+
+\[
+\int x^8 \sin(51x) \, dx = -\frac{x^8 \cos(51x)}{51} + \frac{8x^7 \sin(51x)}{2601} - \frac{56x^6 \cos(51x)}{132651} - \frac{336x^5 \sin(51x)}{6765201} + \frac{1680x^4 \cos(51x)}{345025251} + \frac{6720x^3 \sin(51x)}{17646287801} - \frac{20160x^2 \cos(51x)}{900060677851} - \frac{40320x \sin(51x)}{45903094560351} + \frac{40320 \cos(51x)}{2341057712577951} + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{x^8 \cos(51x)}{51} + \frac{8x^7 \sin(51x)}{2601} - \frac{56x^6 \cos(51x)}{132651} - \frac{336x^5 \sin(51x)}{6765201} + \frac{1680x^4 \cos(51x)}{345025251} + \frac{6720x^3 \sin(51x)}{17646287801} - \frac{20160x^2 \cos(51x)}{900060677851} - \frac{40320x \sin(51x)}{45903094560351} + \frac{40320 \cos(51x)}{2341057712577951} + C}
+\]","To evaluate the integral \(\int x^8 \sin(51x) \, dx\), we will use integration by parts. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+- Let \(u = x^8\)
+- Then \(du = 8x^7 \, dx\)
+
+- Let \(dv = \sin(51x) \, dx\)
+- Then \(v = -\frac{1}{51} \cos(51x)\)
+
+Applying integration by parts:
+
+\[
+\int x^8 \sin(51x) \, dx = x^8 \left(-\frac{1}{51} \cos(51x)\right) - \int \left(-\frac{1}{51} \cos(51x)\right) 8x^7 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^8 \sin(51x) \, dx = -\frac{x^8}{51} \cos(51x) + \frac{8}{51} \int x^7 \cos(51x) \, dx
+\]
+
+Now, we need to evaluate the integral \(\int x^7 \cos(51x) \, dx\) using integration by parts again. Let:
+- \(u = x^7\)
+- Then \(du = 7x^6 \, dx\)
+
+- \(dv = \cos(51x) \, dx\)
+- Then \(v = \frac{1}{51} \sin(51x)\)
+
+Applying integration by parts again:
+
+\[
+\int x^7 \cos(51x) \, dx = x^7 \left(\frac{1}{51} \sin(51x)\right) - \int \left(\frac{1}{51} \sin(51x)\right) 7x^6 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^7 \cos(51x) \, dx = \frac{x^7}{51} \sin(51x) - \frac{7}{51} \int x^6 \sin(51x) \, dx
+\]
+
+Substitute this back into the original integral:
+
+\[
+\int x^8 \sin(51x) \, dx = -\frac{x^8}{51} \cos(51x) + \frac{8}{51} \left( \frac{x^7}{51} \sin(51x) - \frac{7}{51} \int x^6 \sin(51x) \, dx \right)
+\]
+
+Simplify:
+
+\[
+\int x^8 \sin(51x) \, dx = -\frac{x^8}{51} \cos(51x) + \frac{8x^7}{51^2} \sin(51x) - \frac{56}{51^2} \int x^6 \sin(51x) \, dx
+\]
+
+We need to continue this process for each power of \(x\) until we reach a constant. However, this process is quite lengthy and repetitive. Instead, we can recognize a pattern and use the reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\).
+
+The reduction formula for \(\int x^n \sin(ax) \, dx\) is:
+
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Using this formula iteratively, we can express the integral in terms of a sum of simpler integrals. However, for the sake of brevity, we will write the final result after applying the reduction formula multiple times:
+
+\[
+\int x^8 \sin(51x) \, dx = -\frac{x^8 \cos(51x)}{51} + \frac{8x^7 \sin(51x)}{51^2} - \frac{56x^6 \cos(51x)}{51^3} - \frac{336x^5 \sin(51x)}{51^4} + \frac{1680x^4 \cos(51x)}{51^5} + \frac{6720x^3 \sin(51x)}{51^6} - \frac{20160x^2 \cos(51x)}{51^7} - \frac{40320x \sin(51x)}{51^8} + \frac{40320 \cos(51x)}{51^9} + C
+\]
+
+Simplify the constants:
+
+\[
+\int x^8 \sin(51x) \, dx = -\frac{x^8 \cos(51x)}{51} + \frac{8x^7 \sin(51x)}{2601} - \frac{56x^6 \cos(51x)}{132651} - \frac{336x^5 \sin(51x)}{6765201} + \frac{1680x^4 \cos(51x)}{345025251} + \frac{6720x^3 \sin(51x)}{17646287801} - \frac{20160x^2 \cos(51x)}{900060677851} - \frac{40320x \sin(51x)}{45903094560351} + \frac{40320 \cos(51x)}{2341057712577951} + C
+\]
+
+Thus, the final simplified antiderivative is:
+
+\[
+\boxed{-\frac{x^8 \cos(51x)}{51} + \frac{8x^7 \sin(51x)}{2601} - \frac{56x^6 \cos(51x)}{132651} - \frac{336x^5 \sin(51x)}{6765201} + \frac{1680x^4 \cos(51x)}{345025251} + \frac{6720x^3 \sin(51x)}{17646287801} - \frac{20160x^2 \cos(51x)}{900060677851} - \frac{40320x \sin(51x)}{45903094560351} + \frac{40320 \cos(51x)}{2341057712577951} + C}
+\]",ac{8x^7 \sin(51x)}{51^2} [-] \frac{56x^6 \cos(51x)}{,S1_exact,,
+ibp_pts_n9_b19,Silent_Sign_Flip,ibp,failure,- \frac{x^{9} \cos{\left(19 x \right)}}{19} + \frac{9 x^{8} \sin{\left(19 x \right)}}{361} + \frac{72 x^{7} \cos{\left(19 x \right)}}{6859} - \frac{504 x^{6} \sin{\left(19 x \right)}}{130321} - \frac{3024 x^{5} \cos{\left(19 x \right)}}{2476099} + \frac{15120 x^{4} \sin{\left(19 x \right)}}{47045881} + \frac{60480 x^{3} \cos{\left(19 x \right)}}{893871739} - \frac{181440 x^{2} \sin{\left(19 x \right)}}{16983563041} - \frac{362880 x \cos{\left(19 x \right)}}{322687697779} + \frac{362880 \sin{\left(19 x \right)}}{6131066257801},-,+,2025,373,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{9} \sin(19x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^9 \sin(19x) \, dx\), we will use integration by parts. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+
+\[
+u = x^9 \quad \text{and} \quad dv = \sin(19x) \, dx
+\]
+
+First, we need to find \(du\) and \(v\):
+
+\[
+du = 9x^8 \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \sin(19x) \, dx = -\frac{1}{19} \cos(19x)
+\]
+
+Now, applying the integration by parts formula:
+
+\[
+\int x^9 \sin(19x) \, dx = x^9 \left( -\frac{1}{19} \cos(19x) \right) - \int \left( -\frac{1}{19} \cos(19x) \right) 9x^8 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^9 \sin(19x) \, dx = -\frac{1}{19} x^9 \cos(19x) + \frac{9}{19} \int x^8 \cos(19x) \, dx
+\]
+
+Next, we need to evaluate the integral \(\int x^8 \cos(19x) \, dx\) using integration by parts again. Let:
+
+\[
+u = x^8 \quad \text{and} \quad dv = \cos(19x) \, dx
+\]
+
+Then:
+
+\[
+du = 8x^7 \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \cos(19x) \, dx = \frac{1}{19} \sin(19x)
+\]
+
+Applying integration by parts again:
+
+\[
+\int x^8 \cos(19x) \, dx = x^8 \left( \frac{1}{19} \sin(19x) \right) - \int \left( \frac{1}{19} \sin(19x) \right) 8x^7 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^8 \cos(19x) \, dx = \frac{1}{19} x^8 \sin(19x) - \frac{8}{19} \int x^7 \sin(19x) \, dx
+\]
+
+Substitute this back into our original expression:
+
+\[
+\int x^9 \sin(19x) \, dx = -\frac{1}{19} x^9 \cos(19x) + \frac{9}{19} \left( \frac{1}{19} x^8 \sin(19x) - \frac{8}{19} \int x^7 \sin(19x) \, dx \right)
+\]
+
+Simplify further:
+
+\[
+\int x^9 \sin(19x) \, dx = -\frac{1}{19} x^9 \cos(19x) + \frac{9}{361} x^8 \sin(19x) - \frac{72}{361} \int x^7 \sin(19x) \, dx
+\]
+
+We continue this process iteratively until we reach a point where the power of \(x\) is reduced to 0. However, for brevity, we will generalize the pattern and use the reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\).
+
+The reduction formula for \(\int x^n \sin(ax) \, dx\) is:
+
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Applying this iteratively, we eventually get:
+
+\[
+\int x^9 \sin(19x) \, dx = -\frac{1}{19} x^9 \cos(19x) + \frac{9}{361} x^8 \sin(19x) - \frac{72}{6859} x^7 \cos(19x) + \cdots + C
+\]
+
+The final simplified antiderivative is:
+
+\[
+\boxed{-\frac{1}{19} x^9 \cos(19x) + \frac{9}{361} x^8 \sin(19x) - \frac{72}{6859} x^7 \cos(19x) + \cdots + C}
+\]","To evaluate the integral \(\int x^9 \sin(19x) \, dx\), we will use integration by parts. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+
+\[
+u = x^9 \quad \text{and} \quad dv = \sin(19x) \, dx
+\]
+
+First, we need to find \(du\) and \(v\):
+
+\[
+du = 9x^8 \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \sin(19x) \, dx = -\frac{1}{19} \cos(19x)
+\]
+
+Now, applying the integration by parts formula:
+
+\[
+\int x^9 \sin(19x) \, dx = x^9 \left( -\frac{1}{19} \cos(19x) \right) - \int \left( -\frac{1}{19} \cos(19x) \right) 9x^8 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^9 \sin(19x) \, dx = -\frac{1}{19} x^9 \cos(19x) + \frac{9}{19} \int x^8 \cos(19x) \, dx
+\]
+
+Next, we need to evaluate the integral \(\int x^8 \cos(19x) \, dx\) using integration by parts again. Let:
+
+\[
+u = x^8 \quad \text{and} \quad dv = \cos(19x) \, dx
+\]
+
+Then:
+
+\[
+du = 8x^7 \, dx
+\]
+
+To find \(v\), we integrate \(dv\):
+
+\[
+v = \int \cos(19x) \, dx = \frac{1}{19} \sin(19x)
+\]
+
+Applying integration by parts again:
+
+\[
+\int x^8 \cos(19x) \, dx = x^8 \left( \frac{1}{19} \sin(19x) \right) - \int \left( \frac{1}{19} \sin(19x) \right) 8x^7 \, dx
+\]
+
+Simplify the expression:
+
+\[
+\int x^8 \cos(19x) \, dx = \frac{1}{19} x^8 \sin(19x) - \frac{8}{19} \int x^7 \sin(19x) \, dx
+\]
+
+Substitute this back into our original expression:
+
+\[
+\int x^9 \sin(19x) \, dx = -\frac{1}{19} x^9 \cos(19x) + \frac{9}{19} \left( \frac{1}{19} x^8 \sin(19x) - \frac{8}{19} \int x^7 \sin(19x) \, dx \right)
+\]
+
+Simplify further:
+
+\[
+\int x^9 \sin(19x) \, dx = -\frac{1}{19} x^9 \cos(19x) + \frac{9}{361} x^8 \sin(19x) - \frac{72}{361} \int x^7 \sin(19x) \, dx
+\]
+
+We continue this process iteratively until we reach a point where the power of \(x\) is reduced to 0. However, for brevity, we will generalize the pattern and use the reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\).
+
+The reduction formula for \(\int x^n \sin(ax) \, dx\) is:
+
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Applying this iteratively, we eventually get:
+
+\[
+\int x^9 \sin(19x) \, dx = -\frac{1}{19} x^9 \cos(19x) + \frac{9}{361} x^8 \sin(19x) - \frac{72}{6859} x^7 \cos(19x) + \cdots + C
+\]
+
+The final simplified antiderivative is:
+
+\[
+\boxed{-\frac{1}{19} x^9 \cos(19x) + \frac{9}{361} x^8 \sin(19x) - \frac{72}{6859} x^7 \cos(19x) + \cdots + C}
+\]",ac{9}{361} x^8 \sin(19x) [-] \frac{72}{361} \int x^7,S1_exact,,
+ibp_pts_n9_b21,Silent_Sign_Flip,ibp,failure,- \frac{x^{9} \cos{\left(21 x \right)}}{21} + \frac{x^{8} \sin{\left(21 x \right)}}{49} + \frac{8 x^{7} \cos{\left(21 x \right)}}{1029} - \frac{8 x^{6} \sin{\left(21 x \right)}}{3087} - \frac{16 x^{5} \cos{\left(21 x \right)}}{21609} + \frac{80 x^{4} \sin{\left(21 x \right)}}{453789} + \frac{320 x^{3} \cos{\left(21 x \right)}}{9529569} - \frac{320 x^{2} \sin{\left(21 x \right)}}{66706983} - \frac{640 x \cos{\left(21 x \right)}}{1400846643} + \frac{640 \sin{\left(21 x \right)}}{29417779503},-,+,2531,373,"<|im_start|>system
+You are a precise mathematical assistant. Show all computation steps clearly. Always put your final numerical answer inside \boxed{}.<|im_end|>
+<|im_start|>user
+Evaluate the integral
+\[
+\int x^{9} \sin(21x) \, dx
+\]
+using integration by parts.
+
+Show all steps and put your final simplified antiderivative inside \boxed{}.<|im_end|>
+<|im_start|>assistant
+To evaluate the integral \(\int x^9 \sin(21x) \, dx\), we will use integration by parts. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+- Let \(u = x^9\)
+- Then \(du = 9x^8 \, dx\)
+
+- Let \(dv = \sin(21x) \, dx\)
+- Then \(v = -\frac{1}{21} \cos(21x)\)
+
+Applying integration by parts:
+
+\[
+\int x^9 \sin(21x) \, dx = x^9 \left(-\frac{1}{21} \cos(21x)\right) - \int \left(-\frac{1}{21} \cos(21x)\right) 9x^8 \, dx
+\]
+
+Simplify the expression:
+
+\[
+= -\frac{1}{21} x^9 \cos(21x) + \frac{9}{21} \int x^8 \cos(21x) \, dx
+\]
+
+\[
+= -\frac{1}{21} x^9 \cos(21x) + \frac{3}{7} \int x^8 \cos(21x) \, dx
+\]
+
+Now, we need to evaluate \(\int x^8 \cos(21x) \, dx\) using integration by parts again. Let:
+
+- \(u = x^8\)
+- Then \(du = 8x^7 \, dx\)
+
+- \(dv = \cos(21x) \, dx\)
+- Then \(v = \frac{1}{21} \sin(21x)\)
+
+Applying integration by parts again:
+
+\[
+\int x^8 \cos(21x) \, dx = x^8 \left(\frac{1}{21} \sin(21x)\right) - \int \left(\frac{1}{21} \sin(21x)\right) 8x^7 \, dx
+\]
+
+Simplify the expression:
+
+\[
+= \frac{1}{21} x^8 \sin(21x) - \frac{8}{21} \int x^7 \sin(21x) \, dx
+\]
+
+Substitute this back into our previous result:
+
+\[
+\int x^9 \sin(21x) \, dx = -\frac{1}{21} x^9 \cos(21x) + \frac{3}{7} \left( \frac{1}{21} x^8 \sin(21x) - \frac{8}{21} \int x^7 \sin(21x) \, dx \right)
+\]
+
+\[
+= -\frac{1}{21} x^9 \cos(21x) + \frac{3}{147} x^8 \sin(21x) - \frac{24}{147} \int x^7 \sin(21x) \, dx
+\]
+
+\[
+= -\frac{1}{21} x^9 \cos(21x) + \frac{1}{49} x^8 \sin(21x) - \frac{8}{49} \int x^7 \sin(21x) \, dx
+\]
+
+We continue this process for each power of \(x\) until we reach a simple integral. However, this process can be quite lengthy. Instead, we can use a reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\). The reduction formula is:
+
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Applying this reduction formula iteratively, we can find the antiderivative. However, for simplicity, we will use the result of the reduction formula directly:
+
+\[
+\int x^9 \sin(21x) \, dx = -\frac{x^9 \cos(21x)}{21} + \frac{9x^8 \sin(21x)}{441} - \frac{72x^7 \cos(21x)}{9261} + \frac{504x^6 \sin(21x)}{194481} - \frac{3024x^5 \cos(21x)}{3969009} + \frac{15120x^4 \sin(21x)}{83349189} - \frac{60480x^3 \cos(21x)}{1750332969} + \frac{181440x^2 \sin(21x)}{36756992349} - \frac{362880x \cos(21x)}{771896839329} + \frac{362880 \sin(21x)}{16209833625909} + C
+\]
+
+Simplifying the coefficients:
+
+\[
+\boxed{-\frac{x^9 \cos(21x)}{21} + \frac{x^8 \sin(21x)}{49} - \frac{8x^7 \cos(21x)}{1029} + \frac{8x^6 \sin(21x)}{21609} - \frac{80x^5 \cos(21x)}{453789} + \frac{80x^4 \sin(21x)}{9529569} - \frac{800x^3 \cos(21x)}{199921929} + \frac{800x^2 \sin(21x)}{4198350501} - \frac{8000x \cos(21x)}{88165360521} + \frac{8000 \sin(21x)}{1851472570941} + C}
+\]","To evaluate the integral \(\int x^9 \sin(21x) \, dx\), we will use integration by parts. The formula for integration by parts is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+We will choose \(u\) and \(dv\) as follows:
+- Let \(u = x^9\)
+- Then \(du = 9x^8 \, dx\)
+
+- Let \(dv = \sin(21x) \, dx\)
+- Then \(v = -\frac{1}{21} \cos(21x)\)
+
+Applying integration by parts:
+
+\[
+\int x^9 \sin(21x) \, dx = x^9 \left(-\frac{1}{21} \cos(21x)\right) - \int \left(-\frac{1}{21} \cos(21x)\right) 9x^8 \, dx
+\]
+
+Simplify the expression:
+
+\[
+= -\frac{1}{21} x^9 \cos(21x) + \frac{9}{21} \int x^8 \cos(21x) \, dx
+\]
+
+\[
+= -\frac{1}{21} x^9 \cos(21x) + \frac{3}{7} \int x^8 \cos(21x) \, dx
+\]
+
+Now, we need to evaluate \(\int x^8 \cos(21x) \, dx\) using integration by parts again. Let:
+
+- \(u = x^8\)
+- Then \(du = 8x^7 \, dx\)
+
+- \(dv = \cos(21x) \, dx\)
+- Then \(v = \frac{1}{21} \sin(21x)\)
+
+Applying integration by parts again:
+
+\[
+\int x^8 \cos(21x) \, dx = x^8 \left(\frac{1}{21} \sin(21x)\right) - \int \left(\frac{1}{21} \sin(21x)\right) 8x^7 \, dx
+\]
+
+Simplify the expression:
+
+\[
+= \frac{1}{21} x^8 \sin(21x) - \frac{8}{21} \int x^7 \sin(21x) \, dx
+\]
+
+Substitute this back into our previous result:
+
+\[
+\int x^9 \sin(21x) \, dx = -\frac{1}{21} x^9 \cos(21x) + \frac{3}{7} \left( \frac{1}{21} x^8 \sin(21x) - \frac{8}{21} \int x^7 \sin(21x) \, dx \right)
+\]
+
+\[
+= -\frac{1}{21} x^9 \cos(21x) + \frac{3}{147} x^8 \sin(21x) - \frac{24}{147} \int x^7 \sin(21x) \, dx
+\]
+
+\[
+= -\frac{1}{21} x^9 \cos(21x) + \frac{1}{49} x^8 \sin(21x) - \frac{8}{49} \int x^7 \sin(21x) \, dx
+\]
+
+We continue this process for each power of \(x\) until we reach a simple integral. However, this process can be quite lengthy. Instead, we can use a reduction formula for integrals of the form \(\int x^n \sin(ax) \, dx\). The reduction formula is:
+
+\[
+\int x^n \sin(ax) \, dx = -\frac{x^n \cos(ax)}{a} + \frac{n}{a} \int x^{n-1} \cos(ax) \, dx
+\]
+
+Applying this reduction formula iteratively, we can find the antiderivative. However, for simplicity, we will use the result of the reduction formula directly:
+
+\[
+\int x^9 \sin(21x) \, dx = -\frac{x^9 \cos(21x)}{21} + \frac{9x^8 \sin(21x)}{441} - \frac{72x^7 \cos(21x)}{9261} + \frac{504x^6 \sin(21x)}{194481} - \frac{3024x^5 \cos(21x)}{3969009} + \frac{15120x^4 \sin(21x)}{83349189} - \frac{60480x^3 \cos(21x)}{1750332969} + \frac{181440x^2 \sin(21x)}{36756992349} - \frac{362880x \cos(21x)}{771896839329} + \frac{362880 \sin(21x)}{16209833625909} + C
+\]
+
+Simplifying the coefficients:
+
+\[
+\boxed{-\frac{x^9 \cos(21x)}{21} + \frac{x^8 \sin(21x)}{49} - \frac{8x^7 \cos(21x)}{1029} + \frac{8x^6 \sin(21x)}{21609} - \frac{80x^5 \cos(21x)}{453789} + \frac{80x^4 \sin(21x)}{9529569} - \frac{800x^3 \cos(21x)}{199921929} + \frac{800x^2 \sin(21x)}{4198350501} - \frac{8000x \cos(21x)}{88165360521} + \frac{8000 \sin(21x)}{1851472570941} + C}
+\]",rac{9x^8 \sin(21x)}{441} [-] \frac{72x^7 \cos(21x)}{,S1_exact,,

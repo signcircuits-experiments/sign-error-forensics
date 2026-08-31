@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "n_entries": 10,
+    "domains": [
+      "ibp_error"
+    ],
+    "capture_layers": [
+      75,
+      78,
+      79
+    ],
+    "fields": "proj_d = h_L \u00b7 d_hat (signed); norm_h = ||h_L||",
+    "d_hat_recipe": "space-prefixed, norm-weighted",
+    "purpose": "L78 error-modulated magnitude analysis (volume-knob claim)",
+    "note": "Filtered from combined exp_capture_projections.json (discovery side, L75/L78/L79 only; no L63 capture on discovery side for IBP)."
+  },
+  "data": [
+    {
+      "id": "ibp_pts_n7_005",
+      "domain": "ibp_error",
+      "written_sign": "-",
+      "baseline_ld": 3.5,
+      "proj_d_L75": 13.2821,
+      "norm_h_L75": 153.1126,
+      "proj_d_L78": 20.94143,
+      "norm_h_L78": 657.2278,
+      "proj_d_L79": -15.74871,
+      "norm_h_L79": 612.1521
+    },
+    {
+      "id": "ibp_pts_n7_012",
+      "domain": "ibp_error",
+      "written_sign": "-",
+      "baseline_ld": 4.0,
+      "proj_d_L75": 16.67817,
+      "norm_h_L75": 164.0631,
+      "proj_d_L78": 22.44144,
+      "norm_h_L78": 664.0656,
+      "proj_d_L79": -12.29325,
+      "norm_h_L79": 623.5643
+    },
+    {
+      "id": "ibp_pts_n7_016",
+      "domain": "ibp_error",
+      "written_sign": "-",
+      "baseline_ld": 17.625,
+      "proj_d_L75": 18.19536,
+      "norm_h_L75": 193.5927,
+      "proj_d_L78": 19.99174,
+      "norm_h_L78": 623.3544,
+      "proj_d_L79": 8.98342,
+      "norm_h_L79": 764.233
+    },
+    {
+      "id": "ibp_pts_n8_005",
+      "domain": "ibp_error",
+      "written_sign": "-",
+      "baseline_ld": 2.375,
+      "proj_d_L75": 10.43419,
+      "norm_h_L75": 153.5526,
+      "proj_d_L78": 24.48267,
+      "norm_h_L78": 685.5535,
+      "proj_d_L79": -10.71196,
+      "norm_h_L79": 660.3121
+    },
+    {
+      "id": "ibp_pts_n8_006",
+      "domain": "ibp_error",
+      "written_sign": "-",
+      "baseline_ld": 18.625,
+      "proj_d_L75": 18.38783,
+      "norm_h_L75": 200.5808,
+      "proj_d_L78": 20.16972,
+      "norm_h_L78": 619.424,
+      "proj_d_L79": 12.10616,
+      "norm_h_L79": 797.4981
+    },
+    {
+      "id": "ibp_pts_n8_007",
+      "domain": "ibp_error",
+      "written_sign": "-",
+      "baseline_ld": 17.25,
+      "proj_d_L75": 19.71449,
+      "norm_h_L75": 211.425,
+      "proj_d_L78": 22.97355,
+      "norm_h_L78": 634.4355,
+      "proj_d_L79": 9.96617,
+      "norm_h_L79": 707.7158
+    },
+    {
+      "id": "ibp_pts_n8_010",
+      "domain": "ibp_error",
+      "written_sign": "-",
+      "baseline_ld": 19.625,
+      "proj_d_L75": 21.43584,
+      "norm_h_L75": 204.4106,
+      "proj_d_L78": 20.25738,
+      "norm_h_L78": 628.8091,
+      "proj_d_L79": 15.96803,
+      "norm_h_L79": 826.913
+    },
+    {
+      "id": "ibp_pts_n8_013",
+      "domain": "ibp_error",
+      "written_sign": "-",
+      "baseline_ld": 19.375,
+      "proj_d_L75": 18.68425,
+      "norm_h_L75": 199.2089,
+      "proj_d_L78": 19.32086,
+      "norm_h_L78": 620.8576,
+      "proj_d_L79": 14.08222,
+      "norm_h_L79": 811.4155
+    },
+    {
+      "id": "ibp_pts_n8_015",
+      "domain": "ibp_error",
+      "written_sign": "-",
+      "baseline_ld": 17.375,
+      "proj_d_L75": 18.6434,
+      "norm_h_L75": 199.4459,
+      "proj_d_L78": 20.9818,
+      "norm_h_L78": 638.3915,
+      "proj_d_L79": 12.00552,
+      "norm_h_L79": 746.3782
+    },
+    {
+      "id": "ibp_pts_n9_003",
+      "domain": "ibp_error",
+      "written_sign": "-",
+      "baseline_ld": 5.625,
+      "proj_d_L75": 18.7962,
+      "norm_h_L75": 160.6196,
+      "proj_d_L78": 15.4127,
+      "norm_h_L78": 652.5201,
+      "proj_d_L79": -16.2965,
+      "norm_h_L79": 688.4389
+    }
+  ]
+}

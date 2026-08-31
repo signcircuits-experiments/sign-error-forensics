@@ -1,0 +1,4682 @@
+{
+  "meta": {
+    "n_questions": 44,
+    "alpha_values": [
+      1.0,
+      2.0,
+      3.0
+    ],
+    "amp_scales": {
+      "C3": 0.5,
+      "C4": 0.0
+    },
+    "d_hat_recipe": "space-prefixed, norm-weighted",
+    "prediction": "HEADLINE: C3/C4 at alpha=1 flip >=1 question (alpha=1 = removal only). alpha>1 injects opposite push \u2014 dose-response but not headline. Controls (CTRL_RAND, CTRL_BORING, CTRL_ATTN) flip none. FAILURE BRANCH: if C4/alpha=3 flips nothing, report fraction_of_margin_closed."
+  },
+  "results": {
+    "C_4x4_det_001": {
+      "id": "C_4x4_det_001",
+      "written_sign": "+",
+      "baseline_ld": 5.75,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 5.75,
+            "delta_ld": 0.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 6.25,
+            "delta_ld": 0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 6.5,
+            "delta_ld": 0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 6.375,
+            "delta_ld": 0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 7.25,
+            "delta_ld": 1.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 8.5,
+            "delta_ld": 2.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 4.875,
+            "delta_ld": -0.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 5.375,
+            "delta_ld": -0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 6.25,
+            "delta_ld": 0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 3.5,
+            "delta_ld": -2.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 3.75,
+            "delta_ld": -2.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 4.0,
+            "delta_ld": -1.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 5.625,
+          "delta_ld": -0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 5.75,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 3.0,
+          "delta_ld": -2.75,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "C_4x4_det_002": {
+      "id": "C_4x4_det_002",
+      "written_sign": "-",
+      "baseline_ld": 5.625,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 5.125,
+            "delta_ld": -0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 4.75,
+            "delta_ld": -0.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 4.375,
+            "delta_ld": -1.25,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 4.125,
+            "delta_ld": -1.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 2.125,
+            "delta_ld": -3.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": -0.625,
+            "delta_ld": -6.25,
+            "flipped": true,
+            "top1_now_correct": true
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 3.75,
+            "delta_ld": -1.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 2.5,
+            "delta_ld": -3.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 0.625,
+            "delta_ld": -5.0,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 3.375,
+            "delta_ld": -2.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 2.875,
+            "delta_ld": -2.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 2.0,
+            "delta_ld": -3.625,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 5.625,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 5.75,
+          "delta_ld": 0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 6.125,
+          "delta_ld": 0.5,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "C_4x4_det_004": {
+      "id": "C_4x4_det_004",
+      "written_sign": "+",
+      "baseline_ld": 2.0,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 2.125,
+            "delta_ld": 0.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 2.375,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 2.625,
+            "delta_ld": 0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 2.625,
+            "delta_ld": 0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 3.5,
+            "delta_ld": 1.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 4.75,
+            "delta_ld": 2.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 1.875,
+            "delta_ld": -0.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 2.375,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 3.125,
+            "delta_ld": 1.125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 1.0,
+            "delta_ld": -1.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 1.125,
+            "delta_ld": -0.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 1.5,
+            "delta_ld": -0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 2.0,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 1.875,
+          "delta_ld": -0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 0.75,
+          "delta_ld": -1.25,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "C_4x4_det_008": {
+      "id": "C_4x4_det_008",
+      "written_sign": "+",
+      "baseline_ld": 18.125,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 18.125,
+            "delta_ld": 0.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 18.125,
+            "delta_ld": 0.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 18.0,
+            "delta_ld": -0.125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 18.5,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 18.875,
+            "delta_ld": 0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 19.125,
+            "delta_ld": 1.0,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 14.625,
+            "delta_ld": -3.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 14.875,
+            "delta_ld": -3.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 15.125,
+            "delta_ld": -3.0,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 10.6875,
+            "delta_ld": -7.4375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 10.9375,
+            "delta_ld": -7.1875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 11.0,
+            "delta_ld": -7.125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 18.125,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 18.25,
+          "delta_ld": 0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 16.375,
+          "delta_ld": -1.75,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "C_4x4_det_009": {
+      "id": "C_4x4_det_009",
+      "written_sign": "-",
+      "baseline_ld": 3.375,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 3.25,
+            "delta_ld": -0.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 3.125,
+            "delta_ld": -0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 3.0,
+            "delta_ld": -0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 2.125,
+            "delta_ld": -1.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 0.75,
+            "delta_ld": -2.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": -1.0,
+            "delta_ld": -4.375,
+            "flipped": true,
+            "top1_now_correct": true
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 2.0,
+            "delta_ld": -1.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 1.125,
+            "delta_ld": -2.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": -0.125,
+            "delta_ld": -3.5,
+            "flipped": true,
+            "top1_now_correct": true
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 2.0,
+            "delta_ld": -1.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 1.5,
+            "delta_ld": -1.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 0.875,
+            "delta_ld": -2.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 3.375,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 3.5,
+          "delta_ld": 0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 3.0,
+          "delta_ld": -0.375,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "C_4x4_det_010": {
+      "id": "C_4x4_det_010",
+      "written_sign": "-",
+      "baseline_ld": 16.625,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 15.625,
+            "delta_ld": -1.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 14.75,
+            "delta_ld": -1.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 14.125,
+            "delta_ld": -2.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 13.25,
+            "delta_ld": -3.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 9.625,
+            "delta_ld": -7.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 5.75,
+            "delta_ld": -10.875,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 11.5,
+            "delta_ld": -5.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 8.75,
+            "delta_ld": -7.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 5.5,
+            "delta_ld": -11.125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 9.0625,
+            "delta_ld": -7.5625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 7.375,
+            "delta_ld": -9.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 5.375,
+            "delta_ld": -11.25,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 16.5,
+          "delta_ld": -0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 16.75,
+          "delta_ld": 0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 12.125,
+          "delta_ld": -4.5,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "C_4x4_det_014": {
+      "id": "C_4x4_det_014",
+      "written_sign": "+",
+      "baseline_ld": 15.5,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 15.5,
+            "delta_ld": 0.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 15.625,
+            "delta_ld": 0.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 15.375,
+            "delta_ld": -0.125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 15.5,
+            "delta_ld": 0.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 15.125,
+            "delta_ld": -0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 14.875,
+            "delta_ld": -0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 12.5,
+            "delta_ld": -3.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 12.25,
+            "delta_ld": -3.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 12.25,
+            "delta_ld": -3.25,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 9.25,
+            "delta_ld": -6.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 9.125,
+            "delta_ld": -6.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 9.125,
+            "delta_ld": -6.375,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 15.5,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 15.5,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 13.75,
+          "delta_ld": -1.75,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "C_4x4_det_017": {
+      "id": "C_4x4_det_017",
+      "written_sign": "+",
+      "baseline_ld": 15.125,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 15.25,
+            "delta_ld": 0.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 15.125,
+            "delta_ld": 0.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 15.125,
+            "delta_ld": 0.0,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 15.375,
+            "delta_ld": 0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 15.375,
+            "delta_ld": 0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 15.5,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 12.125,
+            "delta_ld": -3.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 12.375,
+            "delta_ld": -2.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 12.25,
+            "delta_ld": -2.875,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 8.875,
+            "delta_ld": -6.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 8.875,
+            "delta_ld": -6.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 9.0,
+            "delta_ld": -6.125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 15.25,
+          "delta_ld": 0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 15.0,
+          "delta_ld": -0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 13.75,
+          "delta_ld": -1.375,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "C_4x4_det_023": {
+      "id": "C_4x4_det_023",
+      "written_sign": "+",
+      "baseline_ld": 4.5,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 4.625,
+            "delta_ld": 0.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 4.875,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 5.0,
+            "delta_ld": 0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 5.0,
+            "delta_ld": 0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 5.625,
+            "delta_ld": 1.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 6.5,
+            "delta_ld": 2.0,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 3.875,
+            "delta_ld": -0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 4.25,
+            "delta_ld": -0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 4.625,
+            "delta_ld": 0.125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 2.625,
+            "delta_ld": -1.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 2.75,
+            "delta_ld": -1.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 2.875,
+            "delta_ld": -1.625,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 4.625,
+          "delta_ld": 0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 4.375,
+          "delta_ld": -0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 2.375,
+          "delta_ld": -2.125,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "C_4x4_det_024": {
+      "id": "C_4x4_det_024",
+      "written_sign": "+",
+      "baseline_ld": 6.0,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 6.25,
+            "delta_ld": 0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 6.75,
+            "delta_ld": 0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 7.125,
+            "delta_ld": 1.125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 7.0,
+            "delta_ld": 1.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 7.875,
+            "delta_ld": 1.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 9.5,
+            "delta_ld": 3.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 5.375,
+            "delta_ld": -0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 6.0,
+            "delta_ld": 0.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 6.875,
+            "delta_ld": 0.875,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 3.75,
+            "delta_ld": -2.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 3.875,
+            "delta_ld": -2.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 4.375,
+            "delta_ld": -1.625,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 6.0,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 6.25,
+          "delta_ld": 0.25,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 3.875,
+          "delta_ld": -2.125,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "C_4x4_det_026": {
+      "id": "C_4x4_det_026",
+      "written_sign": "+",
+      "baseline_ld": 4.875,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 5.0,
+            "delta_ld": 0.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 5.25,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 5.375,
+            "delta_ld": 0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 5.25,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 6.25,
+            "delta_ld": 1.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 7.0,
+            "delta_ld": 2.125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 4.25,
+            "delta_ld": -0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 4.625,
+            "delta_ld": -0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 5.25,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 3.125,
+            "delta_ld": -1.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 3.0,
+            "delta_ld": -1.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 3.25,
+            "delta_ld": -1.625,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 4.875,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 4.625,
+          "delta_ld": -0.25,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 2.875,
+          "delta_ld": -2.0,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "C_4x4_det_031": {
+      "id": "C_4x4_det_031",
+      "written_sign": "+",
+      "baseline_ld": 6.625,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 6.875,
+            "delta_ld": 0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 7.125,
+            "delta_ld": 0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 7.375,
+            "delta_ld": 0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 7.375,
+            "delta_ld": 0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 8.375,
+            "delta_ld": 1.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 9.625,
+            "delta_ld": 3.0,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 6.0,
+            "delta_ld": -0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 6.5,
+            "delta_ld": -0.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 7.25,
+            "delta_ld": 0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 4.5,
+            "delta_ld": -2.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 4.625,
+            "delta_ld": -2.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 5.0,
+            "delta_ld": -1.625,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 6.75,
+          "delta_ld": 0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 6.625,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 3.375,
+          "delta_ld": -3.25,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "C_4x4_det_032": {
+      "id": "C_4x4_det_032",
+      "written_sign": "-",
+      "baseline_ld": 2.625,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 2.625,
+            "delta_ld": 0.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 2.625,
+            "delta_ld": 0.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 2.625,
+            "delta_ld": 0.0,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 2.875,
+            "delta_ld": 0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 3.0,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 3.125,
+            "delta_ld": 0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 1.875,
+            "delta_ld": -0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 2.0,
+            "delta_ld": -0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 2.125,
+            "delta_ld": -0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 1.0,
+            "delta_ld": -1.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 1.0,
+            "delta_ld": -1.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 0.875,
+            "delta_ld": -1.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 2.625,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 2.625,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 4.0,
+          "delta_ld": 1.375,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "C_4x4_det_035": {
+      "id": "C_4x4_det_035",
+      "written_sign": "+",
+      "baseline_ld": 3.5,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 3.75,
+            "delta_ld": 0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 3.875,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 4.125,
+            "delta_ld": 0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 4.25,
+            "delta_ld": 0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 5.375,
+            "delta_ld": 1.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 6.75,
+            "delta_ld": 3.25,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 3.25,
+            "delta_ld": -0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 3.75,
+            "delta_ld": 0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 4.75,
+            "delta_ld": 1.25,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 2.1875,
+            "delta_ld": -1.3125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 2.375,
+            "delta_ld": -1.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 2.75,
+            "delta_ld": -0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 3.375,
+          "delta_ld": -0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 3.375,
+          "delta_ld": -0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 1.5,
+          "delta_ld": -2.0,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "C_4x4_det_039": {
+      "id": "C_4x4_det_039",
+      "written_sign": "+",
+      "baseline_ld": 0.75,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 0.875,
+            "delta_ld": 0.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 1.125,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 1.5,
+            "delta_ld": 0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 1.875,
+            "delta_ld": 1.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 3.625,
+            "delta_ld": 2.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 5.9375,
+            "delta_ld": 5.1875,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 1.125,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 2.125,
+            "delta_ld": 1.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 3.9375,
+            "delta_ld": 3.1875,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 0.4375,
+            "delta_ld": -0.3125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 0.875,
+            "delta_ld": 0.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 2.125,
+            "delta_ld": 1.375,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 0.75,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 0.625,
+          "delta_ld": -0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 0.5,
+          "delta_ld": -0.25,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "C_4x4_det_040": {
+      "id": "C_4x4_det_040",
+      "written_sign": "+",
+      "baseline_ld": -0.375,
+      "baseline_top1_is_wrong_sign": false,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 0.0,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": true
+          },
+          "a2.0": {
+            "edit_ld": 0.125,
+            "delta_ld": 0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 0.5,
+            "delta_ld": 0.875,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 0.875,
+            "delta_ld": 1.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 2.625,
+            "delta_ld": 3.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 5.25,
+            "delta_ld": 5.625,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 0.25,
+            "delta_ld": 0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 1.3125,
+            "delta_ld": 1.6875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 3.3125,
+            "delta_ld": 3.6875,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": -0.25,
+            "delta_ld": 0.125,
+            "flipped": false,
+            "top1_now_correct": true
+          },
+          "a2.0": {
+            "edit_ld": 0.125,
+            "delta_ld": 0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 1.375,
+            "delta_ld": 1.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": -0.375,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": true
+        },
+        "CTRL_BORING": {
+          "edit_ld": -0.375,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": true
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 0.0,
+          "delta_ld": 0.375,
+          "flipped": false,
+          "top1_now_correct": true
+        }
+      }
+    },
+    "C_4x4_det_047": {
+      "id": "C_4x4_det_047",
+      "written_sign": "-",
+      "baseline_ld": 12.625,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 11.625,
+            "delta_ld": -1.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 11.0,
+            "delta_ld": -1.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 10.25,
+            "delta_ld": -2.375,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 10.0,
+            "delta_ld": -2.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 7.125,
+            "delta_ld": -5.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 3.375,
+            "delta_ld": -9.25,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 8.875,
+            "delta_ld": -3.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 6.875,
+            "delta_ld": -5.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 4.125,
+            "delta_ld": -8.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 7.25,
+            "delta_ld": -5.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 6.25,
+            "delta_ld": -6.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 4.875,
+            "delta_ld": -7.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 12.625,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 12.625,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 12.75,
+          "delta_ld": 0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "C_4x4_det_048": {
+      "id": "C_4x4_det_048",
+      "written_sign": "+",
+      "baseline_ld": 12.375,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 12.625,
+            "delta_ld": 0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 12.625,
+            "delta_ld": 0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 12.875,
+            "delta_ld": 0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 14.375,
+            "delta_ld": 2.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 16.375,
+            "delta_ld": 4.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 18.375,
+            "delta_ld": 6.0,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 11.5,
+            "delta_ld": -0.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 13.0,
+            "delta_ld": 0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 14.875,
+            "delta_ld": 2.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 7.75,
+            "delta_ld": -4.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 8.625,
+            "delta_ld": -3.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 9.875,
+            "delta_ld": -2.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 12.375,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 12.625,
+          "delta_ld": 0.25,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 10.5,
+          "delta_ld": -1.875,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "NC_4x4_det_001": {
+      "id": "NC_4x4_det_001",
+      "written_sign": "+",
+      "baseline_ld": 7.125,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 7.375,
+            "delta_ld": 0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 7.5,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 7.75,
+            "delta_ld": 0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 7.75,
+            "delta_ld": 0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 8.75,
+            "delta_ld": 1.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 9.875,
+            "delta_ld": 2.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 6.375,
+            "delta_ld": -0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 6.875,
+            "delta_ld": -0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 7.625,
+            "delta_ld": 0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 4.75,
+            "delta_ld": -2.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 4.875,
+            "delta_ld": -2.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 5.125,
+            "delta_ld": -2.0,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 7.125,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 7.0,
+          "delta_ld": -0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 3.375,
+          "delta_ld": -3.75,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "NC_4x4_det_009": {
+      "id": "NC_4x4_det_009",
+      "written_sign": "+",
+      "baseline_ld": 0.75,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 0.875,
+            "delta_ld": 0.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 1.125,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 1.375,
+            "delta_ld": 0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 1.875,
+            "delta_ld": 1.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 3.375,
+            "delta_ld": 2.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 5.75,
+            "delta_ld": 5.0,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 1.0625,
+            "delta_ld": 0.3125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 1.9375,
+            "delta_ld": 1.1875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 3.625,
+            "delta_ld": 2.875,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 0.1875,
+            "delta_ld": -0.5625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 0.5625,
+            "delta_ld": -0.1875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 1.5625,
+            "delta_ld": 0.8125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 0.75,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 0.625,
+          "delta_ld": -0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 0.5,
+          "delta_ld": -0.25,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "NC_4x4_det_010": {
+      "id": "NC_4x4_det_010",
+      "written_sign": "+",
+      "baseline_ld": -0.625,
+      "baseline_top1_is_wrong_sign": false,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": -0.375,
+            "delta_ld": 0.25,
+            "flipped": false,
+            "top1_now_correct": true
+          },
+          "a2.0": {
+            "edit_ld": -0.125,
+            "delta_ld": 0.5,
+            "flipped": false,
+            "top1_now_correct": true
+          },
+          "a3.0": {
+            "edit_ld": 0.0,
+            "delta_ld": 0.625,
+            "flipped": false,
+            "top1_now_correct": true
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 0.5,
+            "delta_ld": 1.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 2.125,
+            "delta_ld": 2.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 4.625,
+            "delta_ld": 5.25,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 0.0,
+            "delta_ld": 0.625,
+            "flipped": false,
+            "top1_now_correct": true
+          },
+          "a2.0": {
+            "edit_ld": 0.9375,
+            "delta_ld": 1.5625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 2.625,
+            "delta_ld": 3.25,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": -0.5625,
+            "delta_ld": 0.0625,
+            "flipped": false,
+            "top1_now_correct": true
+          },
+          "a2.0": {
+            "edit_ld": -0.25,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": true
+          },
+          "a3.0": {
+            "edit_ld": 0.8125,
+            "delta_ld": 1.4375,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": -0.625,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": true
+        },
+        "CTRL_BORING": {
+          "edit_ld": -0.625,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": true
+        },
+        "CTRL_ATTN": {
+          "edit_ld": -0.125,
+          "delta_ld": 0.5,
+          "flipped": false,
+          "top1_now_correct": true
+        }
+      }
+    },
+    "NC_4x4_det_011": {
+      "id": "NC_4x4_det_011",
+      "written_sign": "-",
+      "baseline_ld": 5.0,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 4.25,
+            "delta_ld": -0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 3.25,
+            "delta_ld": -1.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 2.0,
+            "delta_ld": -3.0,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 2.0,
+            "delta_ld": -3.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": -2.75,
+            "delta_ld": -7.75,
+            "flipped": true,
+            "top1_now_correct": true
+          },
+          "a3.0": {
+            "edit_ld": -9.0,
+            "delta_ld": -14.0,
+            "flipped": true,
+            "top1_now_correct": true
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 2.375,
+            "delta_ld": -2.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": -1.0,
+            "delta_ld": -6.0,
+            "flipped": true,
+            "top1_now_correct": true
+          },
+          "a3.0": {
+            "edit_ld": -5.625,
+            "delta_ld": -10.625,
+            "flipped": true,
+            "top1_now_correct": true
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 2.625,
+            "delta_ld": -2.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 0.875,
+            "delta_ld": -4.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": -1.75,
+            "delta_ld": -6.75,
+            "flipped": true,
+            "top1_now_correct": true
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 5.125,
+          "delta_ld": 0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 5.125,
+          "delta_ld": 0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 5.375,
+          "delta_ld": 0.375,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "NC_4x4_det_018": {
+      "id": "NC_4x4_det_018",
+      "written_sign": "+",
+      "baseline_ld": 1.25,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 1.625,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 1.875,
+            "delta_ld": 0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 2.25,
+            "delta_ld": 1.0,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 2.625,
+            "delta_ld": 1.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 4.5,
+            "delta_ld": 3.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 7.375,
+            "delta_ld": 6.125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 1.625,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 2.75,
+            "delta_ld": 1.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 4.75,
+            "delta_ld": 3.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 0.375,
+            "delta_ld": -0.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 0.875,
+            "delta_ld": -0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 2.0,
+            "delta_ld": 0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 1.25,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 1.25,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 0.125,
+          "delta_ld": -1.125,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "NC_4x4_det_028": {
+      "id": "NC_4x4_det_028",
+      "written_sign": "+",
+      "baseline_ld": 1.0,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 1.25,
+            "delta_ld": 0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 1.5,
+            "delta_ld": 0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 1.75,
+            "delta_ld": 0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 2.25,
+            "delta_ld": 1.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 4.125,
+            "delta_ld": 3.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 6.5,
+            "delta_ld": 5.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 1.25,
+            "delta_ld": 0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 2.25,
+            "delta_ld": 1.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 4.125,
+            "delta_ld": 3.125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 0.25,
+            "delta_ld": -0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 0.25,
+            "delta_ld": -0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 1.375,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 1.125,
+          "delta_ld": 0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 1.0,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 1.5,
+          "delta_ld": 0.5,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "NC_4x4_det_029": {
+      "id": "NC_4x4_det_029",
+      "written_sign": "-",
+      "baseline_ld": 12.125,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 11.625,
+            "delta_ld": -0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 10.875,
+            "delta_ld": -1.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 10.375,
+            "delta_ld": -1.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 9.625,
+            "delta_ld": -2.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 7.125,
+            "delta_ld": -5.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 4.375,
+            "delta_ld": -7.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 8.25,
+            "delta_ld": -3.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 6.5,
+            "delta_ld": -5.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 4.25,
+            "delta_ld": -7.875,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 6.5,
+            "delta_ld": -5.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 5.375,
+            "delta_ld": -6.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 4.0,
+            "delta_ld": -8.125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 12.0,
+          "delta_ld": -0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 12.125,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 9.25,
+          "delta_ld": -2.875,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "NC_4x4_det_036": {
+      "id": "NC_4x4_det_036",
+      "written_sign": "+",
+      "baseline_ld": 3.0,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 3.25,
+            "delta_ld": 0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 3.5,
+            "delta_ld": 0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 3.75,
+            "delta_ld": 0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 3.75,
+            "delta_ld": 0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 4.875,
+            "delta_ld": 1.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 6.25,
+            "delta_ld": 3.25,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 2.75,
+            "delta_ld": -0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 3.25,
+            "delta_ld": 0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 4.125,
+            "delta_ld": 1.125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 1.5,
+            "delta_ld": -1.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 1.5,
+            "delta_ld": -1.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 1.75,
+            "delta_ld": -1.25,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 3.0,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 3.0,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 2.375,
+          "delta_ld": -0.625,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "NC_4x4_det_038": {
+      "id": "NC_4x4_det_038",
+      "written_sign": "+",
+      "baseline_ld": 8.5,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 8.625,
+            "delta_ld": 0.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 8.625,
+            "delta_ld": 0.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 8.875,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 9.0,
+            "delta_ld": 0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 9.5,
+            "delta_ld": 1.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 10.375,
+            "delta_ld": 1.875,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 7.125,
+            "delta_ld": -1.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 7.625,
+            "delta_ld": -0.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 8.125,
+            "delta_ld": -0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 5.375,
+            "delta_ld": -3.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 5.625,
+            "delta_ld": -2.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 5.875,
+            "delta_ld": -2.625,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 8.375,
+          "delta_ld": -0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 8.5,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 4.0,
+          "delta_ld": -4.5,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "NC_4x4_det_047": {
+      "id": "NC_4x4_det_047",
+      "written_sign": "-",
+      "baseline_ld": 5.375,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 5.0,
+            "delta_ld": -0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 4.625,
+            "delta_ld": -0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 4.125,
+            "delta_ld": -1.25,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 3.625,
+            "delta_ld": -1.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 1.375,
+            "delta_ld": -4.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": -1.25,
+            "delta_ld": -6.625,
+            "flipped": true,
+            "top1_now_correct": true
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 3.25,
+            "delta_ld": -2.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 1.75,
+            "delta_ld": -3.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 0.0,
+            "delta_ld": -5.375,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 3.0,
+            "delta_ld": -2.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 2.375,
+            "delta_ld": -3.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 1.25,
+            "delta_ld": -4.125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 5.25,
+          "delta_ld": -0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 5.375,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 5.5,
+          "delta_ld": 0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "NC_4x4_det_066": {
+      "id": "NC_4x4_det_066",
+      "written_sign": "+",
+      "baseline_ld": 4.75,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 4.875,
+            "delta_ld": 0.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 5.125,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 5.375,
+            "delta_ld": 0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 5.375,
+            "delta_ld": 0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 6.5,
+            "delta_ld": 1.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 7.875,
+            "delta_ld": 3.125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 4.125,
+            "delta_ld": -0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 4.875,
+            "delta_ld": 0.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 5.625,
+            "delta_ld": 0.875,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 3.0,
+            "delta_ld": -1.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 3.125,
+            "delta_ld": -1.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 3.5,
+            "delta_ld": -1.25,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 4.75,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 4.625,
+          "delta_ld": -0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 2.5,
+          "delta_ld": -2.25,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "NC_4x4_det_071": {
+      "id": "NC_4x4_det_071",
+      "written_sign": "+",
+      "baseline_ld": 17.0,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 16.75,
+            "delta_ld": -0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 16.5,
+            "delta_ld": -0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 16.125,
+            "delta_ld": -0.875,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 16.25,
+            "delta_ld": -0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 15.375,
+            "delta_ld": -1.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 13.875,
+            "delta_ld": -3.125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 13.375,
+            "delta_ld": -3.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 12.8125,
+            "delta_ld": -4.1875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 11.875,
+            "delta_ld": -5.125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 10.5625,
+            "delta_ld": -6.4375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 10.1875,
+            "delta_ld": -6.8125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 9.6875,
+            "delta_ld": -7.3125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 17.0,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 17.0,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 14.5,
+          "delta_ld": -2.5,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "NC_4x4_det_086": {
+      "id": "NC_4x4_det_086",
+      "written_sign": "+",
+      "baseline_ld": 17.75,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 17.125,
+            "delta_ld": -0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 16.75,
+            "delta_ld": -1.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 16.25,
+            "delta_ld": -1.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 18.0,
+            "delta_ld": 0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 17.6875,
+            "delta_ld": -0.0625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 17.0,
+            "delta_ld": -0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 14.875,
+            "delta_ld": -2.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 14.6875,
+            "delta_ld": -3.0625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 14.4375,
+            "delta_ld": -3.3125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 11.3438,
+            "delta_ld": -6.4062,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 11.25,
+            "delta_ld": -6.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 10.9375,
+            "delta_ld": -6.8125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 17.75,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 17.75,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 16.375,
+          "delta_ld": -1.375,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "NC_4x4_det_089": {
+      "id": "NC_4x4_det_089",
+      "written_sign": "+",
+      "baseline_ld": 3.125,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 3.125,
+            "delta_ld": 0.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 3.375,
+            "delta_ld": 0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 3.5,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 3.625,
+            "delta_ld": 0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 4.375,
+            "delta_ld": 1.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 5.25,
+            "delta_ld": 2.125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 2.75,
+            "delta_ld": -0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 3.125,
+            "delta_ld": 0.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 3.5,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 1.75,
+            "delta_ld": -1.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 1.75,
+            "delta_ld": -1.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 2.0,
+            "delta_ld": -1.125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 3.125,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 3.125,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 0.875,
+          "delta_ld": -2.25,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "NC_4x4_det_098": {
+      "id": "NC_4x4_det_098",
+      "written_sign": "-",
+      "baseline_ld": 7.0,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 6.5,
+            "delta_ld": -0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 6.0,
+            "delta_ld": -1.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 5.625,
+            "delta_ld": -1.375,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 5.0,
+            "delta_ld": -2.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 2.875,
+            "delta_ld": -4.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 0.5,
+            "delta_ld": -6.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 4.625,
+            "delta_ld": -2.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 3.25,
+            "delta_ld": -3.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 1.5,
+            "delta_ld": -5.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 4.0,
+            "delta_ld": -3.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 3.5,
+            "delta_ld": -3.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 2.5,
+            "delta_ld": -4.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 6.875,
+          "delta_ld": -0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 7.0,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 5.375,
+          "delta_ld": -1.625,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "NC_4x4_det_100": {
+      "id": "NC_4x4_det_100",
+      "written_sign": "-",
+      "baseline_ld": 7.75,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 7.5,
+            "delta_ld": -0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 7.25,
+            "delta_ld": -0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 7.0,
+            "delta_ld": -0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 6.0,
+            "delta_ld": -1.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 4.125,
+            "delta_ld": -3.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 2.0,
+            "delta_ld": -5.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 5.5,
+            "delta_ld": -2.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 4.125,
+            "delta_ld": -3.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 2.5,
+            "delta_ld": -5.25,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 4.75,
+            "delta_ld": -3.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 4.125,
+            "delta_ld": -3.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 3.25,
+            "delta_ld": -4.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 7.75,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 7.75,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 4.25,
+          "delta_ld": -3.5,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "NC_4x4_det_101": {
+      "id": "NC_4x4_det_101",
+      "written_sign": "-",
+      "baseline_ld": 1.5,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 1.25,
+            "delta_ld": -0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 1.0,
+            "delta_ld": -0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 0.75,
+            "delta_ld": -0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 1.25,
+            "delta_ld": -0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 0.75,
+            "delta_ld": -0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 0.25,
+            "delta_ld": -1.25,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 1.125,
+            "delta_ld": -0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 0.75,
+            "delta_ld": -0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 0.5,
+            "delta_ld": -1.0,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 0.875,
+            "delta_ld": -0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 0.875,
+            "delta_ld": -0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 1.0,
+            "delta_ld": -0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 1.5,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 1.5,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": -0.125,
+          "delta_ld": -1.625,
+          "flipped": true,
+          "top1_now_correct": true
+        }
+      }
+    },
+    "NC_4x4_det_103": {
+      "id": "NC_4x4_det_103",
+      "written_sign": "+",
+      "baseline_ld": 7.5,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 7.75,
+            "delta_ld": 0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 7.875,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 7.875,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 7.875,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 8.375,
+            "delta_ld": 0.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 8.875,
+            "delta_ld": 1.375,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 6.25,
+            "delta_ld": -1.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 6.625,
+            "delta_ld": -0.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 7.0,
+            "delta_ld": -0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 4.625,
+            "delta_ld": -2.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 4.75,
+            "delta_ld": -2.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 5.0,
+            "delta_ld": -2.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 7.625,
+          "delta_ld": 0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 7.875,
+          "delta_ld": 0.375,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 5.75,
+          "delta_ld": -1.75,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "NC_4x4_det_123": {
+      "id": "NC_4x4_det_123",
+      "written_sign": "+",
+      "baseline_ld": 0.0,
+      "baseline_top1_is_wrong_sign": false,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 0.25,
+            "delta_ld": 0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 0.375,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 0.5,
+            "delta_ld": 0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 0.75,
+            "delta_ld": 0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 1.5,
+            "delta_ld": 1.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 2.5,
+            "delta_ld": 2.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 0.25,
+            "delta_ld": 0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 0.75,
+            "delta_ld": 0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 1.25,
+            "delta_ld": 1.25,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": -0.125,
+            "delta_ld": -0.125,
+            "flipped": false,
+            "top1_now_correct": true
+          },
+          "a2.0": {
+            "edit_ld": -0.125,
+            "delta_ld": -0.125,
+            "flipped": false,
+            "top1_now_correct": true
+          },
+          "a3.0": {
+            "edit_ld": 0.0,
+            "delta_ld": 0.0,
+            "flipped": false,
+            "top1_now_correct": true
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 0.125,
+          "delta_ld": 0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 0.125,
+          "delta_ld": 0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": -1.125,
+          "delta_ld": -1.125,
+          "flipped": false,
+          "top1_now_correct": true
+        }
+      }
+    },
+    "NC_4x4_det_165": {
+      "id": "NC_4x4_det_165",
+      "written_sign": "-",
+      "baseline_ld": 10.875,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 10.25,
+            "delta_ld": -0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 9.875,
+            "delta_ld": -1.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 9.25,
+            "delta_ld": -1.625,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 8.125,
+            "delta_ld": -2.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 5.375,
+            "delta_ld": -5.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 2.125,
+            "delta_ld": -8.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 7.75,
+            "delta_ld": -3.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 5.625,
+            "delta_ld": -5.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 3.125,
+            "delta_ld": -7.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 6.75,
+            "delta_ld": -4.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 5.625,
+            "delta_ld": -5.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 4.25,
+            "delta_ld": -6.625,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 10.75,
+          "delta_ld": -0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 10.875,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 8.0,
+          "delta_ld": -2.875,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "NC_4x4_det_166": {
+      "id": "NC_4x4_det_166",
+      "written_sign": "+",
+      "baseline_ld": 4.25,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 4.375,
+            "delta_ld": 0.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 4.5,
+            "delta_ld": 0.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 4.625,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 4.75,
+            "delta_ld": 0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 5.375,
+            "delta_ld": 1.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 6.375,
+            "delta_ld": 2.125,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 3.75,
+            "delta_ld": -0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 4.125,
+            "delta_ld": -0.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 4.625,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 2.5,
+            "delta_ld": -1.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 2.625,
+            "delta_ld": -1.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 2.625,
+            "delta_ld": -1.625,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 4.125,
+          "delta_ld": -0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 4.25,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 2.25,
+          "delta_ld": -2.0,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "NC_4x4_det_172": {
+      "id": "NC_4x4_det_172",
+      "written_sign": "-",
+      "baseline_ld": 10.125,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 9.375,
+            "delta_ld": -0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 8.875,
+            "delta_ld": -1.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 8.125,
+            "delta_ld": -2.0,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 8.0,
+            "delta_ld": -2.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 5.5,
+            "delta_ld": -4.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 2.375,
+            "delta_ld": -7.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 7.125,
+            "delta_ld": -3.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 5.375,
+            "delta_ld": -4.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 3.125,
+            "delta_ld": -7.0,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 5.875,
+            "delta_ld": -4.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 5.125,
+            "delta_ld": -5.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 3.875,
+            "delta_ld": -6.25,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 9.875,
+          "delta_ld": -0.25,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 10.0,
+          "delta_ld": -0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 10.375,
+          "delta_ld": 0.25,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "NC_4x4_det_183": {
+      "id": "NC_4x4_det_183",
+      "written_sign": "+",
+      "baseline_ld": 16.375,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 15.75,
+            "delta_ld": -0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 15.625,
+            "delta_ld": -0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 15.375,
+            "delta_ld": -1.0,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 15.5,
+            "delta_ld": -0.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 14.75,
+            "delta_ld": -1.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 13.5,
+            "delta_ld": -2.875,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 13.0,
+            "delta_ld": -3.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 12.375,
+            "delta_ld": -4.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 11.75,
+            "delta_ld": -4.625,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 9.75,
+            "delta_ld": -6.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 9.375,
+            "delta_ld": -7.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 9.125,
+            "delta_ld": -7.25,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 16.375,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 16.25,
+          "delta_ld": -0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 13.625,
+          "delta_ld": -2.75,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "NC_4x4_det_192": {
+      "id": "NC_4x4_det_192",
+      "written_sign": "-",
+      "baseline_ld": 4.625,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 3.75,
+            "delta_ld": -0.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 2.75,
+            "delta_ld": -1.875,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 1.625,
+            "delta_ld": -3.0,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 1.625,
+            "delta_ld": -3.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": -3.0,
+            "delta_ld": -7.625,
+            "flipped": true,
+            "top1_now_correct": true
+          },
+          "a3.0": {
+            "edit_ld": -9.0,
+            "delta_ld": -13.625,
+            "flipped": true,
+            "top1_now_correct": true
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 2.0,
+            "delta_ld": -2.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": -1.25,
+            "delta_ld": -5.875,
+            "flipped": true,
+            "top1_now_correct": true
+          },
+          "a3.0": {
+            "edit_ld": -5.75,
+            "delta_ld": -10.375,
+            "flipped": true,
+            "top1_now_correct": true
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 2.375,
+            "delta_ld": -2.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 0.375,
+            "delta_ld": -4.25,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": -2.125,
+            "delta_ld": -6.75,
+            "flipped": true,
+            "top1_now_correct": true
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 4.625,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 4.75,
+          "delta_ld": 0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 4.625,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "NC_4x4_det_194": {
+      "id": "NC_4x4_det_194",
+      "written_sign": "+",
+      "baseline_ld": 2.5,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 2.875,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 3.0,
+            "delta_ld": 0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 3.125,
+            "delta_ld": 0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 3.25,
+            "delta_ld": 0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 4.0,
+            "delta_ld": 1.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 5.125,
+            "delta_ld": 2.625,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 2.375,
+            "delta_ld": -0.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 2.875,
+            "delta_ld": 0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 3.5,
+            "delta_ld": 1.0,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 1.375,
+            "delta_ld": -1.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 1.5,
+            "delta_ld": -1.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 1.75,
+            "delta_ld": -0.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 2.625,
+          "delta_ld": 0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 2.625,
+          "delta_ld": 0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 2.5,
+          "delta_ld": 0.0,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    },
+    "NC_4x4_det_198": {
+      "id": "NC_4x4_det_198",
+      "written_sign": "+",
+      "baseline_ld": 16.375,
+      "baseline_top1_is_wrong_sign": true,
+      "conditions": {
+        "C1": {
+          "a1.0": {
+            "edit_ld": 16.25,
+            "delta_ld": -0.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 16.0,
+            "delta_ld": -0.375,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 15.875,
+            "delta_ld": -0.5,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C2": {
+          "a1.0": {
+            "edit_ld": 16.25,
+            "delta_ld": -0.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 15.75,
+            "delta_ld": -0.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 15.0,
+            "delta_ld": -1.375,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C3": {
+          "a1.0": {
+            "edit_ld": 13.375,
+            "delta_ld": -3.0,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 13.25,
+            "delta_ld": -3.125,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 12.625,
+            "delta_ld": -3.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "C4": {
+          "a1.0": {
+            "edit_ld": 9.875,
+            "delta_ld": -6.5,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a2.0": {
+            "edit_ld": 9.75,
+            "delta_ld": -6.625,
+            "flipped": false,
+            "top1_now_correct": false
+          },
+          "a3.0": {
+            "edit_ld": 9.625,
+            "delta_ld": -6.75,
+            "flipped": false,
+            "top1_now_correct": false
+          }
+        },
+        "CTRL_RAND": {
+          "edit_ld": 16.5,
+          "delta_ld": 0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_BORING": {
+          "edit_ld": 16.5,
+          "delta_ld": 0.125,
+          "flipped": false,
+          "top1_now_correct": false
+        },
+        "CTRL_ATTN": {
+          "edit_ld": 14.25,
+          "delta_ld": -2.125,
+          "flipped": false,
+          "top1_now_correct": false
+        }
+      }
+    }
+  }
+}
