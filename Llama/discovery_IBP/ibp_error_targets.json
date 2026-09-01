@@ -1,0 +1,134 @@
+{
+  "model": "llama",
+  "domain": "ibp_error",
+  "n_layers": 80,
+  "human_reviewed": true,
+  "review_note": "habit_layers=[77,78] robust: survives late-window exclusion of emb-peak/outlier cases and leave-one-out (L78: 14/15 minus-writer cases positive DLA-toward-written; L77: 12/15; neither driven by a single case). check_layer=76 kept but LOW CONFIDENCE: margin over runner-up L60 is 71% driven by one case (ibp_pts_n11_b211, L76=-2.255, next most negative case only -1.028); excluding it collapses the margin from 0.234 to 0.067. Treat check_layer=76 as provisional pending more discovery data.",
+  "habit_layers": [
+    77,
+    78
+  ],
+  "check_layer": 76,
+  "control_layers": [
+    30,
+    50
+  ],
+  "capture_layers": [
+    76,
+    77,
+    78
+  ],
+  "late_window_start": 60,
+  "n_cases": {
+    "total": 22,
+    "emb_peak": 3,
+    "late_peak": 19,
+    "minus_writers": 15,
+    "plus_writers": 7
+  },
+  "emb_peak_ids": [
+    "ibp_pts_n8_b13",
+    "ibp_pts_n9_b8",
+    "ibp_ptc_n16_b39"
+  ],
+  "peak_layer_histogram": {
+    "2": 2,
+    "3": 1,
+    "40": 1,
+    "44": 2,
+    "47": 1,
+    "62": 1,
+    "63": 1,
+    "74": 1,
+    "78": 2,
+    "79": 10
+  },
+  "sign_token_modes": [
+    {
+      "wrong_sign_tok": 482,
+      "correct_sign_tok": 489,
+      "written_sign": "-",
+      "n": 14
+    },
+    {
+      "wrong_sign_tok": 489,
+      "correct_sign_tok": 482,
+      "written_sign": "+",
+      "n": 7
+    },
+    {
+      "wrong_sign_tok": 12,
+      "correct_sign_tok": 10,
+      "written_sign": "-",
+      "n": 1
+    }
+  ],
+  "evidence_mean_mlp_dla": {
+    "late_all": {
+      "60": -0.1562,
+      "61": -0.0366,
+      "62": -0.0003,
+      "63": 0.016,
+      "64": 0.3643,
+      "65": 0.0134,
+      "66": 0.4521,
+      "67": 0.0547,
+      "68": 0.0373,
+      "69": 0.221,
+      "70": 0.0294,
+      "71": 0.0645,
+      "72": 0.2205,
+      "73": 0.1212,
+      "74": 0.2213,
+      "75": 0.0899,
+      "76": -0.1587,
+      "77": 1.1221,
+      "78": 2.0111,
+      "79": 1.7111
+    },
+    "late_minus": {
+      "60": -0.0767,
+      "61": -0.1565,
+      "62": -0.3371,
+      "63": -0.1385,
+      "64": 0.8589,
+      "65": -0.0767,
+      "66": 1.2463,
+      "67": 0.0367,
+      "68": -0.0837,
+      "69": 0.4997,
+      "70": -0.2747,
+      "71": -0.0687,
+      "72": 0.6039,
+      "73": 0.2476,
+      "74": 0.3096,
+      "75": 0.1456,
+      "76": -0.3109,
+      "77": 1.4204,
+      "78": 3.3495,
+      "79": 0.4294
+    },
+    "late_plus": {
+      "60": -0.3266,
+      "61": 0.2204,
+      "62": 0.7215,
+      "63": 0.3472,
+      "64": -0.6954,
+      "65": 0.2065,
+      "66": -1.2497,
+      "67": 0.0931,
+      "68": 0.2965,
+      "69": -0.3763,
+      "70": 0.6812,
+      "71": 0.3498,
+      "72": -0.6009,
+      "73": -0.1497,
+      "74": 0.0321,
+      "75": -0.0295,
+      "76": 0.1676,
+      "77": 0.4828,
+      "78": -0.857,
+      "79": 4.4578
+    }
+  }
+}

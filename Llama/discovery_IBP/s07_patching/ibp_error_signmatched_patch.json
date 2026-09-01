@@ -1,0 +1,730 @@
+{
+  "meta": {
+    "n_questions": 19,
+    "donor_domain": "det_4x4_correct",
+    "d_hat_recipe": "N/A \u2014 mean-patch, no d_hat",
+    "sign_matching": "error written sign matched to correct donor sign",
+    "prediction": "L75/L78 near-null; L77 corrective; L30/L50 null",
+    "note": "label_inversion: correct files have written_sign = row.wrong_sign"
+  },
+  "results": {
+    "ibp_pts_n12_b11": {
+      "id": "ibp_pts_n12_b11",
+      "written_sign": "-",
+      "baseline_ld": -3.25,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": -1.0,
+          "delta_ld": 2.25,
+          "fixed": false
+        },
+        "L78_mlp": {
+          "prediction": "null",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 0.5,
+          "delta_ld": 3.75,
+          "fixed": false
+        },
+        "L76_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": -3.5,
+          "delta_ld": -0.25,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": -1.5,
+          "delta_ld": 1.75,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": -2.75,
+          "delta_ld": 0.5,
+          "fixed": false
+        }
+      }
+    },
+    "ibp_pts_n13_b2": {
+      "id": "ibp_pts_n13_b2",
+      "written_sign": "+",
+      "baseline_ld": 11.75,
+      "patches": {
+        "L77_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L78_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L76_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L30_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L50_mlp": {
+          "skip": "no donor for sign=+"
+        }
+      }
+    },
+    "ibp_pts_n14_b2": {
+      "id": "ibp_pts_n14_b2",
+      "written_sign": "-",
+      "baseline_ld": 3.0,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 4.0,
+          "delta_ld": 1.0,
+          "fixed": false
+        },
+        "L78_mlp": {
+          "prediction": "null",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 5.5,
+          "delta_ld": 2.5,
+          "fixed": false
+        },
+        "L76_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 2.25,
+          "delta_ld": -0.75,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 4.5,
+          "delta_ld": 1.5,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 4.25,
+          "delta_ld": 1.25,
+          "fixed": false
+        }
+      }
+    },
+    "ibp_pts_n15_b3": {
+      "id": "ibp_pts_n15_b3",
+      "written_sign": "+",
+      "baseline_ld": 3.0,
+      "patches": {
+        "L77_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L78_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L76_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L30_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L50_mlp": {
+          "skip": "no donor for sign=+"
+        }
+      }
+    },
+    "ibp_pts_n15_b7": {
+      "id": "ibp_pts_n15_b7",
+      "written_sign": "-",
+      "baseline_ld": -1.25,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 1.25,
+          "delta_ld": 2.5,
+          "fixed": false
+        },
+        "L78_mlp": {
+          "prediction": "null",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 2.25,
+          "delta_ld": 3.5,
+          "fixed": false
+        },
+        "L76_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": -1.5,
+          "delta_ld": -0.25,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": -2.25,
+          "delta_ld": -1.0,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 0.5,
+          "delta_ld": 1.75,
+          "fixed": false
+        }
+      }
+    },
+    "ibp_pts_n6_b12": {
+      "id": "ibp_pts_n6_b12",
+      "written_sign": "-",
+      "baseline_ld": 7.75,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 10.25,
+          "delta_ld": 2.5,
+          "fixed": false
+        },
+        "L78_mlp": {
+          "prediction": "null",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 8.5,
+          "delta_ld": 0.75,
+          "fixed": false
+        },
+        "L76_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 8.5,
+          "delta_ld": 0.75,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 7.0,
+          "delta_ld": -0.75,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 7.0,
+          "delta_ld": -0.75,
+          "fixed": false
+        }
+      }
+    },
+    "ibp_pts_n8_001": {
+      "id": "ibp_pts_n8_001",
+      "written_sign": "-",
+      "baseline_ld": 1.8359,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 7.7969,
+          "delta_ld": 5.9609,
+          "fixed": false
+        },
+        "L78_mlp": {
+          "prediction": "null",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 2.8086,
+          "delta_ld": 0.9727,
+          "fixed": false
+        },
+        "L76_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 1.4062,
+          "delta_ld": -0.4297,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 1.7422,
+          "delta_ld": -0.0938,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 1.5391,
+          "delta_ld": -0.2969,
+          "fixed": false
+        }
+      }
+    },
+    "ibp_pts_n12_b13": {
+      "id": "ibp_pts_n12_b13",
+      "written_sign": "-",
+      "baseline_ld": 19.25,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 17.625,
+          "delta_ld": -1.625,
+          "fixed": false
+        },
+        "L78_mlp": {
+          "prediction": "null",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 16.25,
+          "delta_ld": -3.0,
+          "fixed": false
+        },
+        "L76_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 16.5,
+          "delta_ld": -2.75,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 16.75,
+          "delta_ld": -2.5,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 18.75,
+          "delta_ld": -0.5,
+          "fixed": false
+        }
+      }
+    },
+    "ibp_ptc_n12_b16": {
+      "id": "ibp_ptc_n12_b16",
+      "written_sign": "+",
+      "baseline_ld": -1.75,
+      "patches": {
+        "L77_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L78_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L76_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L30_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L50_mlp": {
+          "skip": "no donor for sign=+"
+        }
+      }
+    },
+    "ibp_ptc_n13_b107": {
+      "id": "ibp_ptc_n13_b107",
+      "written_sign": "+",
+      "baseline_ld": 15.5,
+      "patches": {
+        "L77_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L78_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L76_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L30_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L50_mlp": {
+          "skip": "no donor for sign=+"
+        }
+      }
+    },
+    "ibp_ptc_n8_b281": {
+      "id": "ibp_ptc_n8_b281",
+      "written_sign": "+",
+      "baseline_ld": 14.25,
+      "patches": {
+        "L77_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L78_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L76_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L30_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L50_mlp": {
+          "skip": "no donor for sign=+"
+        }
+      }
+    },
+    "ibp_ptc_n8_b67": {
+      "id": "ibp_ptc_n8_b67",
+      "written_sign": "-",
+      "baseline_ld": 1.0,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 2.0,
+          "delta_ld": 1.0,
+          "fixed": false
+        },
+        "L78_mlp": {
+          "prediction": "null",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 1.5,
+          "delta_ld": 0.5,
+          "fixed": false
+        },
+        "L76_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 0.0,
+          "delta_ld": -1.0,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 3.5,
+          "delta_ld": 2.5,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 4.25,
+          "delta_ld": 3.25,
+          "fixed": false
+        }
+      }
+    },
+    "ibp_pts_n11_b211": {
+      "id": "ibp_pts_n11_b211",
+      "written_sign": "-",
+      "baseline_ld": 18.25,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 16.0,
+          "delta_ld": -2.25,
+          "fixed": false
+        },
+        "L78_mlp": {
+          "prediction": "null",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 17.75,
+          "delta_ld": -0.5,
+          "fixed": false
+        },
+        "L76_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 19.25,
+          "delta_ld": 1.0,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 17.25,
+          "delta_ld": -1.0,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 18.5,
+          "delta_ld": 0.25,
+          "fixed": false
+        }
+      }
+    },
+    "ibp_pts_n12_b18": {
+      "id": "ibp_pts_n12_b18",
+      "written_sign": "+",
+      "baseline_ld": 7.5,
+      "patches": {
+        "L77_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L78_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L76_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L30_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L50_mlp": {
+          "skip": "no donor for sign=+"
+        }
+      }
+    },
+    "ibp_pts_n14_b4": {
+      "id": "ibp_pts_n14_b4",
+      "written_sign": "-",
+      "baseline_ld": 3.0,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 3.25,
+          "delta_ld": 0.25,
+          "fixed": false
+        },
+        "L78_mlp": {
+          "prediction": "null",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 3.75,
+          "delta_ld": 0.75,
+          "fixed": false
+        },
+        "L76_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 3.25,
+          "delta_ld": 0.25,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 3.0,
+          "delta_ld": 0.0,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 6.25,
+          "delta_ld": 3.25,
+          "fixed": false
+        }
+      }
+    },
+    "ibp_pts_n16_b49": {
+      "id": "ibp_pts_n16_b49",
+      "written_sign": "-",
+      "baseline_ld": 15.0,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 13.875,
+          "delta_ld": -1.125,
+          "fixed": false
+        },
+        "L78_mlp": {
+          "prediction": "null",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 12.625,
+          "delta_ld": -2.375,
+          "fixed": false
+        },
+        "L76_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 14.375,
+          "delta_ld": -0.625,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 12.25,
+          "delta_ld": -2.75,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 14.5,
+          "delta_ld": -0.5,
+          "fixed": false
+        }
+      }
+    },
+    "ibp_pts_n1_b6": {
+      "id": "ibp_pts_n1_b6",
+      "written_sign": "-",
+      "baseline_ld": 26.25,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 26.25,
+          "delta_ld": 0.0,
+          "fixed": false
+        },
+        "L78_mlp": {
+          "prediction": "null",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 21.75,
+          "delta_ld": -4.5,
+          "fixed": false
+        },
+        "L76_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 25.75,
+          "delta_ld": -0.5,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 27.5,
+          "delta_ld": 1.25,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 29.625,
+          "delta_ld": 3.375,
+          "fixed": false
+        }
+      }
+    },
+    "ibp_pts_n7_b53": {
+      "id": "ibp_pts_n7_b53",
+      "written_sign": "+",
+      "baseline_ld": 23.5,
+      "patches": {
+        "L77_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L78_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L76_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L30_mlp": {
+          "skip": "no donor for sign=+"
+        },
+        "L50_mlp": {
+          "skip": "no donor for sign=+"
+        }
+      }
+    },
+    "ibp_pts_n8_b19": {
+      "id": "ibp_pts_n8_b19",
+      "written_sign": "-",
+      "baseline_ld": 3.75,
+      "patches": {
+        "L77_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 7.0,
+          "delta_ld": 3.25,
+          "fixed": false
+        },
+        "L78_mlp": {
+          "prediction": "null",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 5.125,
+          "delta_ld": 1.375,
+          "fixed": false
+        },
+        "L76_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 4.75,
+          "delta_ld": 1.0,
+          "fixed": false
+        },
+        "L30_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 4.5,
+          "delta_ld": 0.75,
+          "fixed": false
+        },
+        "L50_mlp": {
+          "prediction": "movement",
+          "donor_sign": "-",
+          "donor_n": 23,
+          "edit_ld": 4.5,
+          "delta_ld": 0.75,
+          "fixed": false
+        }
+      }
+    }
+  }
+}

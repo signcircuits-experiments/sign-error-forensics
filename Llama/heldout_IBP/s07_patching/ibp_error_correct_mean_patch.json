@@ -1,0 +1,762 @@
+{
+  "ibp_ptc_n12_b47": {
+    "id": "ibp_ptc_n12_b47",
+    "written_sign": "-",
+    "baseline_ld": 12.5,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 7.75,
+        "delta_ld": -4.75,
+        "flipped": false
+      },
+      "L78_mlp": {
+        "prediction": "null",
+        "edit_ld": -0.5,
+        "delta_ld": -13.0,
+        "flipped": true
+      },
+      "L76_mlp": {
+        "prediction": "movement",
+        "edit_ld": 10.5,
+        "delta_ld": -2.0,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 15.0,
+        "delta_ld": 2.5,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 13.5,
+        "delta_ld": 1.0,
+        "flipped": false
+      }
+    }
+  },
+  "ibp_ptc_n12_b83": {
+    "id": "ibp_ptc_n12_b83",
+    "written_sign": "-",
+    "baseline_ld": 8.0,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 3.75,
+        "delta_ld": -4.25,
+        "flipped": false
+      },
+      "L78_mlp": {
+        "prediction": "null",
+        "edit_ld": -1.75,
+        "delta_ld": -9.75,
+        "flipped": true
+      },
+      "L76_mlp": {
+        "prediction": "movement",
+        "edit_ld": 6.0,
+        "delta_ld": -2.0,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 8.75,
+        "delta_ld": 0.75,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 8.75,
+        "delta_ld": 0.75,
+        "flipped": false
+      }
+    }
+  },
+  "ibp_ptc_n15_b14": {
+    "id": "ibp_ptc_n15_b14",
+    "written_sign": "-",
+    "baseline_ld": 1.75,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": -2.0,
+        "delta_ld": -3.75,
+        "flipped": true
+      },
+      "L78_mlp": {
+        "prediction": "null",
+        "edit_ld": -5.25,
+        "delta_ld": -7.0,
+        "flipped": true
+      },
+      "L76_mlp": {
+        "prediction": "movement",
+        "edit_ld": -0.5,
+        "delta_ld": -2.25,
+        "flipped": true
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": -2.0,
+        "delta_ld": -3.75,
+        "flipped": true
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 0.75,
+        "delta_ld": -1.0,
+        "flipped": false
+      }
+    }
+  },
+  "ibp_ptc_n15_b16": {
+    "id": "ibp_ptc_n15_b16",
+    "written_sign": "+",
+    "baseline_ld": 11.5,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 14.75,
+        "delta_ld": 3.25,
+        "flipped": false
+      },
+      "L78_mlp": {
+        "prediction": "null",
+        "edit_ld": 16.5,
+        "delta_ld": 5.0,
+        "flipped": false
+      },
+      "L76_mlp": {
+        "prediction": "movement",
+        "edit_ld": 10.5,
+        "delta_ld": -1.0,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 10.75,
+        "delta_ld": -0.75,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 13.0,
+        "delta_ld": 1.5,
+        "flipped": false
+      }
+    }
+  },
+  "ibp_ptc_n15_b25": {
+    "id": "ibp_ptc_n15_b25",
+    "written_sign": "-",
+    "baseline_ld": 11.5,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 5.0,
+        "delta_ld": -6.5,
+        "flipped": false
+      },
+      "L78_mlp": {
+        "prediction": "null",
+        "edit_ld": 0.25,
+        "delta_ld": -11.25,
+        "flipped": false
+      },
+      "L76_mlp": {
+        "prediction": "movement",
+        "edit_ld": 8.75,
+        "delta_ld": -2.75,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 13.75,
+        "delta_ld": 2.25,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 12.75,
+        "delta_ld": 1.25,
+        "flipped": false
+      }
+    }
+  },
+  "ibp_ptc_n16_b113": {
+    "id": "ibp_ptc_n16_b113",
+    "written_sign": "-",
+    "baseline_ld": 7.75,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 1.75,
+        "delta_ld": -6.0,
+        "flipped": false
+      },
+      "L78_mlp": {
+        "prediction": "null",
+        "edit_ld": -4.75,
+        "delta_ld": -12.5,
+        "flipped": true
+      },
+      "L76_mlp": {
+        "prediction": "movement",
+        "edit_ld": 5.5,
+        "delta_ld": -2.25,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 12.0,
+        "delta_ld": 4.25,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 10.75,
+        "delta_ld": 3.0,
+        "flipped": false
+      }
+    }
+  },
+  "ibp_ptc_n16_b14": {
+    "id": "ibp_ptc_n16_b14",
+    "written_sign": "+",
+    "baseline_ld": 18.375,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 19.375,
+        "delta_ld": 1.0,
+        "flipped": false
+      },
+      "L78_mlp": {
+        "prediction": "null",
+        "edit_ld": 18.75,
+        "delta_ld": 0.375,
+        "flipped": false
+      },
+      "L76_mlp": {
+        "prediction": "movement",
+        "edit_ld": 17.125,
+        "delta_ld": -1.25,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 16.625,
+        "delta_ld": -1.75,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 17.625,
+        "delta_ld": -0.75,
+        "flipped": false
+      }
+    }
+  },
+  "ibp_ptc_n16_b18": {
+    "id": "ibp_ptc_n16_b18",
+    "written_sign": "-",
+    "baseline_ld": 21.625,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 13.25,
+        "delta_ld": -8.375,
+        "flipped": false
+      },
+      "L78_mlp": {
+        "prediction": "null",
+        "edit_ld": 8.75,
+        "delta_ld": -12.875,
+        "flipped": false
+      },
+      "L76_mlp": {
+        "prediction": "movement",
+        "edit_ld": 17.625,
+        "delta_ld": -4.0,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 21.875,
+        "delta_ld": 0.25,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 19.25,
+        "delta_ld": -2.375,
+        "flipped": false
+      }
+    }
+  },
+  "ibp_ptc_n16_b83": {
+    "id": "ibp_ptc_n16_b83",
+    "written_sign": "-",
+    "baseline_ld": 9.5,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 6.25,
+        "delta_ld": -3.25,
+        "flipped": false
+      },
+      "L78_mlp": {
+        "prediction": "null",
+        "edit_ld": 0.5,
+        "delta_ld": -9.0,
+        "flipped": false
+      },
+      "L76_mlp": {
+        "prediction": "movement",
+        "edit_ld": 7.5,
+        "delta_ld": -2.0,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 10.0,
+        "delta_ld": 0.5,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 10.75,
+        "delta_ld": 1.25,
+        "flipped": false
+      }
+    }
+  },
+  "ibp_ptc_n16_b97": {
+    "id": "ibp_ptc_n16_b97",
+    "written_sign": "-",
+    "baseline_ld": 18.625,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 13.375,
+        "delta_ld": -5.25,
+        "flipped": false
+      },
+      "L78_mlp": {
+        "prediction": "null",
+        "edit_ld": 8.0,
+        "delta_ld": -10.625,
+        "flipped": false
+      },
+      "L76_mlp": {
+        "prediction": "movement",
+        "edit_ld": 16.0,
+        "delta_ld": -2.625,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 17.25,
+        "delta_ld": -1.375,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 15.75,
+        "delta_ld": -2.875,
+        "flipped": false
+      }
+    }
+  },
+  "ibp_pts_n12_b3": {
+    "id": "ibp_pts_n12_b3",
+    "written_sign": "+",
+    "baseline_ld": 7.25,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 9.0,
+        "delta_ld": 1.75,
+        "flipped": false
+      },
+      "L78_mlp": {
+        "prediction": "null",
+        "edit_ld": 14.0,
+        "delta_ld": 6.75,
+        "flipped": false
+      },
+      "L76_mlp": {
+        "prediction": "movement",
+        "edit_ld": 5.5,
+        "delta_ld": -1.75,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 5.25,
+        "delta_ld": -2.0,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 8.25,
+        "delta_ld": 1.0,
+        "flipped": false
+      }
+    }
+  },
+  "ibp_pts_n12_b79": {
+    "id": "ibp_pts_n12_b79",
+    "written_sign": "-",
+    "baseline_ld": 37.0,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 32.25,
+        "delta_ld": -4.75,
+        "flipped": false
+      },
+      "L78_mlp": {
+        "prediction": "null",
+        "edit_ld": 25.625,
+        "delta_ld": -11.375,
+        "flipped": false
+      },
+      "L76_mlp": {
+        "prediction": "movement",
+        "edit_ld": 36.0,
+        "delta_ld": -1.0,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 36.75,
+        "delta_ld": -0.25,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 37.5,
+        "delta_ld": 0.5,
+        "flipped": false
+      }
+    }
+  },
+  "ibp_pts_n15_b109": {
+    "id": "ibp_pts_n15_b109",
+    "written_sign": "-",
+    "baseline_ld": 6.75,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 4.5,
+        "delta_ld": -2.25,
+        "flipped": false
+      },
+      "L78_mlp": {
+        "prediction": "null",
+        "edit_ld": 0.0,
+        "delta_ld": -6.75,
+        "flipped": false
+      },
+      "L76_mlp": {
+        "prediction": "movement",
+        "edit_ld": 5.75,
+        "delta_ld": -1.0,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 7.0,
+        "delta_ld": 0.25,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 6.75,
+        "delta_ld": 0.0,
+        "flipped": false
+      }
+    }
+  },
+  "ibp_pts_n15_b127": {
+    "id": "ibp_pts_n15_b127",
+    "written_sign": "+",
+    "baseline_ld": 28.5,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 29.25,
+        "delta_ld": 0.75,
+        "flipped": false
+      },
+      "L78_mlp": {
+        "prediction": "null",
+        "edit_ld": 30.125,
+        "delta_ld": 1.625,
+        "flipped": false
+      },
+      "L76_mlp": {
+        "prediction": "movement",
+        "edit_ld": 28.75,
+        "delta_ld": 0.25,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 28.125,
+        "delta_ld": -0.375,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 27.75,
+        "delta_ld": -0.75,
+        "flipped": false
+      }
+    }
+  },
+  "ibp_pts_n15_b4": {
+    "id": "ibp_pts_n15_b4",
+    "written_sign": "+",
+    "baseline_ld": 32.625,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 33.375,
+        "delta_ld": 0.75,
+        "flipped": false
+      },
+      "L78_mlp": {
+        "prediction": "null",
+        "edit_ld": 31.875,
+        "delta_ld": -0.75,
+        "flipped": false
+      },
+      "L76_mlp": {
+        "prediction": "movement",
+        "edit_ld": 34.25,
+        "delta_ld": 1.625,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 33.625,
+        "delta_ld": 1.0,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 32.625,
+        "delta_ld": 0.0,
+        "flipped": false
+      }
+    }
+  },
+  "ibp_pts_n15_b67": {
+    "id": "ibp_pts_n15_b67",
+    "written_sign": "-",
+    "baseline_ld": 28.0,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 22.25,
+        "delta_ld": -5.75,
+        "flipped": false
+      },
+      "L78_mlp": {
+        "prediction": "null",
+        "edit_ld": 16.75,
+        "delta_ld": -11.25,
+        "flipped": false
+      },
+      "L76_mlp": {
+        "prediction": "movement",
+        "edit_ld": 28.875,
+        "delta_ld": 0.875,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 28.375,
+        "delta_ld": 0.375,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 28.75,
+        "delta_ld": 0.75,
+        "flipped": false
+      }
+    }
+  },
+  "ibp_pts_n16_b18": {
+    "id": "ibp_pts_n16_b18",
+    "written_sign": "+",
+    "baseline_ld": 15.0,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 16.0,
+        "delta_ld": 1.0,
+        "flipped": false
+      },
+      "L78_mlp": {
+        "prediction": "null",
+        "edit_ld": 19.75,
+        "delta_ld": 4.75,
+        "flipped": false
+      },
+      "L76_mlp": {
+        "prediction": "movement",
+        "edit_ld": 13.75,
+        "delta_ld": -1.25,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 14.5,
+        "delta_ld": -0.5,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 15.75,
+        "delta_ld": 0.75,
+        "flipped": false
+      }
+    }
+  },
+  "ibp_pts_n16_b79": {
+    "id": "ibp_pts_n16_b79",
+    "written_sign": "-",
+    "baseline_ld": 1.75,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": -3.75,
+        "delta_ld": -5.5,
+        "flipped": true
+      },
+      "L78_mlp": {
+        "prediction": "null",
+        "edit_ld": -9.5,
+        "delta_ld": -11.25,
+        "flipped": true
+      },
+      "L76_mlp": {
+        "prediction": "movement",
+        "edit_ld": 1.0,
+        "delta_ld": -0.75,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 4.0,
+        "delta_ld": 2.25,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 2.5,
+        "delta_ld": 0.75,
+        "flipped": false
+      }
+    }
+  },
+  "ibp_pts_n16_b89": {
+    "id": "ibp_pts_n16_b89",
+    "written_sign": "-",
+    "baseline_ld": 10.0,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 12.0,
+        "delta_ld": 2.0,
+        "flipped": false
+      },
+      "L78_mlp": {
+        "prediction": "null",
+        "edit_ld": 3.1836,
+        "delta_ld": -6.8164,
+        "flipped": false
+      },
+      "L76_mlp": {
+        "prediction": "movement",
+        "edit_ld": 11.9375,
+        "delta_ld": 1.9375,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 8.9375,
+        "delta_ld": -1.0625,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 9.5781,
+        "delta_ld": -0.4219,
+        "flipped": false
+      }
+    }
+  },
+  "ibp_pts_n8_b73": {
+    "id": "ibp_pts_n8_b73",
+    "written_sign": "-",
+    "baseline_ld": 20.0,
+    "baseline_correct": false,
+    "patches": {
+      "L77_mlp": {
+        "prediction": "null",
+        "edit_ld": 14.0,
+        "delta_ld": -6.0,
+        "flipped": false
+      },
+      "L78_mlp": {
+        "prediction": "null",
+        "edit_ld": 9.0,
+        "delta_ld": -11.0,
+        "flipped": false
+      },
+      "L76_mlp": {
+        "prediction": "movement",
+        "edit_ld": 17.75,
+        "delta_ld": -2.25,
+        "flipped": false
+      },
+      "L30_mlp": {
+        "prediction": "null",
+        "edit_ld": 21.0,
+        "delta_ld": 1.0,
+        "flipped": false
+      },
+      "L50_mlp": {
+        "prediction": "null",
+        "edit_ld": 20.25,
+        "delta_ld": 0.25,
+        "flipped": false
+      }
+    }
+  }
+}

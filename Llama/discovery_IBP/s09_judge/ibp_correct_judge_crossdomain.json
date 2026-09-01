@@ -1,0 +1,963 @@
+{
+  "meta": {
+    "n_questions": 23,
+    "gammas": [
+      1.5,
+      2.0,
+      3.0
+    ],
+    "domain": "ibp_correct",
+    "exploratory": false,
+    "candidates_tested": [
+      "L76_mlp",
+      "L30_mlp"
+    ],
+    "l77_dropped": "resolved in an earlier run: L77.attn near-null, L77.mlp no fixes",
+    "prediction": "fixes at gamma=3 in 5x5; IBP exploratory (n=10). DLA-split: fixes concentrate where L79 DLA already opposes written sign."
+  },
+  "results": {
+    "ibp_pts_n7_002": {
+      "id": "ibp_pts_n7_002",
+      "written_sign": "-",
+      "baseline_ld": 29.0,
+      "boosts": {
+        "L76_mlp": {
+          "g1.5": {
+            "edit_ld": 27.5,
+            "delta_ld": -1.5,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 25.375,
+            "delta_ld": -3.625,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 20.8125,
+            "delta_ld": -8.1875,
+            "fixed": false
+          }
+        },
+        "L30_mlp": {
+          "g1.5": {
+            "edit_ld": 29.25,
+            "delta_ld": 0.25,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 29.25,
+            "delta_ld": 0.25,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 28.5,
+            "delta_ld": -0.5,
+            "fixed": false
+          }
+        }
+      }
+    },
+    "ibp_pts_n7_004": {
+      "id": "ibp_pts_n7_004",
+      "written_sign": "-",
+      "baseline_ld": 28.625,
+      "boosts": {
+        "L76_mlp": {
+          "g1.5": {
+            "edit_ld": 27.25,
+            "delta_ld": -1.375,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 25.125,
+            "delta_ld": -3.5,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 20.5,
+            "delta_ld": -8.125,
+            "fixed": false
+          }
+        },
+        "L30_mlp": {
+          "g1.5": {
+            "edit_ld": 28.75,
+            "delta_ld": 0.125,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 28.75,
+            "delta_ld": 0.125,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 28.0,
+            "delta_ld": -0.625,
+            "fixed": false
+          }
+        }
+      }
+    },
+    "ibp_pts_n7_005": {
+      "id": "ibp_pts_n7_005",
+      "written_sign": "-",
+      "baseline_ld": 28.5,
+      "boosts": {
+        "L76_mlp": {
+          "g1.5": {
+            "edit_ld": 26.875,
+            "delta_ld": -1.625,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 25.0,
+            "delta_ld": -3.5,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 20.625,
+            "delta_ld": -7.875,
+            "fixed": false
+          }
+        },
+        "L30_mlp": {
+          "g1.5": {
+            "edit_ld": 28.625,
+            "delta_ld": 0.125,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 28.25,
+            "delta_ld": -0.25,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 27.75,
+            "delta_ld": -0.75,
+            "fixed": false
+          }
+        }
+      }
+    },
+    "ibp_pts_n5_002": {
+      "id": "ibp_pts_n5_002",
+      "written_sign": "-",
+      "baseline_ld": 28.625,
+      "boosts": {
+        "L76_mlp": {
+          "g1.5": {
+            "edit_ld": 27.25,
+            "delta_ld": -1.375,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 25.0,
+            "delta_ld": -3.625,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 19.875,
+            "delta_ld": -8.75,
+            "fixed": false
+          }
+        },
+        "L30_mlp": {
+          "g1.5": {
+            "edit_ld": 28.625,
+            "delta_ld": 0.0,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 28.625,
+            "delta_ld": 0.0,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 27.875,
+            "delta_ld": -0.75,
+            "fixed": false
+          }
+        }
+      }
+    },
+    "ibp_pts_n5_003": {
+      "id": "ibp_pts_n5_003",
+      "written_sign": "-",
+      "baseline_ld": 31.25,
+      "boosts": {
+        "L76_mlp": {
+          "g1.5": {
+            "edit_ld": 29.875,
+            "delta_ld": -1.375,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 27.75,
+            "delta_ld": -3.5,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 23.75,
+            "delta_ld": -7.5,
+            "fixed": false
+          }
+        },
+        "L30_mlp": {
+          "g1.5": {
+            "edit_ld": 31.0,
+            "delta_ld": -0.25,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 30.875,
+            "delta_ld": -0.375,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 29.625,
+            "delta_ld": -1.625,
+            "fixed": false
+          }
+        }
+      }
+    },
+    "ibp_pts_n5_004": {
+      "id": "ibp_pts_n5_004",
+      "written_sign": "-",
+      "baseline_ld": 28.75,
+      "boosts": {
+        "L76_mlp": {
+          "g1.5": {
+            "edit_ld": 27.125,
+            "delta_ld": -1.625,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 25.125,
+            "delta_ld": -3.625,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 20.375,
+            "delta_ld": -8.375,
+            "fixed": false
+          }
+        },
+        "L30_mlp": {
+          "g1.5": {
+            "edit_ld": 28.875,
+            "delta_ld": 0.125,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 28.625,
+            "delta_ld": -0.125,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 27.75,
+            "delta_ld": -1.0,
+            "fixed": false
+          }
+        }
+      }
+    },
+    "ibp_pts_n5_005": {
+      "id": "ibp_pts_n5_005",
+      "written_sign": "-",
+      "baseline_ld": 28.75,
+      "boosts": {
+        "L76_mlp": {
+          "g1.5": {
+            "edit_ld": 27.125,
+            "delta_ld": -1.625,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 24.625,
+            "delta_ld": -4.125,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 19.875,
+            "delta_ld": -8.875,
+            "fixed": false
+          }
+        },
+        "L30_mlp": {
+          "g1.5": {
+            "edit_ld": 28.625,
+            "delta_ld": -0.125,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 28.625,
+            "delta_ld": -0.125,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 27.75,
+            "delta_ld": -1.0,
+            "fixed": false
+          }
+        }
+      }
+    },
+    "ibp_pts_n5_006": {
+      "id": "ibp_pts_n5_006",
+      "written_sign": "-",
+      "baseline_ld": 28.375,
+      "boosts": {
+        "L76_mlp": {
+          "g1.5": {
+            "edit_ld": 27.125,
+            "delta_ld": -1.25,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 25.0,
+            "delta_ld": -3.375,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 19.875,
+            "delta_ld": -8.5,
+            "fixed": false
+          }
+        },
+        "L30_mlp": {
+          "g1.5": {
+            "edit_ld": 28.375,
+            "delta_ld": 0.0,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 28.25,
+            "delta_ld": -0.125,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 27.5,
+            "delta_ld": -0.875,
+            "fixed": false
+          }
+        }
+      }
+    },
+    "ibp_pts_n6_003": {
+      "id": "ibp_pts_n6_003",
+      "written_sign": "-",
+      "baseline_ld": 28.375,
+      "boosts": {
+        "L76_mlp": {
+          "g1.5": {
+            "edit_ld": 27.0,
+            "delta_ld": -1.375,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 25.125,
+            "delta_ld": -3.25,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 20.375,
+            "delta_ld": -8.0,
+            "fixed": false
+          }
+        },
+        "L30_mlp": {
+          "g1.5": {
+            "edit_ld": 28.625,
+            "delta_ld": 0.25,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 28.5,
+            "delta_ld": 0.125,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 28.0,
+            "delta_ld": -0.375,
+            "fixed": false
+          }
+        }
+      }
+    },
+    "ibp_pts_n8_016": {
+      "id": "ibp_pts_n8_016",
+      "written_sign": "-",
+      "baseline_ld": 27.75,
+      "boosts": {
+        "L76_mlp": {
+          "g1.5": {
+            "edit_ld": 26.375,
+            "delta_ld": -1.375,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 24.0,
+            "delta_ld": -3.75,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 19.0,
+            "delta_ld": -8.75,
+            "fixed": false
+          }
+        },
+        "L30_mlp": {
+          "g1.5": {
+            "edit_ld": 27.875,
+            "delta_ld": 0.125,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 27.625,
+            "delta_ld": -0.125,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 26.75,
+            "delta_ld": -1.0,
+            "fixed": false
+          }
+        }
+      }
+    },
+    "ibp_pts_n8_017": {
+      "id": "ibp_pts_n8_017",
+      "written_sign": "-",
+      "baseline_ld": 27.875,
+      "boosts": {
+        "L76_mlp": {
+          "g1.5": {
+            "edit_ld": 26.75,
+            "delta_ld": -1.125,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 24.875,
+            "delta_ld": -3.0,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 20.0,
+            "delta_ld": -7.875,
+            "fixed": false
+          }
+        },
+        "L30_mlp": {
+          "g1.5": {
+            "edit_ld": 28.0,
+            "delta_ld": 0.125,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 28.0,
+            "delta_ld": 0.125,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 27.25,
+            "delta_ld": -0.625,
+            "fixed": false
+          }
+        }
+      }
+    },
+    "ibp_pts_n8_019": {
+      "id": "ibp_pts_n8_019",
+      "written_sign": "-",
+      "baseline_ld": 28.125,
+      "boosts": {
+        "L76_mlp": {
+          "g1.5": {
+            "edit_ld": 26.5,
+            "delta_ld": -1.625,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 24.5,
+            "delta_ld": -3.625,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 20.0,
+            "delta_ld": -8.125,
+            "fixed": false
+          }
+        },
+        "L30_mlp": {
+          "g1.5": {
+            "edit_ld": 28.0,
+            "delta_ld": -0.125,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 28.25,
+            "delta_ld": 0.125,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 27.375,
+            "delta_ld": -0.75,
+            "fixed": false
+          }
+        }
+      }
+    },
+    "ibp_pts_n0_002": {
+      "id": "ibp_pts_n0_002",
+      "written_sign": "-",
+      "baseline_ld": 31.875,
+      "boosts": {
+        "L76_mlp": {
+          "g1.5": {
+            "edit_ld": 29.625,
+            "delta_ld": -2.25,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 26.75,
+            "delta_ld": -5.125,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 21.25,
+            "delta_ld": -10.625,
+            "fixed": false
+          }
+        },
+        "L30_mlp": {
+          "g1.5": {
+            "edit_ld": 31.875,
+            "delta_ld": 0.0,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 31.5,
+            "delta_ld": -0.375,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 30.5,
+            "delta_ld": -1.375,
+            "fixed": false
+          }
+        }
+      }
+    },
+    "ibp_pts_n0_004": {
+      "id": "ibp_pts_n0_004",
+      "written_sign": "-",
+      "baseline_ld": 26.125,
+      "boosts": {
+        "L76_mlp": {
+          "g1.5": {
+            "edit_ld": 24.75,
+            "delta_ld": -1.375,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 23.25,
+            "delta_ld": -2.875,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 19.5,
+            "delta_ld": -6.625,
+            "fixed": false
+          }
+        },
+        "L30_mlp": {
+          "g1.5": {
+            "edit_ld": 25.875,
+            "delta_ld": -0.25,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 25.875,
+            "delta_ld": -0.25,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 25.25,
+            "delta_ld": -0.875,
+            "fixed": false
+          }
+        }
+      }
+    },
+    "ibp_pts_n1_002": {
+      "id": "ibp_pts_n1_002",
+      "written_sign": "-",
+      "baseline_ld": 23.125,
+      "boosts": {
+        "L76_mlp": {
+          "g1.5": {
+            "edit_ld": 20.75,
+            "delta_ld": -2.375,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 18.5,
+            "delta_ld": -4.625,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 14.375,
+            "delta_ld": -8.75,
+            "fixed": false
+          }
+        },
+        "L30_mlp": {
+          "g1.5": {
+            "edit_ld": 23.25,
+            "delta_ld": 0.125,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 23.375,
+            "delta_ld": 0.25,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 23.125,
+            "delta_ld": 0.0,
+            "fixed": false
+          }
+        }
+      }
+    },
+    "ibp_pts_n1_003": {
+      "id": "ibp_pts_n1_003",
+      "written_sign": "-",
+      "baseline_ld": 23.125,
+      "boosts": {
+        "L76_mlp": {
+          "g1.5": {
+            "edit_ld": 20.625,
+            "delta_ld": -2.5,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 18.125,
+            "delta_ld": -5.0,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 14.0,
+            "delta_ld": -9.125,
+            "fixed": false
+          }
+        },
+        "L30_mlp": {
+          "g1.5": {
+            "edit_ld": 23.375,
+            "delta_ld": 0.25,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 23.25,
+            "delta_ld": 0.125,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 22.625,
+            "delta_ld": -0.5,
+            "fixed": false
+          }
+        }
+      }
+    },
+    "ibp_pts_n1_004": {
+      "id": "ibp_pts_n1_004",
+      "written_sign": "-",
+      "baseline_ld": 24.5,
+      "boosts": {
+        "L76_mlp": {
+          "g1.5": {
+            "edit_ld": 21.875,
+            "delta_ld": -2.625,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 19.75,
+            "delta_ld": -4.75,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 15.25,
+            "delta_ld": -9.25,
+            "fixed": false
+          }
+        },
+        "L30_mlp": {
+          "g1.5": {
+            "edit_ld": 24.5,
+            "delta_ld": 0.0,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 24.5,
+            "delta_ld": 0.0,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 23.375,
+            "delta_ld": -1.125,
+            "fixed": false
+          }
+        }
+      }
+    },
+    "ibp_pts_n1_006": {
+      "id": "ibp_pts_n1_006",
+      "written_sign": "-",
+      "baseline_ld": 29.125,
+      "boosts": {
+        "L76_mlp": {
+          "g1.5": {
+            "edit_ld": 27.625,
+            "delta_ld": -1.5,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 25.125,
+            "delta_ld": -4.0,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 19.25,
+            "delta_ld": -9.875,
+            "fixed": false
+          }
+        },
+        "L30_mlp": {
+          "g1.5": {
+            "edit_ld": 28.875,
+            "delta_ld": -0.25,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 28.75,
+            "delta_ld": -0.375,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 27.625,
+            "delta_ld": -1.5,
+            "fixed": false
+          }
+        }
+      }
+    },
+    "ibp_pts_n1_007": {
+      "id": "ibp_pts_n1_007",
+      "written_sign": "-",
+      "baseline_ld": 32.0,
+      "boosts": {
+        "L76_mlp": {
+          "g1.5": {
+            "edit_ld": 30.375,
+            "delta_ld": -1.625,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 27.75,
+            "delta_ld": -4.25,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 22.5,
+            "delta_ld": -9.5,
+            "fixed": false
+          }
+        },
+        "L30_mlp": {
+          "g1.5": {
+            "edit_ld": 32.0,
+            "delta_ld": 0.0,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 32.0,
+            "delta_ld": 0.0,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 31.5,
+            "delta_ld": -0.5,
+            "fixed": false
+          }
+        }
+      }
+    },
+    "ibp_pts_n2_001": {
+      "id": "ibp_pts_n2_001",
+      "written_sign": "-",
+      "baseline_ld": 32.25,
+      "boosts": {
+        "L76_mlp": {
+          "g1.5": {
+            "edit_ld": 30.25,
+            "delta_ld": -2.0,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 27.875,
+            "delta_ld": -4.375,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 23.375,
+            "delta_ld": -8.875,
+            "fixed": false
+          }
+        },
+        "L30_mlp": {
+          "g1.5": {
+            "edit_ld": 32.375,
+            "delta_ld": 0.125,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 32.125,
+            "delta_ld": -0.125,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 31.875,
+            "delta_ld": -0.375,
+            "fixed": false
+          }
+        }
+      }
+    },
+    "ibp_pts_n2_002": {
+      "id": "ibp_pts_n2_002",
+      "written_sign": "-",
+      "baseline_ld": 27.125,
+      "boosts": {
+        "L76_mlp": {
+          "g1.5": {
+            "edit_ld": 25.0,
+            "delta_ld": -2.125,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 22.5,
+            "delta_ld": -4.625,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 17.875,
+            "delta_ld": -9.25,
+            "fixed": false
+          }
+        },
+        "L30_mlp": {
+          "g1.5": {
+            "edit_ld": 27.75,
+            "delta_ld": 0.625,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 27.5,
+            "delta_ld": 0.375,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 26.625,
+            "delta_ld": -0.5,
+            "fixed": false
+          }
+        }
+      }
+    },
+    "ibp_pts_n2_003": {
+      "id": "ibp_pts_n2_003",
+      "written_sign": "-",
+      "baseline_ld": 28.5,
+      "boosts": {
+        "L76_mlp": {
+          "g1.5": {
+            "edit_ld": 27.0,
+            "delta_ld": -1.5,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 24.875,
+            "delta_ld": -3.625,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 20.0,
+            "delta_ld": -8.5,
+            "fixed": false
+          }
+        },
+        "L30_mlp": {
+          "g1.5": {
+            "edit_ld": 28.5,
+            "delta_ld": 0.0,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 28.25,
+            "delta_ld": -0.25,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 27.75,
+            "delta_ld": -0.75,
+            "fixed": false
+          }
+        }
+      }
+    },
+    "ibp_pts_n2_004": {
+      "id": "ibp_pts_n2_004",
+      "written_sign": "-",
+      "baseline_ld": 30.75,
+      "boosts": {
+        "L76_mlp": {
+          "g1.5": {
+            "edit_ld": 29.375,
+            "delta_ld": -1.375,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 27.0,
+            "delta_ld": -3.75,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 22.25,
+            "delta_ld": -8.5,
+            "fixed": false
+          }
+        },
+        "L30_mlp": {
+          "g1.5": {
+            "edit_ld": 30.75,
+            "delta_ld": 0.0,
+            "fixed": false
+          },
+          "g2.0": {
+            "edit_ld": 30.5,
+            "delta_ld": -0.25,
+            "fixed": false
+          },
+          "g3.0": {
+            "edit_ld": 29.75,
+            "delta_ld": -1.0,
+            "fixed": false
+          }
+        }
+      }
+    }
+  }
+}
